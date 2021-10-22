@@ -102,7 +102,7 @@ namespace API.Controllers
 
 
         [HttpPost, AllowAnonymous]
-        public IHttpActionResult Insert([FromBody]CATEGRE Nation)
+        public IHttpActionResult Insert([FromBody]CATEGRES Nation)
         {
             if (ModelState.IsValid)
             {
@@ -140,7 +140,7 @@ namespace API.Controllers
             }
         }
         [HttpPost, AllowAnonymous]
-        public IHttpActionResult Update([FromBody]CATEGRE Nation)
+        public IHttpActionResult Update([FromBody]CATEGRES Nation)
         {
             if (ModelState.IsValid)
             {
@@ -161,7 +161,7 @@ namespace API.Controllers
 
         //***************asmaa********************//
         [HttpPost, AllowAnonymous]
-        public IHttpActionResult UpdateLst(List<CATEGRE> CATEGRES)
+        public IHttpActionResult UpdateLst(List<CATEGRES> CATEGRES)
         {
             try
             {

@@ -9665,7 +9665,318 @@ class ORDER_Master extends SecurityClass {
     public Confirmation: boolean;
 
 }
+class SubscriptionsMasterDetails extends SecurityClass {
+    constructor() {
+        super();
+        this.Custmer_Souscription = new I_Customer_Gym();
+        this.Data_CustmorDetails = new Array<I_Detais_Data_Custmor>();
+    }
+    public Custmer_Souscription: I_Customer_Gym;
+    public Data_CustmorDetails: Array<I_Detais_Data_Custmor>;
 
+
+}
+
+
+
+class Table_Hagz extends SecurityClass {
+    constructor() {
+        super();
+        this.ID = 0;
+        this.Num = 0;
+        this.Name = "";
+        this.Phone = "";
+        this.Type = "";
+        this.Message = "";
+        this.cheak = false;
+        this.StatusFlag = "";
+
+
+    }
+    public ID: number;
+    public Num: number;
+    public Name: string;
+    public Phone: string;
+    public Type: string;
+    public Message: string;
+    public cheak: boolean;
+    public StatusFlag: string;
+}
+
+class Table_Tim_work extends SecurityClass {
+    constructor() {
+        super();
+        this.ID = 0;
+        this.Name = "";
+        this.Cheak = false;
+        this.StatusFlag = "";
+    }
+    public ID: number;
+    public Name: string;
+    public Cheak: boolean;
+    public StatusFlag: string;
+}
+
+
+class I_Attendance extends SecurityClass {
+    constructor() {
+        super();
+        this.ID = 0;
+        this.ID_Cust = 0;
+        this.USER_CODE = "";
+        this.Tr_Date = "";
+        this.Time_in = "";
+        this.Time_out = "";
+        this.Num_Day_Attendance = 0;
+        this.ready = false;
+    }
+    public ID: number;
+    public ID_Cust: number;
+    public USER_CODE: string;
+    public Tr_Date: string;
+    public Time_in: string;
+    public Time_out: string;
+    public Num_Day_Attendance: number;
+    public ready: boolean;
+}
+
+class I_Attendance_New extends SecurityClass {
+    constructor() {
+        super();
+        this.ID = 0;
+        this.ID_Cust = 0;
+        this.USER_CODE = "";
+        this.Tr_Date = "";
+        this.Time_in = "";
+        this.Time_out = "";
+        this.Num_Day_Attendance = 0;
+        this.ready = false;
+        this.Name_Customer = "";
+        this.Num = 0;
+
+
+    }
+    public ID: number;
+    public ID_Cust: number;
+    public USER_CODE: string;
+    public Tr_Date: string;
+    public Time_in: string;
+    public Time_out: string;
+    public Num_Day_Attendance: number;
+    public ready: boolean;
+    public Name_Customer: string;
+    public Num: number;
+}
+
+class IQ_Attend_Multi extends SecurityClass {
+    constructor() {
+        super();
+        this.ID = 0;
+        this.ID_Cust = 0;
+        this.ID_Code_USER = 0;
+        this.Tr_Date = "";
+        this.Time_in = "";
+        this.Time_out = "";
+        this.Num_Day_Attendance = 0;
+        this.ready = false;
+        this.Num_Day = 0;
+        this.Name_Customer = "";
+        this.USER_NAME = "";
+    }
+    public ID: number;
+    public ID_Cust: number;
+    public ID_Code_USER: number;
+    public Tr_Date: string;
+    public Time_in: string;
+    public Time_out: string;
+    public Num_Day_Attendance: number;
+    public ready: boolean;
+    public Num_Day: number;
+    public Name_Customer: string;
+    public USER_NAME: string;
+}
+
+
+
+class IQ__Attendance extends SecurityClass {
+    constructor() {
+        super();
+        this.ID = 0;
+        this.ID_Cust = 0;
+        this.Tr_Date = "";
+        this.Time_in = "";
+        this.Time_out = "";
+        this.Num_Day_Attendance = 0;
+        this.ready = false;
+        this.Name_Customer = "";
+        this.Phone_Customer = "";
+        this.Type = "";
+        this.End_Date = "";
+        this.Start_Date = "";
+        this.Statas = false;
+        this.image = "";
+        this.ID_Souscription = 0;
+        this.Type_Sub = "";
+    }
+    public ID: number;
+    public ID_Cust: number;
+    public Tr_Date: string;
+    public Time_in: string;
+    public Time_out: string;
+    public Num_Day_Attendance: number;
+    public ready: boolean;
+    public Name_Customer: string;
+    public Phone_Customer: string;
+    public Type: string;
+    public End_Date: string;
+    public Start_Date: string;
+    public Statas: boolean;
+    public image: string;
+    public ID_Souscription: number;
+    public Type_Sub: string;
+}
+
+class I_Detais_Data_Custmor extends SecurityClass {
+    constructor() {
+        super();
+        this.ID = 0;
+        this.ID_Cust = 0;
+        this.ID_Souscription = 0;
+        this.Start_Date_Detais = "";
+        this.End_Date_Detais = "";
+        this.Num_Day_Attendance = 0;
+        this.Remarks_Detais = "";
+        this.Longueur_Detais = 0;
+        this.le_Poids_Detais = 0;
+        this.Muscles_P_C = 0;
+        this.Fats_P_C = 0;
+        this.perfect_weight = 0;
+        this.plus_minus = 0;
+        this.StatusFlag = "";
+
+    }
+    public ID: number;
+    public ID_Cust: number;
+    public ID_Souscription: number;
+    public Start_Date_Detais: string;
+    public End_Date_Detais: string;
+    public Num_Day_Attendance: number;
+    public Remarks_Detais: string;
+    public Longueur_Detais: number;
+    public le_Poids_Detais: number;
+    public Muscles_P_C: number;
+    public Fats_P_C: number;
+    public perfect_weight: number;
+    public plus_minus: number;
+    public StatusFlag: string;
+
+}
+class I_Customer_Gym extends SecurityClass {
+    constructor() {
+        super();
+        this.ID_Cust = 0;
+        this.Name_Customer = "";
+        this.Phone_Customer = "";
+        this.Carte_Dentite = "";
+        this.Adresse = "";
+        this.age = 0;
+        this.Remarks = "";
+        this.Statas = false;
+        this.image = "";
+        this.ID_Souscription = 0;
+        this.Start_Date = "";
+        this.End_Date = "";
+        this.Type = "";
+        this.CreatedAt = "";
+        this.CreatedBy = "";
+        this.UpdatedAt = "";
+        this.UpdatedBy = "";
+        this.Type_Customer = 0;
+        this.Num_Days_freeze = 0;
+        this.Num_Attendance = 0;
+        this.End_Date_freeze = "";
+        this.price_Sub = 0;
+        this.Discount = 0;
+        this.Price_After_Discount = 0;
+        this.invitation = 0;
+        this.NewAdd = false;
+        this.Renewal = false;
+
+    }
+    public ID_Cust: number;
+    public Name_Customer: string;
+    public Phone_Customer: string;
+    public Carte_Dentite: string;
+    public Adresse: string;
+    public age: number;
+    public Remarks: string;
+    public Statas: boolean;
+    public image: string;
+    public ID_Souscription: number;
+    public Start_Date: string;
+    public End_Date: string;
+    public Type: string;
+    public CreatedAt: string;
+    public CreatedBy: string;
+    public UpdatedAt: string;
+    public UpdatedBy: string;
+    public Type_Customer: number;
+    public Num_Days_freeze: number;
+    public Num_Attendance: number;
+    public End_Date_freeze: string;
+    public price_Sub: any;
+    public Discount: any;
+    public Price_After_Discount: any;
+    public invitation: any;
+    public NewAdd: boolean;
+    public Renewal: boolean;
+}
+class I_Type_Souscription extends SecurityClass {
+    constructor() {
+        super();
+        this.ID_Souscription = 0;
+        this.Type_Sub = "";
+        this.Num_Day = 0;
+        this.price_Sub
+        this.Discount
+        this.Price_After_Discount
+        this.Active = false;
+        this.invitation = 0;
+        this.StatusFlag = "";
+    }
+    public ID_Souscription: number;
+    public Type_Sub: string;
+    public Num_Day: number;
+    public price_Sub: any;
+    public Discount: any;
+    public Price_After_Discount: any;
+    public Active: boolean;
+    public invitation: number;
+    public StatusFlag: string;
+}
+class invitation extends SecurityClass {
+    constructor() {
+        super();
+        this.ID_invitation = 0;
+        this.ID_Cust = 0;
+        this.Name = "";
+        this.Phone = "";
+        this.Carte_Dentite = "";
+        this.age = 0;
+        this.Tr_Data = "";
+        this.Remarks = "";
+        this.Num_inv = 0;
+    }
+    public ID_invitation: number;
+    public ID_Cust: number;
+    public Name: string;
+    public Phone: string;
+    public Carte_Dentite: string;
+    public age: number;
+    public Tr_Data: string;
+    public Remarks: string;
+    public Num_inv: number;
+}
 class ORDER_DELIVERY extends SecurityClass {
     constructor() {
         super();

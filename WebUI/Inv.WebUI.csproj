@@ -150,6 +150,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientApp\Home\Attendance.js" />
+    <Content Include="ClientApp\Home\Home.js" />
     <Content Include="ClientApp\Reports\Income_expenses.js" />
     <Content Include="ClientApp\Reports\Salesinventory.js" />
     <Content Include="css\select2.min.css" />
@@ -789,6 +791,8 @@
     <Content Include="POS2021DataSet.xsc">
       <DependentUpon>POS2021DataSet.xsd</DependentUpon>
     </Content>
+    <Content Include="ClientApp\Home\Attendance.js.map" />
+    <Content Include="ClientApp\Home\Home.js.map" />
     <None Include="POS2021DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>POS2021DataSet.Designer.cs</LastGenOutput>
@@ -1222,6 +1226,7 @@
     <TypeScriptCompile Include="ClientApp\Generalsetting\CUSTOMERS.ts" />
     <TypeScriptCompile Include="ClientApp\Generalsetting\Catch_Receipt.ts" />
     <TypeScriptCompile Include="ClientApp\Generalsetting\Supplier.ts" />
+    <TypeScriptCompile Include="ClientApp\Home\Attendance.ts" />
     <TypeScriptCompile Include="ClientApp\Pages\LoginAdmin.ts" />
     <TypeScriptCompile Include="ClientApp\Pages\LoginComponent.ts" />
     <TypeScriptCompile Include="ClientApp\CustomEntities.ts" />

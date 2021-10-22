@@ -1,9 +1,190 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "HomeIndex";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
+<style>
 
 
 
- <script src="~/ClientApp/Partial/Background.js"></script>
+    .popu {
+        position: fixed;
+        /* top: 22%; */
+        /* height: 25%; */
+        left: -32%;
+        width: 151%;
+        /* margin-right: 23%; */
+        border: solid 1px #f3f3f3 !important;
+        border-radius: 30px;
+        padding: 12px 11px;
+        /*background-color: #e3e3e3 !important;*/
+        box-shadow: 0px 4px 6px 0;
+        /*background: linear-gradient(to right, rgb(0 0 0) 0%, #054f5b9c 100%) !important;*/
+        background: linear-gradient(to right, rgb(0 0 0) 0%, #5b54059c 100%) !important;
+        color: white;
+        box-shadow: 5px 5px #454242;
+    }
+</style>
+<div class="container">
+    <div class="col-lg-12 ">
+        <div class="col-sm-4"></div>
+        <div class="clo-sm-4">
+
+            <img src="~/Style_design/img/619.png" />
+        </div>
+        <div class="clo-sm-4">
+            <input id="Vld_Attendance" value="1" name="" type="text" class="form-control  text_Display" style="display: none;">
+
+        </div>
+        <div id="DivMassage">
+
+            <h4 id="Text_Massage" style="display: none;"> رساله </h4>
+        </div>
+
+    </div>
+
+
+    <div id="divMasterGridiv" class="col-lg-12  margingred  borderred  " style="width: 99%;">
+        <div class="col-lg-3 col-xs-8" style="margin-bottom: 4px;margin-right: 27px;margin-top: 9px;">
+            <input id="searchbutmemreport" name="" type="text" class="form-control  text_Display" placeholder="بحث ">
+        </div>
+        <div class="col-lg-4 col-xs-8" style="margin-bottom: 4px;margin-right: 27px;margin-top: 9px;">
+
+        </div>
+        <div class="col-lg-3 col-xs-8" style="margin-bottom: 4px;margin-right: 27px;margin-top: 9px;">
+            <input id="Enter_Cust" name="" type="number" class="form-control  text_Display" placeholder="ادخل الكود  " style="background-color: lightcyan;">
+        </div>
+        <div class="col-lg-12 ">
+            <table id="divMasterGrid"></table>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+
+
+<div class="modal fade" id="PopupDialog" role="dialog">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div id="PopupBody" class=" modal-body col-lg-12 col-xs-12 ">
+                <div id="Men_popu" class="popu animated zoomIn" style="display:block;">
+                    <div class="col-lg-12">
+                        <div class="col-lg-4 col-xs-4">
+                            <h2 id="id_Labol" style="text-align: center;">عدد الدعواة المتاحه</h2>
+                        </div>
+                        <div class="col-lg-1 col-xs-4">
+                            <input type="text" style="height:36px;" disabled id="txtNum_inv" name="Num_Days_freeze" class="  form-control   font1" value="0" min="1" max="100" step="1">
+                        </div>
+                        <div class="col-lg-1 col-xs-4">
+                        </div>
+                        <div class="col-lg-2 col-xs-2">
+                            <button id="btnview_invitation" type="button" class="btn btn-info " style="display:block;">
+                                <span class="glyphicon glyphicon-search"></span> عرض الدعواة
+                            </button>
+                        </div>
+                        <div class="col-lg-4 col-xs-4" style="background-color: #807c00;border-radius: 30px;">
+                            <h2 id="id_Labol_Cust" style="text-align: center;font-weight: bold;color: cornsilk;">اسم العميل</h2>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12" id="div_control_invit">
+                        <div class="col-lg-12" id="">
+                            <div class="col-lg-1 col-xs-4">
+                            </div>
+                            <div class="col-lg-2 col-xs-4" style="width: 22%;">
+                                <span class="" style="font-size: 22px;font-weight: bold;">اسم العميل</span>
+                            </div>
+                            <div class="col-lg-1 col-xs-4">
+                            </div>
+                            <div class="col-lg-2 col-xs-12" style="width: 21%;">
+                                <span class="" style="font-size: 22px;font-weight: bold;"> رقم التليفون</span>
+                            </div>
+
+                            <div class="col-lg-1 col-xs-12" style="width: 13%;">
+                                <span class="" style="font-size: 22px;font-weight: bold;"> العمر</span>
+                            </div>
+                            <div class="col-lg-3 col-xs-12">
+                                <span class="" style="font-size: 22px;font-weight: bold;"> الرقم القومي</span>
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-12" style="">
+
+                            <div class="col-lg-4 col-xs-4">
+                                <input type="text" style="height:36px;" id="txtName_invit" name="Name" class="  form-control   font1" value="1" min="1" max="100" step="1">
+
+                            </div>
+                            <div class="col-lg-3 col-xs-4">
+                                <input type="text" style="height:36px;" id="txtPhone_invit" name="Phone" class="  form-control   font1" value="1" min="1" max="100" step="1">
+                            </div>
+                            <div class="col-lg-1 col-xs-4">
+                                <input type="number" style="height:36px;" id="txtAge_invit" name="age" class="  form-control   font1" value="1" min="1" max="100" step="1">
+
+                            </div>
+                            <div class="col-lg-3 col-xs-4">
+                                <input type="number" style="height:36px;" id="txtCarte_Dentite_invit" name="Carte_Dentite" class="  form-control   font1" value="1" min="1" max="100" step="1">
+
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="col-lg-1 col-xs-12">
+                                <span class="" style="font-size: 22px;font-weight: bold;">ملاحظات</span>
+                            </div>
+
+                            <div class=" col-lg-10 col-xs-4">
+                                <textarea type="text" class="form-control input-sm addable editable " name="Remarks" id="txtRemarks_invit" style="height: 105px;"></textarea>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-12">
+
+
+
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="col-lg-4 col-xs-5" style="width: 39%;">
+
+                            </div>
+                            <div class="col-lg-2 col-xs-2">
+                                <button id="btn_Ok_invit" type="button" class="btn btn-info ">
+                                    <span class="glyphicon glyphicon-download"></span> تاكيد الدعوه
+                                </button>
+                            </div>
+                            <div class="col-lg-1 col-xs-2">
+
+                            </div>
+                            <div class="col-lg-1 col-xs-2">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="clo-sm-4"></div>
+        <div class="clo-sm-4"></div>
+    </div>
+</div>
+@*<script src="~/ClientApp/Home/Attendance.js"></script>*@

@@ -27,6 +27,9 @@ var Modules = {
     familly_Cat: "familly_Cat",
     Income_expenses: "Income_expenses",
     SlsTrSalesManager: "SlsTrSalesManager",
+    Subscriptions: "Subscriptions",
+    Typesubscrip: "Typesubscrip",
+    Attendance: "Attendance"
 };
 var MessageType = {
     Error: '2',

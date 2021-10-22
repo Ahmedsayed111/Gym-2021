@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Unity;
-using System.Web.Http.Dependencies;
+﻿using Unity; 
 using Inv.DAL.Repository;
 using Inv.BLL.Services.GUSERS;
-using Inv.BLL.Services.IControl;
-
+using Inv.BLL.Services.IControl; 
 using Inv.BLL.Services.IGCodes;
 using Inv.BLL.Services.GCostCenter;
 using Inv.BLL.Services.GRole;
@@ -18,8 +12,7 @@ using Inv.BLL.Services.G_SUB_SYSTEM;
 using Inv.BLL.Services.USER_BRANCH;
 using Inv.BLL.Services.GCompany;
 using Inv.BLL.Services.GAlertControl;
-using Inv.BLL.Services.CompStatus;
-
+using Inv.BLL.Services.CompStatus; 
 using Inv.BLL.Services.Item;
 using Inv.BLL.Services.Category;
 using Inv.BLL.Services.Customer;
@@ -27,9 +20,12 @@ using Inv.BLL.Services.Outletpirce;
 using Inv.BLL.Services.Stok_ORDER;
 using Inv.BLL.Services.Purchases;
 using Inv.BLL.Services.familly_Cate;
-using Inv.BLL.Services.Vendor;
-using Inv.BLL.Services.Vendor;
-using Inv.BLL.Services.SlsTrSales;
+using Inv.BLL.Services.Vendor; 
+using Inv.BLL.Services.SlsTrSales; 
+//using Inv.BLL.Services.I_Type_Souscriptions;
+//using Inv.BLL.Services.Souscription;
+//using Inv.BLL.Services.SouscriptionDetails;
+//using Inv.BLL.Services.I_Attendancee;
 
 namespace Inv.API.Infrastructure
 {
@@ -62,9 +58,11 @@ namespace Inv.API.Infrastructure
             container.RegisterType<IStok_ORDERServices, Stok_ORDERServices>();
             container.RegisterType<IPurchases_MasterServices, Purchases_MasterServices>();
             container.RegisterType<Ifamilly_CatServices, familly_CatServices>();
-            container.RegisterType<ISlsTrSalesServices, SlsTrSalesServices>();
-
-
+            container.RegisterType<ISlsTrSalesServices, SlsTrSalesServices>(); 
+            //container.RegisterType<II_Type_SouscriptionServices, I_Type_SouscriptionServices>();
+            //container.RegisterType<II_Customer_GymServices, I_Customer_GymServices>();
+            //container.RegisterType<II_Detais_CustmorServices, I_Detais_CustmorServices>();
+            //container.RegisterType<II_AttendanceServices, I_AttendanceServices>();
 
 
 

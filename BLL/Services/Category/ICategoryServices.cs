@@ -10,12 +10,12 @@ namespace Inv.BLL.Services.Category
 {
     public interface ICategoryServices
     {
-        CATEGRE GetById(int id);
-        List<CATEGRE> GetAll();
-        List<CATEGRE> GetAll(Expression<Func<CATEGRE, bool>> predicate);
-        CATEGRE Insert(CATEGRE entity);
-        CATEGRE Update(CATEGRE entity);
+        CATEGRES GetById(int id);
+        List<CATEGRES> GetAll();
+        List<CATEGRES> GetAll(Expression<Func<CATEGRES, bool>> predicate);
+        CATEGRES Insert(CATEGRES entity);
+        CATEGRES Update(CATEGRES entity);
         void Delete(int id);
-        void UpdateList(List<CATEGRE> Lstservice);
+        void UpdateList(List<CATEGRES> Lstservice);
     }
 }

@@ -22,45 +22,45 @@ namespace Inv.BLL.Services.Category
 
 
         #region Nationality Services
-        public CATEGRE GetById(int id)
+        public CATEGRES GetById(int id)
         {
 
-            return unitOfWork.Repository<CATEGRE>().GetById(id);
+            return unitOfWork.Repository<CATEGRES>().GetById(id);
 
         }
 
-        public List<CATEGRE> GetAll()
+        public List<CATEGRES> GetAll()
         {
-            return unitOfWork.Repository<CATEGRE>().GetAll();
+            return unitOfWork.Repository<CATEGRES>().GetAll();
         }
 
-        public List<CATEGRE> GetAll(Expression<Func<CATEGRE, bool>> predicate)
+        public List<CATEGRES> GetAll(Expression<Func<CATEGRES, bool>> predicate)
         {
-            return unitOfWork.Repository<CATEGRE>().Get(predicate);
+            return unitOfWork.Repository<CATEGRES>().Get(predicate);
         }
 
-        public CATEGRE Insert(CATEGRE entity)
+        public CATEGRES Insert(CATEGRES entity)
         {
-            var memb = unitOfWork.Repository<CATEGRE>().Insert(entity);
+            var memb = unitOfWork.Repository<CATEGRES>().Insert(entity);
             unitOfWork.Save();
             return memb;
         }
 
-        public CATEGRE Update(CATEGRE entity)
+        public CATEGRES Update(CATEGRES entity)
         {
 
-            var memb = unitOfWork.Repository<CATEGRE>().Update(entity);
+            var memb = unitOfWork.Repository<CATEGRES>().Update(entity);
             unitOfWork.Save();
             return memb;
         }
 
         public void Delete(int id)
         {
-            unitOfWork.Repository<CATEGRE>().Delete(id);
+            unitOfWork.Repository<CATEGRES>().Delete(id);
             unitOfWork.Save();
         }
 
-        public void UpdateList(List<CATEGRE> Lstservice)
+        public void UpdateList(List<CATEGRES> Lstservice)
         {
 
             var insertedRecord = Lstservice.Where(x => x.StatusFlag == 'i');
@@ -68,16 +68,16 @@ namespace Inv.BLL.Services.Category
             var deletedRecord = Lstservice.Where(x => x.StatusFlag == 'd');
 
             if (updatedRecord.Count() > 0)
-                unitOfWork.Repository<CATEGRE>().Update(updatedRecord);
+                unitOfWork.Repository<CATEGRES>().Update(updatedRecord);
 
             if (insertedRecord.Count() > 0)
-                unitOfWork.Repository<CATEGRE>().Insert(insertedRecord);
+                unitOfWork.Repository<CATEGRES>().Insert(insertedRecord);
 
 
             if (deletedRecord.Count() > 0)
             {
                 foreach (var entity in deletedRecord)
-                    unitOfWork.Repository<CATEGRE>().Delete(entity.ID_CAT);
+                    unitOfWork.Repository<CATEGRES>().Delete(entity.ID_CAT);
             }
 
             unitOfWork.Save();

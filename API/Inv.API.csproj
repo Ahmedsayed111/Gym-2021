@@ -260,6 +260,8 @@
     <Compile Include="Controllers\GBranchController.cs" />
     <Compile Include="Controllers\InventoryController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
+    <Compile Include="Controllers\I_AttendanceController.cs" />
+    <Compile Include="Controllers\I_Type_SouscriptionController.cs" />
     <Compile Include="Controllers\Outletpirce.cs" />
     <Compile Include="Controllers\PurchasesController.cs" />
     <Compile Include="Controllers\ReviewSales.cs" />
@@ -271,6 +273,7 @@
     <Compile Include="Controllers\Shared\I_VW__GetCompStatusController.cs" />
     <Compile Include="Controllers\Shared\SystemToolsController.cs" />
     <Compile Include="Controllers\SlsTrSalesController.cs" />
+    <Compile Include="Controllers\SubscriptionsController.cs" />
     <Compile Include="Controllers\SupplierController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -284,10 +287,13 @@
     <Compile Include="Models\CustomEntities\SystemParameters.cs" />
     <Compile Include="Models\CustomEntities\UserPrivilege.cs" />
     <Compile Include="Models\CustomModel\CompanyLoginStatus.cs" />
+    <Compile Include="Models\CustomModel\CustomG_USERS.cs" />
+    <Compile Include="Models\CustomModel\I_Attendance_New.cs" />
     <Compile Include="Models\CustomModel\MasterDetailsUserRoles.cs" />
     <Compile Include="Models\CustomModel\PurchasesMasterDetails.cs" />
     <Compile Include="Models\CustomModel\SlsInvoiceMasterDetails.cs" />
     <Compile Include="Models\CustomModel\SlsMasterDetails.cs" />
+    <Compile Include="Models\CustomModel\SubscriptionsMasterDetails.cs" />
     <Compile Include="Models\ResponseResult.cs" />
     <Compile Include="Models\SessionRecord.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />

@@ -10,9 +10,7 @@ var Modules = {
     Acc: "Acc",
     DefBranches: "DefBranches",
     Clientaccstat: "Clientaccstat",
-    USERS: "USERS",
-
-
+    USERS: "USERS",   
     SlsTrSales: "SlsTrSales",
     SlsTrReturn: "SlsTrReturn",
     Categories: "Categories",
@@ -24,8 +22,10 @@ var Modules = {
     Salesinventory: "Salesinventory",
     familly_Cat: "familly_Cat",
     Income_expenses: "Income_expenses",
-    SlsTrSalesManager: "SlsTrSalesManager",
-
+    SlsTrSalesManager: "SlsTrSalesManager",   
+    Subscriptions: "Subscriptions",
+    Typesubscrip: "Typesubscrip",
+    Attendance: "Attendance"
 
     
 

@@ -5729,6 +5729,212 @@ var ORDER_Master = /** @class */ (function (_super) {
     }
     return ORDER_Master;
 }(SecurityClass));
+var SubscriptionsMasterDetails = /** @class */ (function (_super) {
+    __extends(SubscriptionsMasterDetails, _super);
+    function SubscriptionsMasterDetails() {
+        var _this = _super.call(this) || this;
+        _this.Custmer_Souscription = new I_Customer_Gym();
+        _this.Data_CustmorDetails = new Array();
+        return _this;
+    }
+    return SubscriptionsMasterDetails;
+}(SecurityClass));
+var Table_Hagz = /** @class */ (function (_super) {
+    __extends(Table_Hagz, _super);
+    function Table_Hagz() {
+        var _this = _super.call(this) || this;
+        _this.ID = 0;
+        _this.Num = 0;
+        _this.Name = "";
+        _this.Phone = "";
+        _this.Type = "";
+        _this.Message = "";
+        _this.cheak = false;
+        _this.StatusFlag = "";
+        return _this;
+    }
+    return Table_Hagz;
+}(SecurityClass));
+var Table_Tim_work = /** @class */ (function (_super) {
+    __extends(Table_Tim_work, _super);
+    function Table_Tim_work() {
+        var _this = _super.call(this) || this;
+        _this.ID = 0;
+        _this.Name = "";
+        _this.Cheak = false;
+        _this.StatusFlag = "";
+        return _this;
+    }
+    return Table_Tim_work;
+}(SecurityClass));
+var I_Attendance = /** @class */ (function (_super) {
+    __extends(I_Attendance, _super);
+    function I_Attendance() {
+        var _this = _super.call(this) || this;
+        _this.ID = 0;
+        _this.ID_Cust = 0;
+        _this.USER_CODE = "";
+        _this.Tr_Date = "";
+        _this.Time_in = "";
+        _this.Time_out = "";
+        _this.Num_Day_Attendance = 0;
+        _this.ready = false;
+        return _this;
+    }
+    return I_Attendance;
+}(SecurityClass));
+var I_Attendance_New = /** @class */ (function (_super) {
+    __extends(I_Attendance_New, _super);
+    function I_Attendance_New() {
+        var _this = _super.call(this) || this;
+        _this.ID = 0;
+        _this.ID_Cust = 0;
+        _this.USER_CODE = "";
+        _this.Tr_Date = "";
+        _this.Time_in = "";
+        _this.Time_out = "";
+        _this.Num_Day_Attendance = 0;
+        _this.ready = false;
+        _this.Name_Customer = "";
+        _this.Num = 0;
+        return _this;
+    }
+    return I_Attendance_New;
+}(SecurityClass));
+var IQ_Attend_Multi = /** @class */ (function (_super) {
+    __extends(IQ_Attend_Multi, _super);
+    function IQ_Attend_Multi() {
+        var _this = _super.call(this) || this;
+        _this.ID = 0;
+        _this.ID_Cust = 0;
+        _this.ID_Code_USER = 0;
+        _this.Tr_Date = "";
+        _this.Time_in = "";
+        _this.Time_out = "";
+        _this.Num_Day_Attendance = 0;
+        _this.ready = false;
+        _this.Num_Day = 0;
+        _this.Name_Customer = "";
+        _this.USER_NAME = "";
+        return _this;
+    }
+    return IQ_Attend_Multi;
+}(SecurityClass));
+var IQ__Attendance = /** @class */ (function (_super) {
+    __extends(IQ__Attendance, _super);
+    function IQ__Attendance() {
+        var _this = _super.call(this) || this;
+        _this.ID = 0;
+        _this.ID_Cust = 0;
+        _this.Tr_Date = "";
+        _this.Time_in = "";
+        _this.Time_out = "";
+        _this.Num_Day_Attendance = 0;
+        _this.ready = false;
+        _this.Name_Customer = "";
+        _this.Phone_Customer = "";
+        _this.Type = "";
+        _this.End_Date = "";
+        _this.Start_Date = "";
+        _this.Statas = false;
+        _this.image = "";
+        _this.ID_Souscription = 0;
+        _this.Type_Sub = "";
+        return _this;
+    }
+    return IQ__Attendance;
+}(SecurityClass));
+var I_Detais_Data_Custmor = /** @class */ (function (_super) {
+    __extends(I_Detais_Data_Custmor, _super);
+    function I_Detais_Data_Custmor() {
+        var _this = _super.call(this) || this;
+        _this.ID = 0;
+        _this.ID_Cust = 0;
+        _this.ID_Souscription = 0;
+        _this.Start_Date_Detais = "";
+        _this.End_Date_Detais = "";
+        _this.Num_Day_Attendance = 0;
+        _this.Remarks_Detais = "";
+        _this.Longueur_Detais = 0;
+        _this.le_Poids_Detais = 0;
+        _this.Muscles_P_C = 0;
+        _this.Fats_P_C = 0;
+        _this.perfect_weight = 0;
+        _this.plus_minus = 0;
+        _this.StatusFlag = "";
+        return _this;
+    }
+    return I_Detais_Data_Custmor;
+}(SecurityClass));
+var I_Customer_Gym = /** @class */ (function (_super) {
+    __extends(I_Customer_Gym, _super);
+    function I_Customer_Gym() {
+        var _this = _super.call(this) || this;
+        _this.ID_Cust = 0;
+        _this.Name_Customer = "";
+        _this.Phone_Customer = "";
+        _this.Carte_Dentite = "";
+        _this.Adresse = "";
+        _this.age = 0;
+        _this.Remarks = "";
+        _this.Statas = false;
+        _this.image = "";
+        _this.ID_Souscription = 0;
+        _this.Start_Date = "";
+        _this.End_Date = "";
+        _this.Type = "";
+        _this.CreatedAt = "";
+        _this.CreatedBy = "";
+        _this.UpdatedAt = "";
+        _this.UpdatedBy = "";
+        _this.Type_Customer = 0;
+        _this.Num_Days_freeze = 0;
+        _this.Num_Attendance = 0;
+        _this.End_Date_freeze = "";
+        _this.price_Sub = 0;
+        _this.Discount = 0;
+        _this.Price_After_Discount = 0;
+        _this.invitation = 0;
+        _this.NewAdd = false;
+        _this.Renewal = false;
+        return _this;
+    }
+    return I_Customer_Gym;
+}(SecurityClass));
+var I_Type_Souscription = /** @class */ (function (_super) {
+    __extends(I_Type_Souscription, _super);
+    function I_Type_Souscription() {
+        var _this = _super.call(this) || this;
+        _this.ID_Souscription = 0;
+        _this.Type_Sub = "";
+        _this.Num_Day = 0;
+        _this.price_Sub;
+        _this.Discount;
+        _this.Price_After_Discount;
+        _this.Active = false;
+        _this.invitation = 0;
+        _this.StatusFlag = "";
+        return _this;
+    }
+    return I_Type_Souscription;
+}(SecurityClass));
+var invitation = /** @class */ (function (_super) {
+    __extends(invitation, _super);
+    function invitation() {
+        var _this = _super.call(this) || this;
+        _this.ID_invitation = 0;
+        _this.ID_Cust = 0;
+        _this.Name = "";
+        _this.Phone = "";
+        _this.Carte_Dentite = "";
+        _this.age = 0;
+        _this.Tr_Data = "";
+        _this.Remarks = "";
+        _this.Num_inv = 0;
+        return _this;
+    }
+    return invitation;
+}(SecurityClass));
 var ORDER_DELIVERY = /** @class */ (function (_super) {
     __extends(ORDER_DELIVERY, _super);
     function ORDER_DELIVERY() {
