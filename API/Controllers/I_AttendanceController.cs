@@ -1,4 +1,4 @@
-﻿using API.Models;
+﻿using Inv.API.Models;
 using BLL.Services.I_Attendancee;
 using Inv.DAL.Domain;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using API.Controllers;
+using Inv.API.Controllers;
 using Inv.API.Tools;
 using System.Web.Http.Cors;
 using System.Data.SqlClient;
@@ -66,7 +66,7 @@ namespace API.Controllers
         //            var res = db.Database.SqlQuery<IQ_Attend_Multi>(query).ToList();
         //            return Ok(new BaseResponse(res));
         //        }
-   
+
         //    }
         //    return BadRequest(ModelState);
         //}
@@ -82,8 +82,8 @@ namespace API.Controllers
                              SELECT dbo.I_Attendance.*, dbo.I_Customer_Gym.Name_Customer
                              FROM   dbo.I_Attendance INNER JOIN
                              dbo.I_Customer_Gym ON dbo.I_Attendance.ID_Cust = dbo.I_Customer_Gym.ID_Cust  where ready = 1 and Num_Day = @Num_Day_out  order by ID DESC";
-                 
-                string query = s ;
+
+                string query = s;
                 var res = db.Database.SqlQuery<Models.CustomModel.I_Attendance_New>(query).ToList();
                 return Ok(new BaseResponse(res));
             }
@@ -113,7 +113,7 @@ namespace API.Controllers
         {
             if (ModelState.IsValid)
             {
-                string s = "GetAttendance "+ ID_Code + "";
+                string s = "GetAttendance " + ID_Code + "";
 
                 string query = s;
                 var res = db.Database.SqlQuery<string>(query).ToList();
@@ -158,46 +158,46 @@ namespace API.Controllers
         //    }
         //    return BadRequest(ModelState);
         //}
-        [HttpGet, AllowAnonymous]
-        public IHttpActionResult PROC_Delete_Rows(int ID, string TR_Type)
-        {
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    var companies = db.Database.SqlQuery<Delete_Rows_Result>("Delete_Rows " + ID + ",'" + TR_Type + "'").ToList();
+        //[HttpGet, AllowAnonymous]
+        //public IHttpActionResult PROC_Delete_Rows(int ID, string TR_Type)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        try
+        //        {
+        //            var companies = db.Database.SqlQuery<Delete_Rows_Result>("Delete_Rows " + ID + ",'" + TR_Type + "'").ToList();
 
-                    return Ok(new BaseResponse(companies));
-
-
-                }
-                catch (Exception ex)
-                {
-                    return Ok(new BaseResponse(HttpStatusCode.ExpectationFailed, ex.Message));
-                }
-            }
-            return BadRequest(ModelState);
-        }
-        [HttpGet, AllowAnonymous]
-        public IHttpActionResult PROC_Enter_Customer(int ID, string TR_Type)
-        {
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    var companies = db.Database.SqlQuery<Enter_Customer_Result>("Enter_Customer " + ID + ",'" + TR_Type + "'").ToList();
-
-                    return Ok(new BaseResponse(companies));
+        //            return Ok(new BaseResponse(companies));
 
 
-                }
-                catch (Exception ex)
-                {
-                    return Ok(new BaseResponse(HttpStatusCode.ExpectationFailed, ex.Message));
-                }
-            }
-            return BadRequest(ModelState);
-        }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            return Ok(new BaseResponse(HttpStatusCode.ExpectationFailed, ex.Message));
+        //        }
+        //    }
+        //    return BadRequest(ModelState);
+        //}
+        //[HttpGet, AllowAnonymous]
+        //public IHttpActionResult PROC_Enter_Customer(int ID, string TR_Type)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        try
+        //        {
+        //            var companies = db.Database.SqlQuery<Enter_Customer_Result>("Enter_Customer " + ID + ",'" + TR_Type + "'").ToList();
+
+        //            return Ok(new BaseResponse(companies));
+
+
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            return Ok(new BaseResponse(HttpStatusCode.ExpectationFailed, ex.Message));
+        //        }
+        //    }
+        //    return BadRequest(ModelState);
+        //}
 
 
         public string ExecuteScalar(string SqlStatement)
@@ -305,9 +305,9 @@ namespace API.Controllers
 
             try
             {
-                var InsertOperationI_Attendance = I_Attendance.Where(x => x.StatusFlag == "i").ToList();
-                var updatedOperationI_Attendance = I_Attendance.Where(x => x.StatusFlag == "u").ToList();
-                var deletedOperationI_Attendance = I_Attendance.Where(x => x.StatusFlag == "d").ToList();
+                var InsertOperationI_Attendance = I_Attendance.Where(x => x.StatusFlag == 'i').ToList();
+                var updatedOperationI_Attendance = I_Attendance.Where(x => x.StatusFlag == 'u').ToList();
+                var deletedOperationI_Attendance = I_Attendance.Where(x => x.StatusFlag == 'd').ToList();
 
 
                 //loop Insert  I_Pur_TR_ReceiveI_Attendance

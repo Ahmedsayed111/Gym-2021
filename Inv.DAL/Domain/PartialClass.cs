@@ -55,7 +55,91 @@ namespace Inv.DAL.Domain
         public int OpCode { get; set; }
        
     }
-  
+    public class SecurityandUpdate_Num_invClass
+    {
+        public string StatusFlag { get; set; }
+        public string UserCode { get; set; }
+        public string Token { get; set; }
+        public int Num_inv { get; set; }
+    }
+    public class SecurityandUpdateFlagClass_flag_Add_new
+    {
+        public string StatusFlag { get; set; }
+        public string UserCode { get; set; }
+        public string Token { get; set; }
+        public Boolean NewAdd { get; set; }
+        public Boolean Renewal { get; set; }
+    }
+    public partial class LoginPage : SecurityandUpdateFlagClass
+    {
+
+    }
+
+    public partial class PRODUCT : SecurityandUpdateFlagClass
+    {
+
+    }
+    public partial class CATEGRES : SecurityandUpdateFlagClass
+    {
+
+    }
+    public partial class Stok_ORDER_DELIVERY : SecurityandUpdateFlagClass
+    {
+
+    }
+    public partial class CUSTOMER : SecurityandUpdateFlagClass
+    {
+
+    }
+    public partial class Outlet : SecurityandUpdateFlagClass
+    {
+
+    }
+    public partial class Supplier : SecurityandUpdateFlagClass
+    {
+
+    }
+    public partial class Purchases_Details : SecurityandUpdateFlagClass
+    {
+
+    }
+    public partial class IQ_Purchases_Details : SecurityandUpdateFlagClass
+    {
+
+    }
+    public partial class Purchases_Master : SecurityandUpdateFlagClass
+    {
+
+    }
+    public partial class familly_Cat : SecurityandUpdateFlagClass
+    {
+
+    }
+    
+    public partial class I_Type_Souscription : SecurityandUpdateFlagClass
+    {
+
+    }
+    public partial class I_Customer_Gym : SecurityandUpdateFlagClass_flag_Add_new
+    {
+
+    }
+    public partial class I_Detais_Data_Custmor : SecurityandUpdateFlagClass
+    {
+
+    }
+    public partial class IQ__Attendance : SecurityandUpdateFlagClass
+    {
+
+    }
+    public partial class I_Attendance_New : SecurityandUpdateFlagClass
+    {
+
+    }
+    public partial class invitation : SecurityandUpdate_Num_invClass
+    {
+
+    }
     public partial class G_Nationality : SecurityandUpdateFlagClass
     {
 
@@ -113,7 +197,7 @@ namespace Inv.DAL.Domain
     {
 
     }
-    public partial class CATEGRE : SecurityandUpdateFlagClass
+    public partial class CATEGRES : SecurityandUpdateFlagClass
     {
 
     }

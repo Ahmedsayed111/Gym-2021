@@ -63,7 +63,7 @@ namespace BLL.Services.I_Attendancee
         public void UpdateList(List<IQ__Attendance> Lstservice)
         {
 
-            var insertedRecord = Lstservice.Where(x => x.StatusFlag =='i');
+            var insertedRecord = Lstservice.Where(x => x.StatusFlag == 'i');
             var updatedRecord = Lstservice.Where(x => x.StatusFlag == 'u');
             var deletedRecord = Lstservice.Where(x => x.StatusFlag == 'd');
 

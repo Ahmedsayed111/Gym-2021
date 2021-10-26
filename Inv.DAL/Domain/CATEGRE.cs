@@ -12,7 +12,7 @@ namespace Inv.DAL.Domain
     using System;
     using System.Collections.Generic;
     
-    public partial class CATEGRE
+    public partial class CATEGRES
     {
         public int ID_CAT { get; set; }
         public string Name_CAT { get; set; }

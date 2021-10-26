@@ -45,9 +45,9 @@ namespace API.Controllers
                 string query = "";
                 if (ID_Souscription != 1001)
                 {
-                    condition = condition + " ID_Souscription =" + ID_Souscription; 
+                    condition = condition + " ID_Souscription =" + ID_Souscription;
 
-                } 
+                }
                 if (Statas != 2)
                 {
 
@@ -55,13 +55,13 @@ namespace API.Controllers
                     {
                         condition = condition + " and ";
 
-                    } 
+                    }
                     condition = condition + " Statas =" + Statas;
                 }
 
                 if (condition == " where")
                 {
-                    query = s ;
+                    query = s;
 
                 }
                 else
@@ -108,7 +108,7 @@ namespace API.Controllers
         {
             if (ModelState.IsValid)
             {
-                string s = "End_Date_Souscription "+ ID_Souscription + "";
+                string s = "End_Date_Souscription " + ID_Souscription + "";
 
                 string query = s;
                 var res = db.Database.SqlQuery<string>(query).ToList();
@@ -135,34 +135,34 @@ namespace API.Controllers
         [HttpGet, AllowAnonymous]
         public IHttpActionResult CodeFounBefore(int ID_Cust)
         {
-           
-                var AccDefVendor = I_Customer_GymServices.GetAll(x => x.ID_Cust == ID_Cust);
 
-                return Ok(new BaseResponse(AccDefVendor));
-           
+            var AccDefVendor = I_Customer_GymServices.GetAll(x => x.ID_Cust == ID_Cust);
+
+            return Ok(new BaseResponse(AccDefVendor));
+
         }
 
 
         [HttpGet, AllowAnonymous]
         public IHttpActionResult Get_Num_inv(int ID_Cust)
-        { 
-            string quer = "select invitation from I_Customer_Gym Where  ID_Cust ="+ ID_Cust;
+        {
+            string quer = "select invitation from I_Customer_Gym Where  ID_Cust =" + ID_Cust;
             var Num_invitation = db.Database.SqlQuery<decimal>(quer);
-            return Ok(new BaseResponse(Num_invitation)); 
+            return Ok(new BaseResponse(Num_invitation));
         }
 
         [HttpPost, AllowAnonymous]
         public IHttpActionResult update_Num_inv([FromBody]invitation invitati)
         {
-            string quer_1 = "insert into invitation values("+ invitati.ID_Cust + " , N'"+ invitati.Name + "' , N'"+ invitati.Phone+ "' , "+ invitati.Carte_Dentite + " , "+ invitati.age + " , (select convert(date, getdate(), 4)) , N'"+ invitati.Remarks+ "')";
+            string quer_1 = "insert into invitation values(" + invitati.ID_Cust + " , N'" + invitati.Name + "' , N'" + invitati.Phone + "' , " + invitati.Carte_Dentite + " , " + invitati.age + " , (select convert(date, getdate(), 4)) , N'" + invitati.Remarks + "')";
 
-           db.Database.ExecuteSqlCommand(quer_1); 
+            db.Database.ExecuteSqlCommand(quer_1);
 
 
 
             string quer_2 = "update I_Customer_Gym set invitation = " + invitati.Num_inv + " where ID_Cust = " + invitati.ID_Cust + "";
 
-             db.Database.ExecuteSqlCommand(quer_2);
+            db.Database.ExecuteSqlCommand(quer_2);
 
 
 
@@ -175,15 +175,15 @@ namespace API.Controllers
         {
             try
             {
-                
-                var insertSubscriptionsItems = Subscriptions.Data_CustmorDetails.Where(x => x.StatusFlag ==  'i').ToList();
+
+                var insertSubscriptionsItems = Subscriptions.Data_CustmorDetails.Where(x => x.StatusFlag == 'i').ToList();
                 var updatedSubscriptionsItems = Subscriptions.Data_CustmorDetails.Where(x => x.StatusFlag == 'u').ToList();
                 var deletedSubscriptionsItems = Subscriptions.Data_CustmorDetails.Where(x => x.StatusFlag == 'd').ToList();
 
                 if (Subscriptions.Custmer_Souscription.NewAdd == true)
                 {
                     //loop insered  I_Customer_Gym 
-                    var InsertedRec = I_Customer_GymServices.Insert(Subscriptions.Custmer_Souscription); 
+                    var InsertedRec = I_Customer_GymServices.Insert(Subscriptions.Custmer_Souscription);
                 }
                 else
                 {
@@ -191,11 +191,11 @@ namespace API.Controllers
                     var updatedRec = I_Customer_GymServices.Update(Subscriptions.Custmer_Souscription);
                 }
 
-                 
+
 
                 //loop insered  I_Detais_Data_Custmor
                 foreach (var item in insertSubscriptionsItems)
-                {                  
+                {
                     var InsertedRec = I_Detais_CustmorServices.Insert(item);
                 }
 
@@ -214,12 +214,12 @@ namespace API.Controllers
                 }
 
 
-                
+
                 if (Subscriptions.Custmer_Souscription.Renewal == true)
                 {
                     string quer = "Insert_Enter_Money N'اشتراك الاعب ( " + Subscriptions.Custmer_Souscription.Name_Customer + " ) ', " + Subscriptions.Custmer_Souscription.Price_After_Discount + ", N'" + Subscriptions.Custmer_Souscription.CreatedBy + "' , N'أيرادات الاشتركات'";
                     var Outlet = db.Database.SqlQuery<decimal>(quer);
-                       return Ok(new BaseResponse(Outlet));
+                    return Ok(new BaseResponse(Outlet));
 
                 }
 

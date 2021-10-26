@@ -10,12 +10,15 @@
 namespace Inv.DAL.Domain
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class G_PaperSize
+    public partial class AFunc_BuildCCTree_Result
     {
-        public int PageSizeID { get; set; }
-        public string PageSizeName { get; set; }
-        public string Descr { get; set; }
+        public Nullable<int> COMP_CODE { get; set; }
+        public string CC_CODE { get; set; }
+        public string CC_DESCA { get; set; }
+        public string CC_DESCE { get; set; }
+        public string CC_PARENT { get; set; }
+        public Nullable<int> real_LEVE { get; set; }
+        public Nullable<long> ROWNUMBER { get; set; }
     }
 }

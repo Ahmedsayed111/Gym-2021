@@ -27,7 +27,7 @@ namespace Inv.DAL.Domain
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<CATEGRE> CATEGRES { get; set; }
+        public virtual DbSet<CATEGRES> CATEGRES { get; set; }
         public virtual DbSet<EMPLOYEE> EMPLOYEEs { get; set; }
         public virtual DbSet<Enter_Money> Enter_Money { get; set; }
         public virtual DbSet<familly_Cat> familly_Cat { get; set; }
@@ -43,7 +43,6 @@ namespace Inv.DAL.Domain
         public virtual DbSet<G_MODULES> G_MODULES { get; set; }
         public virtual DbSet<G_Noteifications> G_Noteifications { get; set; }
         public virtual DbSet<G_NotificationCompany> G_NotificationCompany { get; set; }
-        public virtual DbSet<G_PaperSize> G_PaperSize { get; set; }
         public virtual DbSet<G_REGION> G_REGION { get; set; }
         public virtual DbSet<G_REGION_BRANCH> G_REGION_BRANCH { get; set; }
         public virtual DbSet<G_Role> G_Role { get; set; }
@@ -59,7 +58,6 @@ namespace Inv.DAL.Domain
         public virtual DbSet<G_USER_BRANCH> G_USER_BRANCH { get; set; }
         public virtual DbSet<G_USER_COMPANY> G_USER_COMPANY { get; set; }
         public virtual DbSet<G_USER_LOG> G_USER_LOG { get; set; }
-        public virtual DbSet<G_USERS> G_USERS { get; set; }
         public virtual DbSet<I_Control> I_Control { get; set; }
         public virtual DbSet<ORDER_DELIVERY> ORDER_DELIVERY { get; set; }
         public virtual DbSet<Outlet> Outlets { get; set; }
@@ -89,6 +87,92 @@ namespace Inv.DAL.Domain
         public virtual DbSet<CUSTOMER> CUSTOMERs { get; set; }
         public virtual DbSet<Catch_Receipt> Catch_Receipt { get; set; }
         public virtual DbSet<IQ_Catch_Receipt> IQ_Catch_Receipt { get; set; }
+        public virtual DbSet<IQ__Attendance> IQ__Attendance { get; set; }
+        public virtual DbSet<IQ_Custmer_Souscription> IQ_Custmer_Souscription { get; set; }
+        public virtual DbSet<I_Customer_Gym> I_Customer_Gym { get; set; }
+        public virtual DbSet<A_PERIOD> A_PERIOD { get; set; }
+        public virtual DbSet<A_TmpVoucherProcess> A_TmpVoucherProcess { get; set; }
+        public virtual DbSet<A_TR_VchrTemplate> A_TR_VchrTemplate { get; set; }
+        public virtual DbSet<A_TR_VchrTemplateDetail> A_TR_VchrTemplateDetail { get; set; }
+        public virtual DbSet<A_Voucher_Types> A_Voucher_Types { get; set; }
+        public virtual DbSet<ACGroup> ACGroups { get; set; }
+        public virtual DbSet<ACTimeZone> ACTimeZones { get; set; }
+        public virtual DbSet<ACUnlockComb> ACUnlockCombs { get; set; }
+        public virtual DbSet<AlarmLog> AlarmLogs { get; set; }
+        public virtual DbSet<AttParam> AttParams { get; set; }
+        public virtual DbSet<AuditedExc> AuditedExcs { get; set; }
+        public virtual DbSet<AUTHDEVICE> AUTHDEVICEs { get; set; }
+        public virtual DbSet<CHECKEXACT> CHECKEXACTs { get; set; }
+        public virtual DbSet<CHECKINOUT> CHECKINOUTs { get; set; }
+        public virtual DbSet<DEPARTMENT> DEPARTMENTS { get; set; }
+        public virtual DbSet<DeptUsedSch> DeptUsedSchs { get; set; }
+        public virtual DbSet<FaceTemp> FaceTemps { get; set; }
+        public virtual DbSet<G_COST_CENTER> G_COST_CENTER { get; set; }
+        public virtual DbSet<G_LnkTrans> G_LnkTrans { get; set; }
+        public virtual DbSet<G_LnkTrans_Temp> G_LnkTrans_Temp { get; set; }
+        public virtual DbSet<G_LnkTrans_TempVchr> G_LnkTrans_TempVchr { get; set; }
+        public virtual DbSet<G_LnkTransVariable> G_LnkTransVariable { get; set; }
+        public virtual DbSet<G_LnkTransVoucher> G_LnkTransVoucher { get; set; }
+        public virtual DbSet<G_LnkVar> G_LnkVar { get; set; }
+        public virtual DbSet<G_LnkVarBranch> G_LnkVarBranch { get; set; }
+        public virtual DbSet<G_News> G_News { get; set; }
+        public virtual DbSet<G_ReportWebSetting> G_ReportWebSetting { get; set; }
+        public virtual DbSet<G_VatNature> G_VatNature { get; set; }
+        public virtual DbSet<HOLIDAY> HOLIDAYS { get; set; }
+        public virtual DbSet<I_Attendance> I_Attendance { get; set; }
+        public virtual DbSet<I_Detais_Data_Custmor> I_Detais_Data_Custmor { get; set; }
+        public virtual DbSet<I_Type_Souscription> I_Type_Souscription { get; set; }
+        public virtual DbSet<invitation> invitations { get; set; }
+        public virtual DbSet<LeaveClass> LeaveClasses { get; set; }
+        public virtual DbSet<LeaveClass1> LeaveClass1 { get; set; }
+        public virtual DbSet<Machine> Machines { get; set; }
+        public virtual DbSet<NUM_RUN> NUM_RUN { get; set; }
+        public virtual DbSet<NUM_RUN_DEIL> NUM_RUN_DEIL { get; set; }
+        public virtual DbSet<ReportItem> ReportItems { get; set; }
+        public virtual DbSet<SchClass> SchClasses { get; set; }
+        public virtual DbSet<SECURITYDETAIL> SECURITYDETAILS { get; set; }
+        public virtual DbSet<SHIFT> SHIFTs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<SystemLog> SystemLogs { get; set; }
+        public virtual DbSet<TBSMSALLOT> TBSMSALLOTs { get; set; }
+        public virtual DbSet<TBSMSINFO> TBSMSINFOes { get; set; }
+        public virtual DbSet<TEMPLATE> TEMPLATEs { get; set; }
+        public virtual DbSet<USER_OF_RUN> USER_OF_RUN { get; set; }
+        public virtual DbSet<USER_SPEDAY> USER_SPEDAY { get; set; }
+        public virtual DbSet<USER_TEMP_SCH> USER_TEMP_SCH { get; set; }
+        public virtual DbSet<UserACMachine> UserACMachines { get; set; }
+        public virtual DbSet<UserACPrivilege> UserACPrivileges { get; set; }
+        public virtual DbSet<UserAttendance> UserAttendances { get; set; }
+        public virtual DbSet<USERINFO> USERINFOes { get; set; }
+        public virtual DbSet<UserUpdate> UserUpdates { get; set; }
+        public virtual DbSet<UserUsedSClass> UserUsedSClasses { get; set; }
+        public virtual DbSet<EmOpLog> EmOpLogs { get; set; }
+        public virtual DbSet<ServerLog> ServerLogs { get; set; }
+        public virtual DbSet<UsersMachine> UsersMachines { get; set; }
+        public virtual DbSet<AQ_GetVchrTemplateDetail> AQ_GetVchrTemplateDetail { get; set; }
+        public virtual DbSet<AQVAT_GetPeriodDetail> AQVAT_GetPeriodDetail { get; set; }
+        public virtual DbSet<AQVat_Srch_VatPurchaseHeader> AQVat_Srch_VatPurchaseHeader { get; set; }
+        public virtual DbSet<GQ_GetLnkTransVoucher> GQ_GetLnkTransVoucher { get; set; }
+        public virtual DbSet<GQ_GetLnkTransVoucherDetail> GQ_GetLnkTransVoucherDetail { get; set; }
+        public virtual DbSet<GQ_GetLnkVarBranch> GQ_GetLnkVarBranch { get; set; }
+        public virtual DbSet<GQ_GetLnkVoucherDetail> GQ_GetLnkVoucherDetail { get; set; }
+        public virtual DbSet<IQ_GetBoxAdjustmentList> IQ_GetBoxAdjustmentList { get; set; }
+        public virtual DbSet<IQ_GetBoxAdjustmentVat> IQ_GetBoxAdjustmentVat { get; set; }
+        public virtual DbSet<IQ_GetBoxReceiveList> IQ_GetBoxReceiveList { get; set; }
+        public virtual DbSet<IQ_GetCustomer> IQ_GetCustomer { get; set; }
+        public virtual DbSet<IQ_GetStkAdjust> IQ_GetStkAdjust { get; set; }
+        public virtual DbSet<IQ_GetStkAdjustDetail> IQ_GetStkAdjustDetail { get; set; }
+        public virtual DbSet<IQ_GetTransfer> IQ_GetTransfer { get; set; }
+        public virtual DbSet<IQ_GetTransferDetail> IQ_GetTransferDetail { get; set; }
+        public virtual DbSet<IQ_GetVendor> IQ_GetVendor { get; set; }
+        public virtual DbSet<IQ_LnkInvoice> IQ_LnkInvoice { get; set; }
+        public virtual DbSet<IQ_NoteBoxPaymentList> IQ_NoteBoxPaymentList { get; set; }
+        public virtual DbSet<IQ_NoteBoxReceiveList> IQ_NoteBoxReceiveList { get; set; }
+        public virtual DbSet<IQ_NoteOperation> IQ_NoteOperation { get; set; }
+        public virtual DbSet<IQ_NotePurReceive> IQ_NotePurReceive { get; set; }
+        public virtual DbSet<IQ_NoteSlsInvoiceList> IQ_NoteSlsInvoiceList { get; set; }
+        public virtual DbSet<IQ_NoteSlsInvReturnList> IQ_NoteSlsInvReturnList { get; set; }
+        public virtual DbSet<G_USERS> G_USERS { get; set; }
     
         [DbFunction("InvEntities", "GFun_Companies")]
         public virtual IQueryable<GFun_Companies_Result> GFun_Companies(string userCode)
@@ -645,6 +729,1033 @@ namespace Inv.DAL.Domain
                 new ObjectParameter("ToDate", typeof(System.DateTime));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<all_The_Gard_Result>("all_The_Gard", userNameParameter, fromDateParameter, toDateParameter);
+        }
+    
+        public virtual int select_days(ObjectParameter num_Day_out)
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("select_days", num_Day_out);
+        }
+    
+        public virtual int Select_Date_Day_Out(Nullable<int> num_Day, ObjectParameter endDate)
+        {
+            var num_DayParameter = num_Day.HasValue ?
+                new ObjectParameter("Num_Day", num_Day) :
+                new ObjectParameter("Num_Day", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Select_Date_Day_Out", num_DayParameter, endDate);
+        }
+    
+        [DbFunction("InvEntities", "A_CustomerTransactionDetail")]
+        public virtual IQueryable<A_CustomerTransactionDetail_Result> A_CustomerTransactionDetail(Nullable<int> comp, Nullable<int> catID, Nullable<int> groupID, Nullable<int> custID, Nullable<int> stat, string fromDate, string todate)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("Comp", comp) :
+                new ObjectParameter("Comp", typeof(int));
+    
+            var catIDParameter = catID.HasValue ?
+                new ObjectParameter("CatID", catID) :
+                new ObjectParameter("CatID", typeof(int));
+    
+            var groupIDParameter = groupID.HasValue ?
+                new ObjectParameter("GroupID", groupID) :
+                new ObjectParameter("GroupID", typeof(int));
+    
+            var custIDParameter = custID.HasValue ?
+                new ObjectParameter("CustID", custID) :
+                new ObjectParameter("CustID", typeof(int));
+    
+            var statParameter = stat.HasValue ?
+                new ObjectParameter("Stat", stat) :
+                new ObjectParameter("Stat", typeof(int));
+    
+            var fromDateParameter = fromDate != null ?
+                new ObjectParameter("FromDate", fromDate) :
+                new ObjectParameter("FromDate", typeof(string));
+    
+            var todateParameter = todate != null ?
+                new ObjectParameter("Todate", todate) :
+                new ObjectParameter("Todate", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<A_CustomerTransactionDetail_Result>("[InvEntities].[A_CustomerTransactionDetail](@Comp, @CatID, @GroupID, @CustID, @Stat, @FromDate, @Todate)", compParameter, catIDParameter, groupIDParameter, custIDParameter, statParameter, fromDateParameter, todateParameter);
+        }
+    
+        [DbFunction("InvEntities", "A_VendorCollectiveTransactionDetail")]
+        public virtual IQueryable<A_VendorCollectiveTransactionDetail_Result> A_VendorCollectiveTransactionDetail(Nullable<int> comp, Nullable<int> catID, Nullable<int> groupID, Nullable<int> custID, Nullable<int> stat, string fromDate, string todate)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("Comp", comp) :
+                new ObjectParameter("Comp", typeof(int));
+    
+            var catIDParameter = catID.HasValue ?
+                new ObjectParameter("CatID", catID) :
+                new ObjectParameter("CatID", typeof(int));
+    
+            var groupIDParameter = groupID.HasValue ?
+                new ObjectParameter("GroupID", groupID) :
+                new ObjectParameter("GroupID", typeof(int));
+    
+            var custIDParameter = custID.HasValue ?
+                new ObjectParameter("CustID", custID) :
+                new ObjectParameter("CustID", typeof(int));
+    
+            var statParameter = stat.HasValue ?
+                new ObjectParameter("Stat", stat) :
+                new ObjectParameter("Stat", typeof(int));
+    
+            var fromDateParameter = fromDate != null ?
+                new ObjectParameter("FromDate", fromDate) :
+                new ObjectParameter("FromDate", typeof(string));
+    
+            var todateParameter = todate != null ?
+                new ObjectParameter("Todate", todate) :
+                new ObjectParameter("Todate", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<A_VendorCollectiveTransactionDetail_Result>("[InvEntities].[A_VendorCollectiveTransactionDetail](@Comp, @CatID, @GroupID, @CustID, @Stat, @FromDate, @Todate)", compParameter, catIDParameter, groupIDParameter, custIDParameter, statParameter, fromDateParameter, todateParameter);
+        }
+    
+        [DbFunction("InvEntities", "A_VendorTransactionDetail")]
+        public virtual IQueryable<A_VendorTransactionDetail_Result> A_VendorTransactionDetail(Nullable<int> comp, Nullable<int> catID, Nullable<int> groupID, Nullable<int> custID, Nullable<int> stat, string fromDate, string todate)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("Comp", comp) :
+                new ObjectParameter("Comp", typeof(int));
+    
+            var catIDParameter = catID.HasValue ?
+                new ObjectParameter("CatID", catID) :
+                new ObjectParameter("CatID", typeof(int));
+    
+            var groupIDParameter = groupID.HasValue ?
+                new ObjectParameter("GroupID", groupID) :
+                new ObjectParameter("GroupID", typeof(int));
+    
+            var custIDParameter = custID.HasValue ?
+                new ObjectParameter("CustID", custID) :
+                new ObjectParameter("CustID", typeof(int));
+    
+            var statParameter = stat.HasValue ?
+                new ObjectParameter("Stat", stat) :
+                new ObjectParameter("Stat", typeof(int));
+    
+            var fromDateParameter = fromDate != null ?
+                new ObjectParameter("FromDate", fromDate) :
+                new ObjectParameter("FromDate", typeof(string));
+    
+            var todateParameter = todate != null ?
+                new ObjectParameter("Todate", todate) :
+                new ObjectParameter("Todate", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<A_VendorTransactionDetail_Result>("[InvEntities].[A_VendorTransactionDetail](@Comp, @CatID, @GroupID, @CustID, @Stat, @FromDate, @Todate)", compParameter, catIDParameter, groupIDParameter, custIDParameter, statParameter, fromDateParameter, todateParameter);
+        }
+    
+        [DbFunction("InvEntities", "AFunc_BuildAccTree")]
+        public virtual IQueryable<AFunc_BuildAccTree_Result> AFunc_BuildAccTree(Nullable<int> cOMP_CODE)
+        {
+            var cOMP_CODEParameter = cOMP_CODE.HasValue ?
+                new ObjectParameter("COMP_CODE", cOMP_CODE) :
+                new ObjectParameter("COMP_CODE", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<AFunc_BuildAccTree_Result>("[InvEntities].[AFunc_BuildAccTree](@COMP_CODE)", cOMP_CODEParameter);
+        }
+    
+        [DbFunction("InvEntities", "AFunc_BuildAccTreeWithAcc")]
+        public virtual IQueryable<AFunc_BuildAccTreeWithAcc_Result> AFunc_BuildAccTreeWithAcc(Nullable<int> cOMP_CODE, string aCC_CODE)
+        {
+            var cOMP_CODEParameter = cOMP_CODE.HasValue ?
+                new ObjectParameter("COMP_CODE", cOMP_CODE) :
+                new ObjectParameter("COMP_CODE", typeof(int));
+    
+            var aCC_CODEParameter = aCC_CODE != null ?
+                new ObjectParameter("ACC_CODE", aCC_CODE) :
+                new ObjectParameter("ACC_CODE", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<AFunc_BuildAccTreeWithAcc_Result>("[InvEntities].[AFunc_BuildAccTreeWithAcc](@COMP_CODE, @ACC_CODE)", cOMP_CODEParameter, aCC_CODEParameter);
+        }
+    
+        [DbFunction("InvEntities", "AFunc_BuildCCTree")]
+        public virtual IQueryable<AFunc_BuildCCTree_Result> AFunc_BuildCCTree(Nullable<int> cOMP_CODE)
+        {
+            var cOMP_CODEParameter = cOMP_CODE.HasValue ?
+                new ObjectParameter("COMP_CODE", cOMP_CODE) :
+                new ObjectParameter("COMP_CODE", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<AFunc_BuildCCTree_Result>("[InvEntities].[AFunc_BuildCCTree](@COMP_CODE)", cOMP_CODEParameter);
+        }
+    
+        [DbFunction("InvEntities", "AFunc_BuildCCTreeWithCC")]
+        public virtual IQueryable<AFunc_BuildCCTreeWithCC_Result> AFunc_BuildCCTreeWithCC(Nullable<int> cOMP_CODE, string cC_CODE)
+        {
+            var cOMP_CODEParameter = cOMP_CODE.HasValue ?
+                new ObjectParameter("COMP_CODE", cOMP_CODE) :
+                new ObjectParameter("COMP_CODE", typeof(int));
+    
+            var cC_CODEParameter = cC_CODE != null ?
+                new ObjectParameter("CC_CODE", cC_CODE) :
+                new ObjectParameter("CC_CODE", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<AFunc_BuildCCTreeWithCC_Result>("[InvEntities].[AFunc_BuildCCTreeWithCC](@COMP_CODE, @CC_CODE)", cOMP_CODEParameter, cC_CODEParameter);
+        }
+    
+        [DbFunction("InvEntities", "AFunc_GLAccountStatmentDetail")]
+        public virtual IQueryable<AFunc_GLAccountStatmentDetail_Result> AFunc_GLAccountStatmentDetail(Nullable<int> comp, string fromDate, string toDate, string cc_Code, string fromAccCode, string toAccCode, Nullable<int> isAuthVchr, Nullable<int> isNewVchr, Nullable<int> exZero)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("comp", comp) :
+                new ObjectParameter("comp", typeof(int));
+    
+            var fromDateParameter = fromDate != null ?
+                new ObjectParameter("FromDate", fromDate) :
+                new ObjectParameter("FromDate", typeof(string));
+    
+            var toDateParameter = toDate != null ?
+                new ObjectParameter("ToDate", toDate) :
+                new ObjectParameter("ToDate", typeof(string));
+    
+            var cc_CodeParameter = cc_Code != null ?
+                new ObjectParameter("cc_Code", cc_Code) :
+                new ObjectParameter("cc_Code", typeof(string));
+    
+            var fromAccCodeParameter = fromAccCode != null ?
+                new ObjectParameter("FromAccCode", fromAccCode) :
+                new ObjectParameter("FromAccCode", typeof(string));
+    
+            var toAccCodeParameter = toAccCode != null ?
+                new ObjectParameter("ToAccCode", toAccCode) :
+                new ObjectParameter("ToAccCode", typeof(string));
+    
+            var isAuthVchrParameter = isAuthVchr.HasValue ?
+                new ObjectParameter("IsAuthVchr", isAuthVchr) :
+                new ObjectParameter("IsAuthVchr", typeof(int));
+    
+            var isNewVchrParameter = isNewVchr.HasValue ?
+                new ObjectParameter("IsNewVchr", isNewVchr) :
+                new ObjectParameter("IsNewVchr", typeof(int));
+    
+            var exZeroParameter = exZero.HasValue ?
+                new ObjectParameter("ExZero", exZero) :
+                new ObjectParameter("ExZero", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<AFunc_GLAccountStatmentDetail_Result>("[InvEntities].[AFunc_GLAccountStatmentDetail](@comp, @FromDate, @ToDate, @cc_Code, @FromAccCode, @ToAccCode, @IsAuthVchr, @IsNewVchr, @ExZero)", compParameter, fromDateParameter, toDateParameter, cc_CodeParameter, fromAccCodeParameter, toAccCodeParameter, isAuthVchrParameter, isNewVchrParameter, exZeroParameter);
+        }
+    
+        [DbFunction("InvEntities", "AFunc_GLDtCCenterStatmentDetail")]
+        public virtual IQueryable<AFunc_GLDtCCenterStatmentDetail_Result> AFunc_GLDtCCenterStatmentDetail(Nullable<int> comp, string fromDate, string toDate, string cCDT_CODE, string fromAccCode, Nullable<int> isAuthVchr, Nullable<int> isNewVchr, Nullable<int> exZero)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("comp", comp) :
+                new ObjectParameter("comp", typeof(int));
+    
+            var fromDateParameter = fromDate != null ?
+                new ObjectParameter("FromDate", fromDate) :
+                new ObjectParameter("FromDate", typeof(string));
+    
+            var toDateParameter = toDate != null ?
+                new ObjectParameter("ToDate", toDate) :
+                new ObjectParameter("ToDate", typeof(string));
+    
+            var cCDT_CODEParameter = cCDT_CODE != null ?
+                new ObjectParameter("CCDT_CODE", cCDT_CODE) :
+                new ObjectParameter("CCDT_CODE", typeof(string));
+    
+            var fromAccCodeParameter = fromAccCode != null ?
+                new ObjectParameter("FromAccCode", fromAccCode) :
+                new ObjectParameter("FromAccCode", typeof(string));
+    
+            var isAuthVchrParameter = isAuthVchr.HasValue ?
+                new ObjectParameter("IsAuthVchr", isAuthVchr) :
+                new ObjectParameter("IsAuthVchr", typeof(int));
+    
+            var isNewVchrParameter = isNewVchr.HasValue ?
+                new ObjectParameter("IsNewVchr", isNewVchr) :
+                new ObjectParameter("IsNewVchr", typeof(int));
+    
+            var exZeroParameter = exZero.HasValue ?
+                new ObjectParameter("ExZero", exZero) :
+                new ObjectParameter("ExZero", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<AFunc_GLDtCCenterStatmentDetail_Result>("[InvEntities].[AFunc_GLDtCCenterStatmentDetail](@comp, @FromDate, @ToDate, @CCDT_CODE, @FromAccCode, @IsAuthVchr, @IsNewVchr, @ExZero)", compParameter, fromDateParameter, toDateParameter, cCDT_CODEParameter, fromAccCodeParameter, isAuthVchrParameter, isNewVchrParameter, exZeroParameter);
+        }
+    
+        [DbFunction("InvEntities", "AFunc_VATTRANSLIST")]
+        public virtual IQueryable<AFunc_VATTRANSLIST_Result> AFunc_VATTRANSLIST(Nullable<int> cOMP, Nullable<int> sEC, Nullable<System.DateTime> startdate, Nullable<System.DateTime> endDate)
+        {
+            var cOMPParameter = cOMP.HasValue ?
+                new ObjectParameter("COMP", cOMP) :
+                new ObjectParameter("COMP", typeof(int));
+    
+            var sECParameter = sEC.HasValue ?
+                new ObjectParameter("SEC", sEC) :
+                new ObjectParameter("SEC", typeof(int));
+    
+            var startdateParameter = startdate.HasValue ?
+                new ObjectParameter("Startdate", startdate) :
+                new ObjectParameter("Startdate", typeof(System.DateTime));
+    
+            var endDateParameter = endDate.HasValue ?
+                new ObjectParameter("EndDate", endDate) :
+                new ObjectParameter("EndDate", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<AFunc_VATTRANSLIST_Result>("[InvEntities].[AFunc_VATTRANSLIST](@COMP, @SEC, @Startdate, @EndDate)", cOMPParameter, sECParameter, startdateParameter, endDateParameter);
+        }
+    
+        [DbFunction("InvEntities", "AFunc_VATTRANSLISTInventory")]
+        public virtual IQueryable<AFunc_VATTRANSLISTInventory_Result> AFunc_VATTRANSLISTInventory(Nullable<int> cOMP, Nullable<int> sEC, Nullable<System.DateTime> startdate, Nullable<System.DateTime> endDate)
+        {
+            var cOMPParameter = cOMP.HasValue ?
+                new ObjectParameter("COMP", cOMP) :
+                new ObjectParameter("COMP", typeof(int));
+    
+            var sECParameter = sEC.HasValue ?
+                new ObjectParameter("SEC", sEC) :
+                new ObjectParameter("SEC", typeof(int));
+    
+            var startdateParameter = startdate.HasValue ?
+                new ObjectParameter("Startdate", startdate) :
+                new ObjectParameter("Startdate", typeof(System.DateTime));
+    
+            var endDateParameter = endDate.HasValue ?
+                new ObjectParameter("EndDate", endDate) :
+                new ObjectParameter("EndDate", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<AFunc_VATTRANSLISTInventory_Result>("[InvEntities].[AFunc_VATTRANSLISTInventory](@COMP, @SEC, @Startdate, @EndDate)", cOMPParameter, sECParameter, startdateParameter, endDateParameter);
+        }
+    
+        [DbFunction("InvEntities", "AFunc_VATTRANSLISTOperation")]
+        public virtual IQueryable<AFunc_VATTRANSLISTOperation_Result> AFunc_VATTRANSLISTOperation(Nullable<int> cOMP, Nullable<int> sEC, Nullable<System.DateTime> startdate, Nullable<System.DateTime> endDate)
+        {
+            var cOMPParameter = cOMP.HasValue ?
+                new ObjectParameter("COMP", cOMP) :
+                new ObjectParameter("COMP", typeof(int));
+    
+            var sECParameter = sEC.HasValue ?
+                new ObjectParameter("SEC", sEC) :
+                new ObjectParameter("SEC", typeof(int));
+    
+            var startdateParameter = startdate.HasValue ?
+                new ObjectParameter("Startdate", startdate) :
+                new ObjectParameter("Startdate", typeof(System.DateTime));
+    
+            var endDateParameter = endDate.HasValue ?
+                new ObjectParameter("EndDate", endDate) :
+                new ObjectParameter("EndDate", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<AFunc_VATTRANSLISTOperation_Result>("[InvEntities].[AFunc_VATTRANSLISTOperation](@COMP, @SEC, @Startdate, @EndDate)", cOMPParameter, sECParameter, startdateParameter, endDateParameter);
+        }
+    
+        [DbFunction("InvEntities", "AFunc_VoucherCCDTTotals")]
+        public virtual IQueryable<AFunc_VoucherCCDTTotals_Result> AFunc_VoucherCCDTTotals(Nullable<int> comp, Nullable<int> authorized, Nullable<int> newvoucher, string cCDT_code, string acc_code, string fromDate, string todate)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("comp", comp) :
+                new ObjectParameter("comp", typeof(int));
+    
+            var authorizedParameter = authorized.HasValue ?
+                new ObjectParameter("authorized", authorized) :
+                new ObjectParameter("authorized", typeof(int));
+    
+            var newvoucherParameter = newvoucher.HasValue ?
+                new ObjectParameter("newvoucher", newvoucher) :
+                new ObjectParameter("newvoucher", typeof(int));
+    
+            var cCDT_codeParameter = cCDT_code != null ?
+                new ObjectParameter("CCDT_code", cCDT_code) :
+                new ObjectParameter("CCDT_code", typeof(string));
+    
+            var acc_codeParameter = acc_code != null ?
+                new ObjectParameter("Acc_code", acc_code) :
+                new ObjectParameter("Acc_code", typeof(string));
+    
+            var fromDateParameter = fromDate != null ?
+                new ObjectParameter("FromDate", fromDate) :
+                new ObjectParameter("FromDate", typeof(string));
+    
+            var todateParameter = todate != null ?
+                new ObjectParameter("Todate", todate) :
+                new ObjectParameter("Todate", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<AFunc_VoucherCCDTTotals_Result>("[InvEntities].[AFunc_VoucherCCDTTotals](@comp, @authorized, @newvoucher, @CCDT_code, @Acc_code, @FromDate, @Todate)", compParameter, authorizedParameter, newvoucherParameter, cCDT_codeParameter, acc_codeParameter, fromDateParameter, todateParameter);
+        }
+    
+        [DbFunction("InvEntities", "AFunc_VoucherTotals")]
+        public virtual IQueryable<AFunc_VoucherTotals_Result> AFunc_VoucherTotals(Nullable<int> comp, Nullable<int> authorized, Nullable<int> newvoucher, string cc_code, string fromDate, string todate)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("comp", comp) :
+                new ObjectParameter("comp", typeof(int));
+    
+            var authorizedParameter = authorized.HasValue ?
+                new ObjectParameter("authorized", authorized) :
+                new ObjectParameter("authorized", typeof(int));
+    
+            var newvoucherParameter = newvoucher.HasValue ?
+                new ObjectParameter("newvoucher", newvoucher) :
+                new ObjectParameter("newvoucher", typeof(int));
+    
+            var cc_codeParameter = cc_code != null ?
+                new ObjectParameter("cc_code", cc_code) :
+                new ObjectParameter("cc_code", typeof(string));
+    
+            var fromDateParameter = fromDate != null ?
+                new ObjectParameter("FromDate", fromDate) :
+                new ObjectParameter("FromDate", typeof(string));
+    
+            var todateParameter = todate != null ?
+                new ObjectParameter("Todate", todate) :
+                new ObjectParameter("Todate", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<AFunc_VoucherTotals_Result>("[InvEntities].[AFunc_VoucherTotals](@comp, @authorized, @newvoucher, @cc_code, @FromDate, @Todate)", compParameter, authorizedParameter, newvoucherParameter, cc_codeParameter, fromDateParameter, todateParameter);
+        }
+    
+        public virtual int AProc_Prnt_CashVoucher(Nullable<int> comp, Nullable<int> bra, string compNameA, string compNameE, string braNameA, string braNameE, string loginUser, Nullable<int> repType, Nullable<int> tRId)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("comp", comp) :
+                new ObjectParameter("comp", typeof(int));
+    
+            var braParameter = bra.HasValue ?
+                new ObjectParameter("bra", bra) :
+                new ObjectParameter("bra", typeof(int));
+    
+            var compNameAParameter = compNameA != null ?
+                new ObjectParameter("CompNameA", compNameA) :
+                new ObjectParameter("CompNameA", typeof(string));
+    
+            var compNameEParameter = compNameE != null ?
+                new ObjectParameter("CompNameE", compNameE) :
+                new ObjectParameter("CompNameE", typeof(string));
+    
+            var braNameAParameter = braNameA != null ?
+                new ObjectParameter("BraNameA", braNameA) :
+                new ObjectParameter("BraNameA", typeof(string));
+    
+            var braNameEParameter = braNameE != null ?
+                new ObjectParameter("BraNameE", braNameE) :
+                new ObjectParameter("BraNameE", typeof(string));
+    
+            var loginUserParameter = loginUser != null ?
+                new ObjectParameter("LoginUser", loginUser) :
+                new ObjectParameter("LoginUser", typeof(string));
+    
+            var repTypeParameter = repType.HasValue ?
+                new ObjectParameter("RepType", repType) :
+                new ObjectParameter("RepType", typeof(int));
+    
+            var tRIdParameter = tRId.HasValue ?
+                new ObjectParameter("TRId", tRId) :
+                new ObjectParameter("TRId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("AProc_Prnt_CashVoucher", compParameter, braParameter, compNameAParameter, compNameEParameter, braNameAParameter, braNameEParameter, loginUserParameter, repTypeParameter, tRIdParameter);
+        }
+    
+        public virtual int AProc_Prnt_JournalVoucher(Nullable<int> comp, Nullable<int> bra, string compNameA, string compNameE, string braNameA, string braNameE, string loginUser, Nullable<int> repType, Nullable<int> tRId)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("comp", comp) :
+                new ObjectParameter("comp", typeof(int));
+    
+            var braParameter = bra.HasValue ?
+                new ObjectParameter("bra", bra) :
+                new ObjectParameter("bra", typeof(int));
+    
+            var compNameAParameter = compNameA != null ?
+                new ObjectParameter("CompNameA", compNameA) :
+                new ObjectParameter("CompNameA", typeof(string));
+    
+            var compNameEParameter = compNameE != null ?
+                new ObjectParameter("CompNameE", compNameE) :
+                new ObjectParameter("CompNameE", typeof(string));
+    
+            var braNameAParameter = braNameA != null ?
+                new ObjectParameter("BraNameA", braNameA) :
+                new ObjectParameter("BraNameA", typeof(string));
+    
+            var braNameEParameter = braNameE != null ?
+                new ObjectParameter("BraNameE", braNameE) :
+                new ObjectParameter("BraNameE", typeof(string));
+    
+            var loginUserParameter = loginUser != null ?
+                new ObjectParameter("LoginUser", loginUser) :
+                new ObjectParameter("LoginUser", typeof(string));
+    
+            var repTypeParameter = repType.HasValue ?
+                new ObjectParameter("RepType", repType) :
+                new ObjectParameter("RepType", typeof(int));
+    
+            var tRIdParameter = tRId.HasValue ?
+                new ObjectParameter("TRId", tRId) :
+                new ObjectParameter("TRId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("AProc_Prnt_JournalVoucher", compParameter, braParameter, compNameAParameter, compNameEParameter, braNameAParameter, braNameEParameter, loginUserParameter, repTypeParameter, tRIdParameter);
+        }
+    
+        public virtual int AProc_ReverseVoucher(Nullable<int> comp, string user, Nullable<int> trID, ObjectParameter newID)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("Comp", comp) :
+                new ObjectParameter("Comp", typeof(int));
+    
+            var userParameter = user != null ?
+                new ObjectParameter("user", user) :
+                new ObjectParameter("user", typeof(string));
+    
+            var trIDParameter = trID.HasValue ?
+                new ObjectParameter("TrID", trID) :
+                new ObjectParameter("TrID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("AProc_ReverseVoucher", compParameter, userParameter, trIDParameter, newID);
+        }
+    
+        public virtual int AProc_VATPeriodClose(Nullable<int> comp, Nullable<int> yr, Nullable<int> prd, ObjectParameter voucherCode)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("Comp", comp) :
+                new ObjectParameter("Comp", typeof(int));
+    
+            var yrParameter = yr.HasValue ?
+                new ObjectParameter("yr", yr) :
+                new ObjectParameter("yr", typeof(int));
+    
+            var prdParameter = prd.HasValue ?
+                new ObjectParameter("Prd", prd) :
+                new ObjectParameter("Prd", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("AProc_VATPeriodClose", compParameter, yrParameter, prdParameter, voucherCode);
+        }
+    
+        public virtual int AProc_VATVatPeriodCalculate(Nullable<int> comp, Nullable<int> yr, Nullable<int> prd, ObjectParameter ok)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("Comp", comp) :
+                new ObjectParameter("Comp", typeof(int));
+    
+            var yrParameter = yr.HasValue ?
+                new ObjectParameter("yr", yr) :
+                new ObjectParameter("yr", typeof(int));
+    
+            var prdParameter = prd.HasValue ?
+                new ObjectParameter("Prd", prd) :
+                new ObjectParameter("Prd", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("AProc_VATVatPeriodCalculate", compParameter, yrParameter, prdParameter, ok);
+        }
+    
+        public virtual int Bse_AddAllModule()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Bse_AddAllModule");
+        }
+    
+        public virtual int Bse_AddModule(string module)
+        {
+            var moduleParameter = module != null ?
+                new ObjectParameter("Module", module) :
+                new ObjectParameter("Module", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Bse_AddModule", moduleParameter);
+        }
+    
+        public virtual int bse_DropFK()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("bse_DropFK");
+        }
+    
+        public virtual int BSE_initCompany(Nullable<int> comp, Nullable<int> braCode, Nullable<int> yearid, Nullable<int> fromComp)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("comp", comp) :
+                new ObjectParameter("comp", typeof(int));
+    
+            var braCodeParameter = braCode.HasValue ?
+                new ObjectParameter("BraCode", braCode) :
+                new ObjectParameter("BraCode", typeof(int));
+    
+            var yearidParameter = yearid.HasValue ?
+                new ObjectParameter("yearid", yearid) :
+                new ObjectParameter("yearid", typeof(int));
+    
+            var fromCompParameter = fromComp.HasValue ?
+                new ObjectParameter("FromComp", fromComp) :
+                new ObjectParameter("FromComp", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("BSE_initCompany", compParameter, braCodeParameter, yearidParameter, fromCompParameter);
+        }
+    
+        public virtual int Bse_ITEMdata()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Bse_ITEMdata");
+        }
+    
+        public virtual int Bse_zapdata()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Bse_zapdata");
+        }
+    
+        [DbFunction("InvEntities", "BUILD_TREE_withCompCode")]
+        public virtual IQueryable<BUILD_TREE_withCompCode_Result> BUILD_TREE_withCompCode(Nullable<int> cOMP_CODE)
+        {
+            var cOMP_CODEParameter = cOMP_CODE.HasValue ?
+                new ObjectParameter("COMP_CODE", cOMP_CODE) :
+                new ObjectParameter("COMP_CODE", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<BUILD_TREE_withCompCode_Result>("[InvEntities].[BUILD_TREE_withCompCode](@COMP_CODE)", cOMP_CODEParameter);
+        }
+    
+        public virtual int G_NotificationUpdate(Nullable<int> comp, Nullable<int> bra, string sys)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("Comp", comp) :
+                new ObjectParameter("Comp", typeof(int));
+    
+            var braParameter = bra.HasValue ?
+                new ObjectParameter("bra", bra) :
+                new ObjectParameter("bra", typeof(int));
+    
+            var sysParameter = sys != null ?
+                new ObjectParameter("sys", sys) :
+                new ObjectParameter("sys", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("G_NotificationUpdate", compParameter, braParameter, sysParameter);
+        }
+    
+        public virtual ObjectResult<GetAllAttend_Result> GetAllAttend()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetAllAttend_Result>("GetAllAttend");
+        }
+    
+        public virtual ObjectResult<string> GetAttendance(Nullable<int> iD_Code)
+        {
+            var iD_CodeParameter = iD_Code.HasValue ?
+                new ObjectParameter("ID_Code", iD_Code) :
+                new ObjectParameter("ID_Code", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetAttendance", iD_CodeParameter);
+        }
+    
+        public virtual int GetNumDay(Nullable<System.DateTime> end_Date, ObjectParameter num_DayS_out)
+        {
+            var end_DateParameter = end_Date.HasValue ?
+                new ObjectParameter("End_Date", end_Date) :
+                new ObjectParameter("End_Date", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("GetNumDay", end_DateParameter, num_DayS_out);
+        }
+    
+        public virtual int GLnk_GenerateVoucher(Nullable<int> comp, Nullable<int> bra, string user, string vchrDescr)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("comp", comp) :
+                new ObjectParameter("comp", typeof(int));
+    
+            var braParameter = bra.HasValue ?
+                new ObjectParameter("Bra", bra) :
+                new ObjectParameter("Bra", typeof(int));
+    
+            var userParameter = user != null ?
+                new ObjectParameter("User", user) :
+                new ObjectParameter("User", typeof(string));
+    
+            var vchrDescrParameter = vchrDescr != null ?
+                new ObjectParameter("VchrDescr", vchrDescr) :
+                new ObjectParameter("VchrDescr", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("GLnk_GenerateVoucher", compParameter, braParameter, userParameter, vchrDescrParameter);
+        }
+    
+        [DbFunction("InvEntities", "IFunc_GetCustomerInfo")]
+        public virtual IQueryable<IFunc_GetCustomerInfo_Result> IFunc_GetCustomerInfo(Nullable<int> custID)
+        {
+            var custIDParameter = custID.HasValue ?
+                new ObjectParameter("custID", custID) :
+                new ObjectParameter("custID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<IFunc_GetCustomerInfo_Result>("[InvEntities].[IFunc_GetCustomerInfo](@custID)", custIDParameter);
+        }
+    
+        [DbFunction("InvEntities", "IFunc_IitemOpenBal")]
+        public virtual IQueryable<IFunc_IitemOpenBal_Result> IFunc_IitemOpenBal(Nullable<int> comp, Nullable<int> catid, Nullable<int> itTypeid, Nullable<int> itemid, Nullable<int> status, string todate)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("Comp", comp) :
+                new ObjectParameter("Comp", typeof(int));
+    
+            var catidParameter = catid.HasValue ?
+                new ObjectParameter("Catid", catid) :
+                new ObjectParameter("Catid", typeof(int));
+    
+            var itTypeidParameter = itTypeid.HasValue ?
+                new ObjectParameter("ItTypeid", itTypeid) :
+                new ObjectParameter("ItTypeid", typeof(int));
+    
+            var itemidParameter = itemid.HasValue ?
+                new ObjectParameter("Itemid", itemid) :
+                new ObjectParameter("Itemid", typeof(int));
+    
+            var statusParameter = status.HasValue ?
+                new ObjectParameter("Status", status) :
+                new ObjectParameter("Status", typeof(int));
+    
+            var todateParameter = todate != null ?
+                new ObjectParameter("Todate", todate) :
+                new ObjectParameter("Todate", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<IFunc_IitemOpenBal_Result>("[InvEntities].[IFunc_IitemOpenBal](@Comp, @Catid, @ItTypeid, @Itemid, @Status, @Todate)", compParameter, catidParameter, itTypeidParameter, itemidParameter, statusParameter, todateParameter);
+        }
+    
+        [DbFunction("InvEntities", "IFunc_IitemTransaction")]
+        public virtual IQueryable<IFunc_IitemTransaction_Result> IFunc_IitemTransaction(Nullable<int> comp, Nullable<int> catid, Nullable<int> itTypeid, Nullable<int> itemid, Nullable<int> status, string fromdate, string todate)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("Comp", comp) :
+                new ObjectParameter("Comp", typeof(int));
+    
+            var catidParameter = catid.HasValue ?
+                new ObjectParameter("Catid", catid) :
+                new ObjectParameter("Catid", typeof(int));
+    
+            var itTypeidParameter = itTypeid.HasValue ?
+                new ObjectParameter("ItTypeid", itTypeid) :
+                new ObjectParameter("ItTypeid", typeof(int));
+    
+            var itemidParameter = itemid.HasValue ?
+                new ObjectParameter("Itemid", itemid) :
+                new ObjectParameter("Itemid", typeof(int));
+    
+            var statusParameter = status.HasValue ?
+                new ObjectParameter("Status", status) :
+                new ObjectParameter("Status", typeof(int));
+    
+            var fromdateParameter = fromdate != null ?
+                new ObjectParameter("Fromdate", fromdate) :
+                new ObjectParameter("Fromdate", typeof(string));
+    
+            var todateParameter = todate != null ?
+                new ObjectParameter("Todate", todate) :
+                new ObjectParameter("Todate", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<IFunc_IitemTransaction_Result>("[InvEntities].[IFunc_IitemTransaction](@Comp, @Catid, @ItTypeid, @Itemid, @Status, @Fromdate, @Todate)", compParameter, catidParameter, itTypeidParameter, itemidParameter, statusParameter, fromdateParameter, todateParameter);
+        }
+    
+        [DbFunction("InvEntities", "IFunc_IitemTransactionSummery")]
+        public virtual IQueryable<IFunc_IitemTransactionSummery_Result> IFunc_IitemTransactionSummery(Nullable<int> comp, Nullable<int> catid, Nullable<int> itTypeid, Nullable<int> itemid, Nullable<int> status, string fromdate, string todate)
+        {
+            var compParameter = comp.HasValue ?
+                new ObjectParameter("Comp", comp) :
+                new ObjectParameter("Comp", typeof(int));
+    
+            var catidParameter = catid.HasValue ?
+                new ObjectParameter("Catid", catid) :
+                new ObjectParameter("Catid", typeof(int));
+    
+            var itTypeidParameter = itTypeid.HasValue ?
+                new ObjectParameter("ItTypeid", itTypeid) :
+                new ObjectParameter("ItTypeid", typeof(int));
+    
+            var itemidParameter = itemid.HasValue ?
+                new ObjectParameter("Itemid", itemid) :
+                new ObjectParameter("Itemid", typeof(int));
+    
+            var statusParameter = status.HasValue ?
+                new ObjectParameter("Status", status) :
+                new ObjectParameter("Status", typeof(int));
+    
+            var fromdateParameter = fromdate != null ?
+                new ObjectParameter("Fromdate", fromdate) :
+                new ObjectParameter("Fromdate", typeof(string));
+    
+            var todateParameter = todate != null ?
+                new ObjectParameter("Todate", todate) :
+                new ObjectParameter("Todate", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<IFunc_IitemTransactionSummery_Result>("[InvEntities].[IFunc_IitemTransactionSummery](@Comp, @Catid, @ItTypeid, @Itemid, @Status, @Fromdate, @Todate)", compParameter, catidParameter, itTypeidParameter, itemidParameter, statusParameter, fromdateParameter, todateParameter);
+        }
+    
+        public virtual int insert_EMPLOYEE(string eMPLOYEE_NAME, string uSER_CODE)
+        {
+            var eMPLOYEE_NAMEParameter = eMPLOYEE_NAME != null ?
+                new ObjectParameter("EMPLOYEE_NAME", eMPLOYEE_NAME) :
+                new ObjectParameter("EMPLOYEE_NAME", typeof(string));
+    
+            var uSER_CODEParameter = uSER_CODE != null ?
+                new ObjectParameter("USER_CODE", uSER_CODE) :
+                new ObjectParameter("USER_CODE", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insert_EMPLOYEE", eMPLOYEE_NAMEParameter, uSER_CODEParameter);
+        }
+    
+        public virtual int Iproc_Deleteitem(Nullable<int> itemid)
+        {
+            var itemidParameter = itemid.HasValue ?
+                new ObjectParameter("itemid", itemid) :
+                new ObjectParameter("itemid", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Iproc_Deleteitem", itemidParameter);
+        }
+    
+        public virtual int IProc_ReorderVendorSerial(Nullable<int> invoiceId)
+        {
+            var invoiceIdParameter = invoiceId.HasValue ?
+                new ObjectParameter("InvoiceId", invoiceId) :
+                new ObjectParameter("InvoiceId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("IProc_ReorderVendorSerial", invoiceIdParameter);
+        }
+    
+        public virtual int IProc_UpdateOperationTotals(Nullable<int> procID, Nullable<int> mode)
+        {
+            var procIDParameter = procID.HasValue ?
+                new ObjectParameter("ProcID", procID) :
+                new ObjectParameter("ProcID", typeof(int));
+    
+            var modeParameter = mode.HasValue ?
+                new ObjectParameter("mode", mode) :
+                new ObjectParameter("mode", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("IProc_UpdateOperationTotals", procIDParameter, modeParameter);
+        }
+    
+        public virtual ObjectResult<Notifications_confirmation_Result> Notifications_confirmation()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Notifications_confirmation_Result>("Notifications_confirmation");
+        }
+    
+        public virtual int Notifications_insert_Name_Pilot(Nullable<int> iD_ORDER_Delivery, string name_Pilot)
+        {
+            var iD_ORDER_DeliveryParameter = iD_ORDER_Delivery.HasValue ?
+                new ObjectParameter("ID_ORDER_Delivery", iD_ORDER_Delivery) :
+                new ObjectParameter("ID_ORDER_Delivery", typeof(int));
+    
+            var name_PilotParameter = name_Pilot != null ?
+                new ObjectParameter("Name_Pilot", name_Pilot) :
+                new ObjectParameter("Name_Pilot", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Notifications_insert_Name_Pilot", iD_ORDER_DeliveryParameter, name_PilotParameter);
+        }
+    
+        public virtual int Notifications_successful(Nullable<int> iD_ORDER_Delivery)
+        {
+            var iD_ORDER_DeliveryParameter = iD_ORDER_Delivery.HasValue ?
+                new ObjectParameter("ID_ORDER_Delivery", iD_ORDER_Delivery) :
+                new ObjectParameter("ID_ORDER_Delivery", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Notifications_successful", iD_ORDER_DeliveryParameter);
+        }
+    
+        public virtual ObjectResult<Original_Purchases_receipt_Result> Original_Purchases_receipt(Nullable<int> trNo)
+        {
+            var trNoParameter = trNo.HasValue ?
+                new ObjectParameter("TrNo", trNo) :
+                new ObjectParameter("TrNo", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Original_Purchases_receipt_Result>("Original_Purchases_receipt", trNoParameter);
+        }
+    
+        public virtual ObjectResult<Original_sales_receipt_Result> Original_sales_receipt(Nullable<int> trNo)
+        {
+            var trNoParameter = trNo.HasValue ?
+                new ObjectParameter("TrNo", trNo) :
+                new ObjectParameter("TrNo", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Original_sales_receipt_Result>("Original_sales_receipt", trNoParameter);
+        }
+    
+        public virtual int Processes_Purchases(string pRODUCT_NAME, Nullable<int> pRODUCT_QET, Nullable<decimal> pRODUCT_Purchasing_price, Nullable<decimal> pRODUCT_PRICE, Nullable<decimal> minUnitPrice, string name_CAT, Nullable<int> trNo, Nullable<int> iD_Details, Nullable<int> iD_familly_Cat, string statusFlag)
+        {
+            var pRODUCT_NAMEParameter = pRODUCT_NAME != null ?
+                new ObjectParameter("PRODUCT_NAME", pRODUCT_NAME) :
+                new ObjectParameter("PRODUCT_NAME", typeof(string));
+    
+            var pRODUCT_QETParameter = pRODUCT_QET.HasValue ?
+                new ObjectParameter("PRODUCT_QET", pRODUCT_QET) :
+                new ObjectParameter("PRODUCT_QET", typeof(int));
+    
+            var pRODUCT_Purchasing_priceParameter = pRODUCT_Purchasing_price.HasValue ?
+                new ObjectParameter("PRODUCT_Purchasing_price", pRODUCT_Purchasing_price) :
+                new ObjectParameter("PRODUCT_Purchasing_price", typeof(decimal));
+    
+            var pRODUCT_PRICEParameter = pRODUCT_PRICE.HasValue ?
+                new ObjectParameter("PRODUCT_PRICE", pRODUCT_PRICE) :
+                new ObjectParameter("PRODUCT_PRICE", typeof(decimal));
+    
+            var minUnitPriceParameter = minUnitPrice.HasValue ?
+                new ObjectParameter("MinUnitPrice", minUnitPrice) :
+                new ObjectParameter("MinUnitPrice", typeof(decimal));
+    
+            var name_CATParameter = name_CAT != null ?
+                new ObjectParameter("Name_CAT", name_CAT) :
+                new ObjectParameter("Name_CAT", typeof(string));
+    
+            var trNoParameter = trNo.HasValue ?
+                new ObjectParameter("TrNo", trNo) :
+                new ObjectParameter("TrNo", typeof(int));
+    
+            var iD_DetailsParameter = iD_Details.HasValue ?
+                new ObjectParameter("ID_Details", iD_Details) :
+                new ObjectParameter("ID_Details", typeof(int));
+    
+            var iD_familly_CatParameter = iD_familly_Cat.HasValue ?
+                new ObjectParameter("ID_familly_Cat", iD_familly_Cat) :
+                new ObjectParameter("ID_familly_Cat", typeof(int));
+    
+            var statusFlagParameter = statusFlag != null ?
+                new ObjectParameter("StatusFlag", statusFlag) :
+                new ObjectParameter("StatusFlag", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Processes_Purchases", pRODUCT_NAMEParameter, pRODUCT_QETParameter, pRODUCT_Purchasing_priceParameter, pRODUCT_PRICEParameter, minUnitPriceParameter, name_CATParameter, trNoParameter, iD_DetailsParameter, iD_familly_CatParameter, statusFlagParameter);
+        }
+    
+        public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_alterdiagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual int sp_creatediagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_creatediagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual int sp_dropdiagram(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_dropdiagram", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual int sp_helpdiagramdefinition(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_helpdiagramdefinition", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual int sp_helpdiagrams(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual int sp_renamediagram(string diagramname, Nullable<int> owner_id, string new_diagramname)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var new_diagramnameParameter = new_diagramname != null ?
+                new ObjectParameter("new_diagramname", new_diagramname) :
+                new ObjectParameter("new_diagramname", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_renamediagram", diagramnameParameter, owner_idParameter, new_diagramnameParameter);
+        }
+    
+        public virtual int sp_upgraddiagrams()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
+        }
+    
+        public virtual int update_Purchases_Master(Nullable<int> trNo, string tr_Date, Nullable<int> iD_Supplier, Nullable<bool> type_Debit, Nullable<decimal> total_Amount, Nullable<decimal> paid_Up, Nullable<decimal> to_be_Paid, string rEMARKS)
+        {
+            var trNoParameter = trNo.HasValue ?
+                new ObjectParameter("TrNo", trNo) :
+                new ObjectParameter("TrNo", typeof(int));
+    
+            var tr_DateParameter = tr_Date != null ?
+                new ObjectParameter("Tr_Date", tr_Date) :
+                new ObjectParameter("Tr_Date", typeof(string));
+    
+            var iD_SupplierParameter = iD_Supplier.HasValue ?
+                new ObjectParameter("ID_Supplier", iD_Supplier) :
+                new ObjectParameter("ID_Supplier", typeof(int));
+    
+            var type_DebitParameter = type_Debit.HasValue ?
+                new ObjectParameter("Type_Debit", type_Debit) :
+                new ObjectParameter("Type_Debit", typeof(bool));
+    
+            var total_AmountParameter = total_Amount.HasValue ?
+                new ObjectParameter("Total_Amount", total_Amount) :
+                new ObjectParameter("Total_Amount", typeof(decimal));
+    
+            var paid_UpParameter = paid_Up.HasValue ?
+                new ObjectParameter("Paid_Up", paid_Up) :
+                new ObjectParameter("Paid_Up", typeof(decimal));
+    
+            var to_be_PaidParameter = to_be_Paid.HasValue ?
+                new ObjectParameter("To_be_Paid", to_be_Paid) :
+                new ObjectParameter("To_be_Paid", typeof(decimal));
+    
+            var rEMARKSParameter = rEMARKS != null ?
+                new ObjectParameter("REMARKS", rEMARKS) :
+                new ObjectParameter("REMARKS", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("update_Purchases_Master", trNoParameter, tr_DateParameter, iD_SupplierParameter, type_DebitParameter, total_AmountParameter, paid_UpParameter, to_be_PaidParameter, rEMARKSParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<decimal>> updateDebit(Nullable<int> cUSTOMER_ID, Nullable<decimal> shootMoney, string userName)
+        {
+            var cUSTOMER_IDParameter = cUSTOMER_ID.HasValue ?
+                new ObjectParameter("CUSTOMER_ID", cUSTOMER_ID) :
+                new ObjectParameter("CUSTOMER_ID", typeof(int));
+    
+            var shootMoneyParameter = shootMoney.HasValue ?
+                new ObjectParameter("ShootMoney", shootMoney) :
+                new ObjectParameter("ShootMoney", typeof(decimal));
+    
+            var userNameParameter = userName != null ?
+                new ObjectParameter("UserName", userName) :
+                new ObjectParameter("UserName", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("updateDebit", cUSTOMER_IDParameter, shootMoneyParameter, userNameParameter);
         }
     }
 }

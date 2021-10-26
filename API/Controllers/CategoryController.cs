@@ -35,9 +35,9 @@ namespace API.Controllers
             if (ModelState.IsValid)
             {
                 var Cat = CategoryServices.GetAll().ToList();
-                
-                    return Ok(new BaseResponse(Cat));
-              
+
+                return Ok(new BaseResponse(Cat));
+
             }
             return BadRequest(ModelState);
         }
@@ -47,8 +47,8 @@ namespace API.Controllers
         {
             if (ModelState.IsValid)
             {
-                var Item = CategoryServices.GetAll(x => x.ID_CAT == Cat ).ToList();
-               
+                var Item = CategoryServices.GetAll(x => x.ID_CAT == Cat).ToList();
+
                 return Ok(new BaseResponse(Item));
 
             }
@@ -68,10 +68,10 @@ namespace API.Controllers
         }
 
 
-         
-        
 
-     
+
+
+
         public string ExecuteScalar(string SqlStatement)
         {
             string connectionString = db.Database.Connection.ConnectionString;
@@ -98,7 +98,7 @@ namespace API.Controllers
 
         }
 
-     
+
 
 
         [HttpPost, AllowAnonymous]
@@ -128,7 +128,7 @@ namespace API.Controllers
                     CategoryServices.Delete(ID);
                     return Ok(new BaseResponse());
                 }
-                catch (Exception  )
+                catch (Exception)
                 {
                     return Ok(new BaseResponse(0, "Error"));
                 }

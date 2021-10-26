@@ -63,9 +63,9 @@ namespace BLL.Services.I_Type_Souscriptions
         public void UpdateList(List<I_Type_Souscription> Lstservice)
         {
 
-            var insertedRecord = Lstservice.Where(x => x.StatusFlag == "i");
-            var updatedRecord = Lstservice.Where(x => x.StatusFlag == "u");
-            var deletedRecord = Lstservice.Where(x => x.StatusFlag == "d");
+            var insertedRecord = Lstservice.Where(x => x.StatusFlag =='i');
+            var updatedRecord = Lstservice.Where(x => x.StatusFlag == 'u');
+            var deletedRecord = Lstservice.Where(x => x.StatusFlag == 'd');
 
             if (updatedRecord.Count() > 0)
                 unitOfWork.Repository<I_Type_Souscription>().Update(updatedRecord);
