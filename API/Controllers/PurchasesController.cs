@@ -122,9 +122,9 @@ namespace API.Controllers
 
 
 
-
+        //*************************************************************************************************  !important!
         [HttpPost, AllowAnonymous]
-        public IHttpActionResult Insert_Purchases([FromBody]PurchasesMasterDetails Operation)
+        public IHttpActionResult Insert_Purchases([FromBody]Models.CustomModel.PurchasesMasterDetails Operation)
         {
 
             try

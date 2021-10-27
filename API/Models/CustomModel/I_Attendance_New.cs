@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using DAL.Domain;
+using Inv.DAL.Domain;
 using API.Models;
-using API.Models.CustomEntities;
+using Inv.API.Models.CustomEntities;
 
 namespace API.Models.CustomModel
 {
