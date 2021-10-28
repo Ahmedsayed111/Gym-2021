@@ -111,7 +111,6 @@
   <ItemGroup>
     <Folder Include="bin\Debug\" />
     <Folder Include="bin\Release\" />
-    <Folder Include="Services\insert_Table\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

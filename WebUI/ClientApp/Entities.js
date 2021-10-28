@@ -3465,16 +3465,13 @@ var GQ_GetUsers = /** @class */ (function (_super) {
     __extends(GQ_GetUsers, _super);
     function GQ_GetUsers() {
         var _this = _super.call(this) || this;
-        _this.LoginUrl = false;
         _this.USER_CODE = "";
         _this.USER_PASSWORD = "";
         _this.USER_ACTIVE = false;
         _this.USER_NAME = "";
         _this.CompCode = 0;
-        _this.CashBoxID = 0;
-        _this.SalesManID = 0;
         _this.REGION_CODE = "";
-        _this.GRP_CODE = "";
+        _this.GRP_CODE = 0;
         _this.USER_PASSWORD2 = "";
         _this.CHANGE_PASS_DATE = "";
         _this.City = "";
@@ -3487,9 +3484,9 @@ var GQ_GetUsers = /** @class */ (function (_super) {
         _this.JobTitle = "";
         _this.USER_TYPE = 0;
         _this.ManagedBy = "";
+        _this.LoginUrl = false;
         _this.Tokenid = "";
         _this.LastLogin = "";
-        _this.USER_ACTIVE_Name = "";
         _this.FirstLogin = "";
         _this.Remarks = "";
         _this.CreatedAt = "";
@@ -3499,12 +3496,9 @@ var GQ_GetUsers = /** @class */ (function (_super) {
         _this.Type_DescA = "";
         _this.Type_DescE = "";
         _this.CodeType = "";
-        _this.IsActiveDesc = "";
-        _this.SYSTEM_CODE = "";
-        _this.SUB_SYSTEM_CODE = "";
-        _this.Flag_Mastr = "";
+        _this.CashBoxID = 0;
+        _this.SalesManID = 0;
         _this.StoreID = 0;
-        _this.salary = 0;
         return _this;
     }
     return GQ_GetUsers;

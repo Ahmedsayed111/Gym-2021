@@ -146,7 +146,7 @@
     <Compile Include="Domain\Catch_Receipt.cs">
       <DependentUpon>InvModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Domain\CATEGRE.cs">
+    <Compile Include="Domain\CATEGRES.cs">
       <DependentUpon>InvModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Domain\CHECKEXACT.cs">
@@ -392,6 +392,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InvModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\IQ_Attend_Multi.cs">
+      <DependentUpon>InvModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Domain\IQ_Catch_Receipt.cs">
       <DependentUpon>InvModel.tt</DependentUpon>

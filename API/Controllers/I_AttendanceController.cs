@@ -7,7 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Inv.API.Controllers;
+using API.Controllers;
 using Inv.API.Tools;
 using System.Web.Http.Cors;
 using System.Data.SqlClient;
@@ -16,7 +16,7 @@ using Inv.DAL.Repository;
 using Newtonsoft.Json;
 using API.Models.CustomModel;
 
-    
+
 namespace API.Controllers
 {
     [EnableCorsAttribute("*", "*", "*")]
@@ -27,49 +27,49 @@ namespace API.Controllers
 
         public I_AttendanceController(II_AttendanceServices _I_AttendanceServices)
         {
-      this.I_AttendanceServices = _I_AttendanceServices;
+            this.I_AttendanceServices = _I_AttendanceServices;
 
         }
 
-        //[HttpGet, AllowAnonymous]
-        //public IHttpActionResult GetAll(string startDate, string endDate, int type , int cust)
-        //{
+        [HttpGet, AllowAnonymous]
+        public IHttpActionResult GetAll(string startDate, string endDate, int type, int cust)
+        {
 
-        //    if (ModelState.IsValid)
-        //    {
-        //        if (type==1)
-        //        {
-        //            string s = "SELECT * FROM  [dbo].[IQ_Attend_Multi] WHERE [ID_Cust] > 0   and  ready = 0 and Tr_Date >='" + startDate + "' and Tr_Date <='" + endDate + "'";
+            if (ModelState.IsValid)
+            {
+                if (type == 1)
+                {
+                    string s = "SELECT * FROM  [dbo].[IQ_Attend_Multi] WHERE [ID_Cust] > 0   and  ready = 0 and Tr_Date >='" + startDate + "' and Tr_Date <='" + endDate + "'";
 
-        //            string condition = "";
+                    string condition = "";
 
-        //            if (cust != 0)
-        //            {
-        //                condition += "and [ID_Cust] = " + cust;
-        //            }
-        //            string query = s + condition;
-        //            var res = db.Database.SqlQuery<IQ_Attend_Multi>(query).ToList();
-        //            return Ok(new BaseResponse(res));
-        //        }
+                    if (cust != 0)
+                    {
+                        condition += "and [ID_Cust] = " + cust;
+                    }
+                    string query = s + condition;
+                    var res = db.Database.SqlQuery<IQ_Attend_Multi>(query).ToList();
+                    return Ok(new BaseResponse(res));
+                }
 
-        //        else
-        //        {
-        //            string s = "SELECT * FROM  [dbo].[IQ_Attend_Multi] WHERE [ID_Code_USER] > 0   and  ready = 0 and Tr_Date >='" + startDate + "' and Tr_Date <='" + endDate + "'";
+                else
+                {
+                    string s = "SELECT * FROM  [dbo].[IQ_Attend_Multi] WHERE [ID_Code_USER] > 0   and  ready = 0 and Tr_Date >='" + startDate + "' and Tr_Date <='" + endDate + "'";
 
-        //            string condition = "";
+                    string condition = "";
 
-        //            if (cust != 0)
-        //            {
-        //                condition += "and [ID_Code_USER] = " + cust;
-        //            }
-        //            string query = s + condition;
-        //            var res = db.Database.SqlQuery<IQ_Attend_Multi>(query).ToList();
-        //            return Ok(new BaseResponse(res));
-        //        }
+                    if (cust != 0)
+                    {
+                        condition += "and [ID_Code_USER] = " + cust;
+                    }
+                    string query = s + condition;
+                    var res = db.Database.SqlQuery<IQ_Attend_Multi>(query).ToList();
+                    return Ok(new BaseResponse(res));
+                }
 
-        //    }
-        //    return BadRequest(ModelState);
-        //}
+            }
+            return BadRequest(ModelState);
+        }
 
 
         [HttpGet, AllowAnonymous]
@@ -305,7 +305,7 @@ namespace API.Controllers
 
             try
             {
-                var InsertOperationI_Attendance = I_Attendance.Where(x => x.StatusFlag == 'i').ToList();
+                var InsertOperationI_Attendance = I_Attendance.Where(x => x.StatusFlag ==  'i').ToList();
                 var updatedOperationI_Attendance = I_Attendance.Where(x => x.StatusFlag == 'u').ToList();
                 var deletedOperationI_Attendance = I_Attendance.Where(x => x.StatusFlag == 'd').ToList();
 

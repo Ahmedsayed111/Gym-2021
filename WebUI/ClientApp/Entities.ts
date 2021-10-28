@@ -5780,7 +5780,7 @@ class G_USERS extends SecurityClass {
         this.USER_PASSWORD = "";
         this.USER_ACTIVE = false;
         this.USER_NAME = "";
-        this.CompCode = 0;     
+        this.CompCode = 0;
         this.REGION_CODE = "";
         this.USER_PASSWORD2 = "";
         this.CHANGE_PASS_DATE = "";
@@ -5798,9 +5798,9 @@ class G_USERS extends SecurityClass {
         this.Tokenid = "";
         this.LastLogin = "";
         this.Flag_Mastr = "";
-        this.StoreID = 0;       
-        this.USER_ACTIVE_Name = "";  
-        this.GRP_CODE = 0;   
+        this.StoreID = 0;
+        this.USER_ACTIVE_Name = "";
+        this.GRP_CODE = 0;
         this.salary = 0;
         this.day_num = 0;
         this.hour_num = 0;
@@ -5844,8 +5844,8 @@ class G_USERS extends SecurityClass {
     public LastLogin: string;
     public Tokenid: string;
     public Flag_Mastr: string;
-    public StoreID: number;       
-    public USER_ACTIVE_Name: string;   
+    public StoreID: number;
+    public USER_ACTIVE_Name: string;
     public salary: number;
     public day_num: number;
     public hour_num: number;
@@ -5859,16 +5859,13 @@ class G_USERS extends SecurityClass {
 class GQ_GetUsers extends SecurityClass {
     constructor() {
         super();
-        this.LoginUrl = false;
         this.USER_CODE = "";
         this.USER_PASSWORD = "";
-        this.USER_ACTIVE = false;
+        this.USER_ACTIVE =false;
         this.USER_NAME = "";
         this.CompCode = 0;
-        this.CashBoxID = 0;
-        this.SalesManID = 0;
         this.REGION_CODE = "";
-        this.GRP_CODE = "";
+        this.GRP_CODE = 0;
         this.USER_PASSWORD2 = "";
         this.CHANGE_PASS_DATE = "";
         this.City = "";
@@ -5881,9 +5878,9 @@ class GQ_GetUsers extends SecurityClass {
         this.JobTitle = "";
         this.USER_TYPE = 0;
         this.ManagedBy = "";
+        this.LoginUrl = false;
         this.Tokenid = "";
         this.LastLogin = "";
-        this.USER_ACTIVE_Name = "";
         this.FirstLogin = "";
         this.Remarks = "";
         this.CreatedAt = "";
@@ -5893,26 +5890,18 @@ class GQ_GetUsers extends SecurityClass {
         this.Type_DescA = "";
         this.Type_DescE = "";
         this.CodeType = "";
-        this.IsActiveDesc = "";
-        this.SYSTEM_CODE = "";
-        this.SUB_SYSTEM_CODE = "";
-        this.Flag_Mastr = "";
+        this.CashBoxID = 0;
+        this.SalesManID = 0;
         this.StoreID = 0;
-        this.salary = 0;
 
     }
-    public LoginUrl: boolean;
-    public SYSTEM_CODE: string;
-    public SUB_SYSTEM_CODE: string;
     public USER_CODE: string;
-    public USER_PASSWORD: string;
+    public USER_PASSWORD: string
     public USER_ACTIVE: boolean;
     public USER_NAME: string;
     public CompCode: number;
-    public CashBoxID: number;
-    public SalesManID: number;
     public REGION_CODE: string;
-    public GRP_CODE: string;
+    public GRP_CODE: number;
     public USER_PASSWORD2: string;
     public CHANGE_PASS_DATE: string;
     public City: string;
@@ -5925,6 +5914,7 @@ class GQ_GetUsers extends SecurityClass {
     public JobTitle: string;
     public USER_TYPE: number;
     public ManagedBy: string;
+    public LoginUrl: boolean;
     public Tokenid: string;
     public LastLogin: string;
     public FirstLogin: string;
@@ -5936,11 +5926,9 @@ class GQ_GetUsers extends SecurityClass {
     public Type_DescA: string;
     public Type_DescE: string;
     public CodeType: string;
-    public IsActiveDesc: string;
-    public Flag_Mastr: string;
-    public USER_ACTIVE_Name: string;
+    public CashBoxID: number;
+    public SalesManID: number;
     public StoreID: number;
-    public salary: number;
 }
 class GQ_GetUserRole extends SecurityClass {
     constructor() {
@@ -9549,7 +9537,7 @@ class Settings_Report {
         this.Parameter_7 = "";
         this.Parameter_8 = "";
         this.Parameter_9 = "";
-        this.Parameter_ = "";   
+        this.Parameter_ = "";
         this.Type_Print = 1;
 
     }
@@ -9565,7 +9553,7 @@ class Settings_Report {
     public Parameter_7: string;
     public Parameter_8: string;
     public Parameter_9: string;
-    public Parameter_: string;   
+    public Parameter_: string;
     public Type_Print: number;
 }
 
@@ -9653,7 +9641,7 @@ class ReviewSalesMaster extends SecurityClass {
         this.Namber_Order_Delivery = 0;
         this.Total = 0;
 
-        
+
     }
     public ID_ORDER_Delivery: number;
     public Date_Order_Delivery: string;
@@ -9675,7 +9663,7 @@ class ReviewSalesMaster extends SecurityClass {
     public Namber_Order_Delivery: number;
     public Total: number;
 
-    
+
 }
 
 
@@ -10084,7 +10072,7 @@ class IQ_Data_CustmorDetails extends SecurityClass {
     public Muscles_P_C: number;
     public Fats_P_C: number;
     public Type_Sub: string;
-}    
+}
 
 class invitation extends SecurityClass {
     constructor() {
@@ -10192,14 +10180,14 @@ class CUSTOMER extends SecurityClass {
         super();
         this.CUSTOMER_ID = 0;
         this.CUSTOMER_NAME = "";
-        this.NAMEE = "";      
+        this.NAMEE = "";
         this.CUSTOMER_ADDRES = "";
         this.CUSTOMER_ADDRES_2 = "";
         this.PHONE = "";
         this.EMAIL = "";
         this.REMARKS = "";
         this.STATUS = false;
-        this.IsCreditCustomer = false;        
+        this.IsCreditCustomer = false;
         this.BranchCode = 0;
         this.CompCode = 0;
         this.CREATED_BY = "";
@@ -10218,21 +10206,21 @@ class CUSTOMER extends SecurityClass {
         this.CreditFC = 0;
         this.CustomerCODE = "";
         this.StatusFlag = "";
-        this.Name_STATUS = "";    
+        this.Name_STATUS = "";
         this.NameIsCreditCustomer = "";
 
-        
+
     }
     public CUSTOMER_ID: number;
     public CUSTOMER_NAME: string;
-    public NAMEE: string;   
+    public NAMEE: string;
     public CUSTOMER_ADDRES: string;
     public CUSTOMER_ADDRES_2: string;
     public PHONE: string;
     public EMAIL: string;
     public REMARKS: string;
     public STATUS: boolean;
-    public IsCreditCustomer: boolean;      
+    public IsCreditCustomer: boolean;
     public BranchCode: number;
     public CompCode: number;
     public CREATED_BY: string;
@@ -10250,14 +10238,14 @@ class CUSTOMER extends SecurityClass {
     public Credit: number;
     public CreditFC: number;
     public CustomerCODE: string;
-    public StatusFlag: string;     
-    public Name_STATUS: string; 
-    public NameIsCreditCustomer: string; 
-
-    
+    public StatusFlag: string;
+    public Name_STATUS: string;
+    public NameIsCreditCustomer: string;
 
 
-}                              
+
+
+}
 
 
 class Stok_ORDER_DELIVERY extends SecurityClass {
@@ -10538,7 +10526,7 @@ class Catch_Receipt extends SecurityClass {
         this.Amount
         this.ShootMoney
         this.Remarks = "";
-        this.Data = "";   
+        this.Data = "";
 
     }
     public ID_Receipt: number;
