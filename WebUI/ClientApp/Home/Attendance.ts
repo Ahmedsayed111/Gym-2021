@@ -121,7 +121,7 @@ namespace Attendance {
             { title: "وقت الدخول", name: "Time_in", type: "text", width: "10%" },
             { title: "عدد ايام الحضور", name: "Num_Day_Attendance", type: "text", width: "11%" },
             {
-                title: "الدعوه"   ,
+                title: "الدعوه",
                 width: "5%",
                 itemTemplate: (s: string, item: I_Attendance_New): HTMLInputElement => {
                     let txt: HTMLInputElement = document.createElement("input");
@@ -233,7 +233,7 @@ namespace Attendance {
 
         if ($("#txtName_invit").val().trim() == '') {
 
-            Errorinput($("#txtName_invit"));       
+            Errorinput($("#txtName_invit"));
             MessageBox.Show('برجاء ادخال الاسم', 'خطا');
             return false
 
@@ -246,19 +246,19 @@ namespace Attendance {
         }
         else if ($("#txtAge_invit").val().trim() == '') {
             Errorinput($("#txtAge_invit"));
-            MessageBox.Show('برجاء ادخال العمر', 'خطا');     
+            MessageBox.Show('برجاء ادخال العمر', 'خطا');
             return false
         }
-       
 
 
-        Model  = new invitation();
 
-        
+        Model = new invitation();
+
+
         let Num_unv = (Number($("#txtNum_inv").val()) - 1)
 
         Model.ID_Cust = ID_Cust_inv_view;
-        Model.Num_inv = Num_unv;                  
+        Model.Num_inv = Num_unv;
         Model.Name = $("#txtName_invit").val();
         Model.Phone = $("#txtPhone_invit").val();
         Model.age = $("#txtAge_invit").val();
@@ -274,8 +274,8 @@ namespace Attendance {
             success: (d) => {
                 let result = d as BaseResponse;
                 if (result.IsSuccess) {
-                   
-                    $("#PopupDialog").modal("hide");   
+
+                    $("#PopupDialog").modal("hide");
                     $('#Men_popu').attr('class', 'popu animated zoomOutUp');
 
                     Enter_Cust.focus();

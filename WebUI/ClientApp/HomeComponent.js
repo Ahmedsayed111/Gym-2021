@@ -625,6 +625,9 @@ var HomeComponent;
         $("#btnfamilly_Cat").click(function () { OpenPage(Modules.familly_Cat); });
         $("#btnIncome_expenses").click(function () { OpenPage(Modules.Income_expenses); });
         $("#btnSlsTrSalesManager").click(function () { OpenPage(Modules.SlsTrSalesManager); });
+        $("#btnSubscriptions").click(function () { OpenPage(Modules.Subscriptions); });
+        $("#btnTypesubscrip").click(function () { OpenPage(Modules.Typesubscrip); });
+        $("#btnAttendance").click(function () { OpenPage(Modules.Attendance); });
     }
     function Notifications_Message() {
         var comCode = SysSession.CurrentEnvironment.CompCode;

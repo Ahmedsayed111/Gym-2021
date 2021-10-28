@@ -1119,6 +1119,22 @@ function AddDate(prd, Sdate, count) {
     }
     return Tdate;
 }
+function GetNumDay(StartDate, EndDate) {
+    var Start_Date = Date.parse(StartDate);
+    var Date_Now = Date.parse(GetDate());
+    var Date_From;
+    if (Date_Now > Start_Date) {
+        Date_From = GetDate();
+    }
+    else {
+        Date_From = StartDate;
+    }
+    var from = Date.parse(Date_From);
+    var to = Date.parse(EndDate);
+    var NumDay = ((to - from) / 86400000);
+    return NumDay < 0 ? 0 : NumDay - 1;
+}
+;
 function GetResourceByName(Sourcekey) {
     var result = "";
     Ajax.Callsync({

@@ -1,88 +1,166 @@
-﻿using Inv.DAL.Domain;
+﻿using Inv.API.Models;
+using BLL.Services.I_Type_Souscriptions;
+using Inv.DAL.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using Inv.DAL.Repository;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using API.Controllers;
+using Inv.API.Tools;
+using System.Web.Http.Cors;
+using System.Data.SqlClient;
+using System.Data.Entity;
+using Inv.DAL.Repository; 
+using Newtonsoft.Json;
 
-namespace BLL.Services.I_Type_Souscriptions
+namespace API.Controllers
 {
-    public class I_Type_SouscriptionServices : II_Type_SouscriptionServices
+    [EnableCorsAttribute("*", "*", "*")]
+    public class I_Type_SouscriptionController : BaseController
     {
-        private readonly IUnitOfWork unitOfWork;
 
-        public I_Type_SouscriptionServices(IUnitOfWork _unitOfWork)
+        private readonly II_Type_SouscriptionServices I_Type_SouscriptionServices;
+
+        public I_Type_SouscriptionController(II_Type_SouscriptionServices _II_Type_SouscriptionServices)
         {
-
-            this.unitOfWork = _unitOfWork;
+            I_Type_SouscriptionServices = _II_Type_SouscriptionServices;
 
         }
 
-
-        #region Nationality Services
-        public I_Type_Souscription GetById(int id)
+        [HttpGet, AllowAnonymous]
+        public IHttpActionResult GetAll()
         {
-
-            return unitOfWork.Repository<I_Type_Souscription>().GetById(id);
-
-        }
-
-        public List<I_Type_Souscription> GetAll()
-        {
-            return unitOfWork.Repository<I_Type_Souscription>().GetAll();
-        }
-
-        public List<I_Type_Souscription> GetAll(Expression<Func<I_Type_Souscription, bool>> predicate)
-        {
-            return unitOfWork.Repository<I_Type_Souscription>().Get(predicate);
-        }
-
-        public I_Type_Souscription Insert(I_Type_Souscription entity)
-        {
-            var memb = unitOfWork.Repository<I_Type_Souscription>().Insert(entity);
-            unitOfWork.Save();
-            return memb;
-        }
-
-        public I_Type_Souscription Update(I_Type_Souscription entity)
-        {
-
-            var memb = unitOfWork.Repository<I_Type_Souscription>().Update(entity);
-            unitOfWork.Save();
-            return memb;
-        }
-
-        public void Delete(int id)
-        {
-            unitOfWork.Repository<I_Type_Souscription>().Delete(id);
-            unitOfWork.Save();
-        }
-
-        public void UpdateList(List<I_Type_Souscription> Lstservice)
-        {
-
-            var insertedRecord = Lstservice.Where(x => x.StatusFlag =='i');
-            var updatedRecord = Lstservice.Where(x => x.StatusFlag == 'u');
-            var deletedRecord = Lstservice.Where(x => x.StatusFlag == 'd');
-
-            if (updatedRecord.Count() > 0)
-                unitOfWork.Repository<I_Type_Souscription>().Update(updatedRecord);
-
-            if (insertedRecord.Count() > 0)
-                unitOfWork.Repository<I_Type_Souscription>().Insert(insertedRecord);
-
-
-            if (deletedRecord.Count() > 0)
+            if (ModelState.IsValid)
             {
-                foreach (var entity in deletedRecord)
-                    unitOfWork.Repository<I_Type_Souscription>().Delete(entity.ID_Souscription);
+                var Cust = I_Type_SouscriptionServices.GetAll().ToList();
+
+                return Ok(new BaseResponse(Cust));
+
             }
-
-            unitOfWork.Save();
-
+            return BadRequest(ModelState);
         }
-        #endregion
+
+
+        [HttpPost, AllowAnonymous]
+        public IHttpActionResult Insert([FromBody]I_Type_Souscription Nation)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var Nationality = I_Type_SouscriptionServices.Insert(Nation);
+                    return Ok(new BaseResponse(Nationality));
+                }
+                catch (Exception ex)
+                {
+                    return Ok(new BaseResponse(HttpStatusCode.ExpectationFailed, ex.Message));
+                }
+            }
+            return BadRequest(ModelState);
+        }
+        [HttpGet, AllowAnonymous]
+        public IHttpActionResult Delete(int ID)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    I_Type_SouscriptionServices.Delete(ID);
+                    return Ok(new BaseResponse());
+                }
+                catch (Exception)
+                {
+                    return Ok(new BaseResponse(0, "Error"));
+                }
+
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
+        }
+        [HttpPost, AllowAnonymous]
+        public IHttpActionResult Update([FromBody]I_Type_Souscription Nation)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var Nationality = I_Type_SouscriptionServices.Update(Nation);
+                    return Ok(new BaseResponse(Nationality));
+                }
+                catch (Exception ex)
+                {
+                    return Ok(new BaseResponse(HttpStatusCode.ExpectationFailed, ex.Message));
+                }
+            }
+            return BadRequest(ModelState);
+        }
+
+
+
+        //***************asmaa********************//
+        [HttpPost, AllowAnonymous]
+        public IHttpActionResult UpdateCustlist(List<I_Type_Souscription> CUSTOMERList)
+        {
+
+            if (ModelState.IsValid)
+            {
+
+                try
+                {
+                    var insertedRecords = CUSTOMERList.Where(x => x.StatusFlag =='i').ToList();
+                    var updatedRecords = CUSTOMERList.Where(x => x.StatusFlag == 'u').ToList();
+                    var deletedRecords = CUSTOMERList.Where(x => x.StatusFlag == 'd').ToList();
+                    ResponseResult res = new ResponseResult();
+                    //loop insered 
+                    if (insertedRecords.Count > 0)
+                    {
+                        foreach (var item in insertedRecords)
+                        {
+                            var InsertedRec = I_Type_SouscriptionServices.Insert(item);
+
+                        }
+
+                    }
+
+
+                    //loop Update 
+                    if (updatedRecords.Count > 0)
+                    {
+                        foreach (var item in updatedRecords)
+                        {
+                            var updatedRec = I_Type_SouscriptionServices.Update(item);
+
+                        }
+
+                    }
+
+                    //loop Delete 
+                    if (deletedRecords.Count > 0)
+                    {
+                        foreach (var item in deletedRecords)
+                        {
+                            var id = item.ID_Souscription;
+                            I_Type_SouscriptionServices.Delete(id);
+                        }
+
+                    }
+
+
+                    return Ok(new BaseResponse(1));
+
+                }
+                catch (Exception ex)
+                {
+                    return Ok(new BaseResponse(HttpStatusCode.ExpectationFailed, ex.Message));
+                }
+
+            }
+            return BadRequest(ModelState);
+        }
+
     }
 }

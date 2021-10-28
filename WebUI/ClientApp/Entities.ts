@@ -121,6 +121,21 @@ class BaseResponse {
     public Response: any;
 }
 
+class LoginPage extends SecurityClass {
+    constructor() {
+        super();
+        this.ID_User = 0;
+        this.UserName = "";
+        this.password = "";
+        this.WepFormLoad = "";
+        this.Open_Login = false;
+    }
+    public ID_User: number;
+    public UserName: string;
+    public password: string;
+    public WepFormLoad: string;
+    public Open_Login: boolean;
+}
 
 class ReportParameters {
 
@@ -5765,8 +5780,7 @@ class G_USERS extends SecurityClass {
         this.USER_PASSWORD = "";
         this.USER_ACTIVE = false;
         this.USER_NAME = "";
-        this.CompCode = 0;
-        this.GRP_CODE = "";
+        this.CompCode = 0;     
         this.REGION_CODE = "";
         this.USER_PASSWORD2 = "";
         this.CHANGE_PASS_DATE = "";
@@ -5784,8 +5798,17 @@ class G_USERS extends SecurityClass {
         this.Tokenid = "";
         this.LastLogin = "";
         this.Flag_Mastr = "";
-        this.StoreID = 0;
-
+        this.StoreID = 0;       
+        this.USER_ACTIVE_Name = "";  
+        this.GRP_CODE = 0;   
+        this.salary = 0;
+        this.day_num = 0;
+        this.hour_num = 0;
+        this.Num_Attendance = 0;
+        this.ID_Code = 0;
+        this.End_Data = "";
+        this.Start_Data = "";
+        this.Day_Off = 0;
 
     }
     public LoginUrl: boolean;
@@ -5803,7 +5826,7 @@ class G_USERS extends SecurityClass {
     public USER_ACTIVE: boolean;
     public USER_NAME: string;
     public CompCode: number;
-    public GRP_CODE: string;
+    public GRP_CODE: number;
     public REGION_CODE: string;
     public USER_PASSWORD2: string;
     public CHANGE_PASS_DATE: string;
@@ -5821,7 +5844,16 @@ class G_USERS extends SecurityClass {
     public LastLogin: string;
     public Tokenid: string;
     public Flag_Mastr: string;
-    public StoreID: number;
+    public StoreID: number;       
+    public USER_ACTIVE_Name: string;   
+    public salary: number;
+    public day_num: number;
+    public hour_num: number;
+    public Num_Attendance: number;
+    public ID_Code: number;
+    public End_Data: string;
+    public Start_Data: string;
+    public Day_Off: number;
 }
 
 class GQ_GetUsers extends SecurityClass {
@@ -5851,6 +5883,7 @@ class GQ_GetUsers extends SecurityClass {
         this.ManagedBy = "";
         this.Tokenid = "";
         this.LastLogin = "";
+        this.USER_ACTIVE_Name = "";
         this.FirstLogin = "";
         this.Remarks = "";
         this.CreatedAt = "";
@@ -5865,6 +5898,7 @@ class GQ_GetUsers extends SecurityClass {
         this.SUB_SYSTEM_CODE = "";
         this.Flag_Mastr = "";
         this.StoreID = 0;
+        this.salary = 0;
 
     }
     public LoginUrl: boolean;
@@ -5904,7 +5938,9 @@ class GQ_GetUsers extends SecurityClass {
     public CodeType: string;
     public IsActiveDesc: string;
     public Flag_Mastr: string;
+    public USER_ACTIVE_Name: string;
     public StoreID: number;
+    public salary: number;
 }
 class GQ_GetUserRole extends SecurityClass {
     constructor() {
@@ -9954,6 +9990,102 @@ class I_Type_Souscription extends SecurityClass {
     public invitation: number;
     public StatusFlag: string;
 }
+
+class IQ_Custmer_Souscription extends SecurityClass {
+    constructor() {
+        super();
+        this.ID_Cust = 0;
+        this.Name_Customer = "";
+        this.Phone_Customer = "";
+        this.Carte_Dentite = "";
+        this.Adresse = "";
+        this.age = 0;
+        this.Remarks = "";
+        this.image = "";
+        this.ID_Souscription = 0;
+        this.Start_Date = "";
+        this.End_Date = "";
+        this.NameStatas = "";
+        this.Statas = false;
+        this.Num_Day = 0;
+        this.Type_Sub = "";
+        this.Type = "";
+        this.CreatedAt = "";
+        this.CreatedBy = "";
+        this.UpdatedAt = "";
+        this.UpdatedBy = "";
+        this.price_Sub = 0;
+        this.Discount = 0;
+        this.Price_After_Discount = 0;
+        this.End_Date_freeze = "";
+        this.Num_Days_freeze = 0;
+        this.Num_Attendance = 0;
+        this.Type_Customer = 0;
+        this.invitation = 0;
+        this.remainDay = '';
+
+    }
+    public ID_Cust: number;
+    public Name_Customer: string;
+    public Phone_Customer: string;
+    public Carte_Dentite: string;
+    public Adresse: string;
+    public age: number;
+    public Remarks: string;
+    public image: string;
+    public ID_Souscription: number;
+    public Start_Date: string;
+    public End_Date: string;
+    public NameStatas: string;
+    public Statas: boolean;
+    public Num_Day: number;
+    public Type_Sub: string;
+    public Type: string;
+    public CreatedAt: string;
+    public CreatedBy: string;
+    public UpdatedAt: string;
+    public UpdatedBy: string;
+    public price_Sub: any;
+    public Discount: any;
+    public Price_After_Discount: any;
+    public End_Date_freeze: string;
+    public Num_Days_freeze: number;
+    public Num_Attendance: number;
+    public Type_Customer: number;
+    public invitation: any;
+    public remainDay: string;
+}
+
+class IQ_Data_CustmorDetails extends SecurityClass {
+    constructor() {
+        super();
+        this.ID = 0;
+        this.ID_Cust = 0;
+        this.ID_Souscription = 0;
+        this.Start_Date_Detais = "";
+        this.End_Date_Detais = "";
+        this.Num_Day_Attendance = 0;
+        this.Remarks_Detais = "";
+        this.Longueur_Detais = 0;
+        this.le_Poids_Detais = 0;
+        this.Muscles_P_C = 0;
+        this.Fats_P_C = 0;
+        this.Type_Sub = "";
+    }
+    public ID: number;
+    public ID_Cust: number;
+    public ID_Souscription: number;
+    public Start_Date_Detais: string;
+    public End_Date_Detais: string;
+    public Num_Day_Attendance: number;
+    public Remarks_Detais: string;
+    public Longueur_Detais: number;
+    public le_Poids_Detais: number;
+    public Muscles_P_C: number;
+    public Fats_P_C: number;
+    public Type_Sub: string;
+}    
+
 class invitation extends SecurityClass {
     constructor() {
         super();

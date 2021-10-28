@@ -177,6 +177,21 @@ namespace Inv.WebUI.Controllers
 
             return View("~/Views/Report/Income_expenses.cshtml");
         }
+        public ActionResult SubscriptionsIndex()
+        {
+
+            return View("~/Views/Sub/SubscriptionsIndex.cshtml");
+        }
+        public ActionResult TypesubscripIndex()
+        {
+
+            return View("~/Views/Generalsetting/TypesubscripIndex.cshtml");
+        }
+        public ActionResult AttendanceIndex()
+        {
+
+            return View("~/Views/Sub/AttendanceIndex.cshtml");
+        }
 
 
 

@@ -740,9 +740,7 @@ namespace HomeComponent {
         $("#btnUSERS").click(() => { OpenPage(Modules.USERS); })//   
         $("#btnAcc").click(() => { OpenPage(Modules.Acc); })
         $("#btnbranches").click(() => { OpenPage(Modules.branches); })
-        $("#btnDefBranches").click(() => { OpenPage(Modules.DefBranches); })
-
-
+        $("#btnDefBranches").click(() => { OpenPage(Modules.DefBranches); })         
         $("#btnSlsTrSales").click(() => { OpenPage(Modules.SlsTrSales); })
         $("#btnSlsTrReturn").click(() => { OpenPage(Modules.SlsTrReturn); })
         $("#btnPurchases").click(() => { OpenPage(Modules.Purchases); })
@@ -755,11 +753,10 @@ namespace HomeComponent {
         $("#btnfamilly_Cat").click(() => { OpenPage(Modules.familly_Cat); })
         $("#btnIncome_expenses").click(() => { OpenPage(Modules.Income_expenses); })
         $("#btnSlsTrSalesManager").click(() => { OpenPage(Modules.SlsTrSalesManager); })
-
-
-        
-
-
+        $("#btnSubscriptions").click(() => { OpenPage(Modules.Subscriptions); })
+        $("#btnTypesubscrip").click(() => { OpenPage(Modules.Typesubscrip); })
+        $("#btnAttendance").click(() => { OpenPage(Modules.Attendance); })
+          
     }
 
     function Notifications_Message() {

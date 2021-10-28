@@ -21,7 +21,7 @@ using Inv.BLL.Services.Stok_ORDER;
 using Inv.BLL.Services.Purchases;
 using Inv.BLL.Services.familly_Cate;
 using Inv.BLL.Services.Vendor; 
-using Inv.BLL.Services.SlsTrSales;     
+using Inv.BLL.Services.SlsTrSales;
 using BLL.Services.I_Type_Souscriptions;
 using BLL.Services.Souscription;
 using BLL.Services.SouscriptionDetails;
@@ -58,7 +58,7 @@ namespace Inv.API.Infrastructure
             container.RegisterType<IStok_ORDERServices, Stok_ORDERServices>();
             container.RegisterType<IPurchases_MasterServices, Purchases_MasterServices>();
             container.RegisterType<Ifamilly_CatServices, familly_CatServices>();
-            container.RegisterType<ISlsTrSalesServices, SlsTrSalesServices>(); 
+            container.RegisterType<ISlsTrSalesServices, SlsTrSalesServices>();
             container.RegisterType<II_Type_SouscriptionServices, I_Type_SouscriptionServices>();
             container.RegisterType<II_Customer_GymServices, I_Customer_GymServices>();
             container.RegisterType<II_Detais_CustmorServices, I_Detais_CustmorServices>();

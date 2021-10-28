@@ -151,6 +151,19 @@ var BaseResponse = /** @class */ (function () {
     }
     return BaseResponse;
 }());
+var LoginPage = /** @class */ (function (_super) {
+    __extends(LoginPage, _super);
+    function LoginPage() {
+        var _this = _super.call(this) || this;
+        _this.ID_User = 0;
+        _this.UserName = "";
+        _this.password = "";
+        _this.WepFormLoad = "";
+        _this.Open_Login = false;
+        return _this;
+    }
+    return LoginPage;
+}(SecurityClass));
 var ReportParameters = /** @class */ (function () {
     function ReportParameters() {
     }
@@ -3416,7 +3429,6 @@ var G_USERS = /** @class */ (function (_super) {
         _this.USER_ACTIVE = false;
         _this.USER_NAME = "";
         _this.CompCode = 0;
-        _this.GRP_CODE = "";
         _this.REGION_CODE = "";
         _this.USER_PASSWORD2 = "";
         _this.CHANGE_PASS_DATE = "";
@@ -3435,6 +3447,16 @@ var G_USERS = /** @class */ (function (_super) {
         _this.LastLogin = "";
         _this.Flag_Mastr = "";
         _this.StoreID = 0;
+        _this.USER_ACTIVE_Name = "";
+        _this.GRP_CODE = 0;
+        _this.salary = 0;
+        _this.day_num = 0;
+        _this.hour_num = 0;
+        _this.Num_Attendance = 0;
+        _this.ID_Code = 0;
+        _this.End_Data = "";
+        _this.Start_Data = "";
+        _this.Day_Off = 0;
         return _this;
     }
     return G_USERS;
@@ -3467,6 +3489,7 @@ var GQ_GetUsers = /** @class */ (function (_super) {
         _this.ManagedBy = "";
         _this.Tokenid = "";
         _this.LastLogin = "";
+        _this.USER_ACTIVE_Name = "";
         _this.FirstLogin = "";
         _this.Remarks = "";
         _this.CreatedAt = "";
@@ -3481,6 +3504,7 @@ var GQ_GetUsers = /** @class */ (function (_super) {
         _this.SUB_SYSTEM_CODE = "";
         _this.Flag_Mastr = "";
         _this.StoreID = 0;
+        _this.salary = 0;
         return _this;
     }
     return GQ_GetUsers;
@@ -5917,6 +5941,63 @@ var I_Type_Souscription = /** @class */ (function (_super) {
         return _this;
     }
     return I_Type_Souscription;
+}(SecurityClass));
+var IQ_Custmer_Souscription = /** @class */ (function (_super) {
+    __extends(IQ_Custmer_Souscription, _super);
+    function IQ_Custmer_Souscription() {
+        var _this = _super.call(this) || this;
+        _this.ID_Cust = 0;
+        _this.Name_Customer = "";
+        _this.Phone_Customer = "";
+        _this.Carte_Dentite = "";
+        _this.Adresse = "";
+        _this.age = 0;
+        _this.Remarks = "";
+        _this.image = "";
+        _this.ID_Souscription = 0;
+        _this.Start_Date = "";
+        _this.End_Date = "";
+        _this.NameStatas = "";
+        _this.Statas = false;
+        _this.Num_Day = 0;
+        _this.Type_Sub = "";
+        _this.Type = "";
+        _this.CreatedAt = "";
+        _this.CreatedBy = "";
+        _this.UpdatedAt = "";
+        _this.UpdatedBy = "";
+        _this.price_Sub = 0;
+        _this.Discount = 0;
+        _this.Price_After_Discount = 0;
+        _this.End_Date_freeze = "";
+        _this.Num_Days_freeze = 0;
+        _this.Num_Attendance = 0;
+        _this.Type_Customer = 0;
+        _this.invitation = 0;
+        _this.remainDay = '';
+        return _this;
+    }
+    return IQ_Custmer_Souscription;
+}(SecurityClass));
+var IQ_Data_CustmorDetails = /** @class */ (function (_super) {
+    __extends(IQ_Data_CustmorDetails, _super);
+    function IQ_Data_CustmorDetails() {
+        var _this = _super.call(this) || this;
+        _this.ID = 0;
+        _this.ID_Cust = 0;
+        _this.ID_Souscription = 0;
+        _this.Start_Date_Detais = "";
+        _this.End_Date_Detais = "";
+        _this.Num_Day_Attendance = 0;
+        _this.Remarks_Detais = "";
+        _this.Longueur_Detais = 0;
+        _this.le_Poids_Detais = 0;
+        _this.Muscles_P_C = 0;
+        _this.Fats_P_C = 0;
+        _this.Type_Sub = "";
+        return _this;
+    }
+    return IQ_Data_CustmorDetails;
 }(SecurityClass));
 var invitation = /** @class */ (function (_super) {
     __extends(invitation, _super);

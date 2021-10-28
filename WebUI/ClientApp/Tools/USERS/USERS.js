@@ -697,7 +697,7 @@ var USERS;
         return res;
     }
     function Update() {
-        Model = Selecteditem;
+        Model = new G_USERS;
         Assign();
         Assign_BRANCH();
         Master.Token = "HGFD-" + SysSession.CurrentEnvironment.Token;

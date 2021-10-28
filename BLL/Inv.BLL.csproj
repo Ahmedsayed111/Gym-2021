@@ -78,10 +78,10 @@
     <Compile Include="Services\IGCodes\IIGCodesService.cs" />
     <Compile Include="Services\Item\IItemServices.cs" />
     <Compile Include="Services\Item\ItemServices.cs" />
+    <Compile Include="Services\I_Type_Souscriptions\II_Type_SouscriptionsServices.cs" />
+    <Compile Include="Services\I_Type_Souscriptions\I_Type_SouscriptionsServices.cs" />
     <Compile Include="Services\I_Attendancee\II_AttendanceServices.cs" />
     <Compile Include="Services\I_Attendancee\I_AttendanceServices.cs" />
-    <Compile Include="Services\I_Type_Souscriptions\II_Type_SouscriptionServices.cs" />
-    <Compile Include="Services\I_Type_Souscriptions\I_Type_SouscriptionServices.cs" />
     <Compile Include="Services\Outletpirce\IOutletpirceServices.cs" />
     <Compile Include="Services\Outletpirce\OutletpirceServices.cs" />
     <Compile Include="Services\Purchases\IPurchases_MasterServices.cs" />

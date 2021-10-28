@@ -812,7 +812,7 @@ namespace USERS {
     }
 
     function Update() {
-        Model = <G_USERS>Selecteditem;
+        Model = new G_USERS ;
         Assign();
 
         Assign_BRANCH();

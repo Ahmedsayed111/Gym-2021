@@ -9,7 +9,7 @@ using Inv.DAL.Repository;
 
 namespace BLL.Services.I_Type_Souscriptions
 {
-   public class I_Type_SouscriptionServices : II_Type_SouscriptionServices
+    public class I_Type_SouscriptionServices : II_Type_SouscriptionServices
     {
         private readonly IUnitOfWork unitOfWork;
 
