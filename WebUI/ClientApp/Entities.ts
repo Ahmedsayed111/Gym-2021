@@ -5890,6 +5890,7 @@ class GQ_GetUsers extends SecurityClass {
         this.Type_DescA = "";
         this.Type_DescE = "";
         this.CodeType = "";
+        this.IsActiveDesc = "";
         this.CashBoxID = 0;
         this.SalesManID = 0;
         this.StoreID = 0;
@@ -5925,6 +5926,7 @@ class GQ_GetUsers extends SecurityClass {
     public UpdatedBy: string;
     public Type_DescA: string;
     public Type_DescE: string;
+    public IsActiveDesc: string;
     public CodeType: string;
     public CashBoxID: number;
     public SalesManID: number;

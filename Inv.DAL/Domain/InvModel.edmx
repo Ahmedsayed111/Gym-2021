@@ -3893,6 +3893,9 @@ warning 6002: The table/view 'Gym2021.dbo.ReviewSalesMaster' does not have a pri
         </Function>
         <Function Name="Close_days" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="Date_Time_Now" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="End_Date_Souscription" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_Souscription" Type="int" Mode="In" />
+        </Function>
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="G_GetHDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
           <Parameter Name="DateG" Type="smalldatetime" Mode="In" />
@@ -7740,6 +7743,9 @@ warning 6002: The table/view 'Gym2021.dbo.ReviewSalesMaster' does not have a pri
           </FunctionImport>
           <EntitySet Name="G_USERS" EntityType="POS2021Model.G_USERS" />
           <EntitySet Name="IQ_Attend_Multi" EntityType="POS2021Model.IQ_Attend_Multi" />
+          <FunctionImport Name="End_Date_Souscription" ReturnType="Collection(String)">
+            <Parameter Name="ID_Souscription" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="Get_Settings_Report_Result">
           <Property Type="Int32" Name="ID_Report" Nullable="false" />
@@ -14554,6 +14560,7 @@ warning 6002: The table/view 'Gym2021.dbo.ReviewSalesMaster' does not have a pri
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="End_Date_Souscription" FunctionName="POS2021Model.Store.End_Date_Souscription" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

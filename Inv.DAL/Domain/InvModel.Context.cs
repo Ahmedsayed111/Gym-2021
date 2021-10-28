@@ -1758,5 +1758,14 @@ namespace Inv.DAL.Domain
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<decimal>>("updateDebit", cUSTOMER_IDParameter, shootMoneyParameter, userNameParameter);
         }
+    
+        public virtual ObjectResult<string> End_Date_Souscription(Nullable<int> iD_Souscription)
+        {
+            var iD_SouscriptionParameter = iD_Souscription.HasValue ?
+                new ObjectParameter("ID_Souscription", iD_Souscription) :
+                new ObjectParameter("ID_Souscription", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("End_Date_Souscription", iD_SouscriptionParameter);
+        }
     }
 }

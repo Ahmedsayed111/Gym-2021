@@ -3496,6 +3496,7 @@ var GQ_GetUsers = /** @class */ (function (_super) {
         _this.Type_DescA = "";
         _this.Type_DescE = "";
         _this.CodeType = "";
+        _this.IsActiveDesc = "";
         _this.CashBoxID = 0;
         _this.SalesManID = 0;
         _this.StoreID = 0;
