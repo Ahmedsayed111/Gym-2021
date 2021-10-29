@@ -24,8 +24,6 @@ var Attendance;
             InitializeGrid();
             Display();
             setTime();
-            Enter_Cust.focus();
-            Foucs();
         }
     }
     Attendance.InitalizeComponent = InitalizeComponent;
@@ -93,6 +91,7 @@ var Attendance;
             { title: "التاريخ", name: "Tr_Date", type: "text", width: "10%" },
             { title: "وقت الدخول", name: "Time_in", type: "text", width: "10%" },
             { title: "عدد ايام الحضور", name: "Num_Day_Attendance", type: "text", width: "11%" },
+            { title: "الملاحظات", name: "Remarks", type: "text", width: "11%" },
             {
                 title: "الدعوه",
                 width: "5%",
@@ -140,8 +139,6 @@ var Attendance;
             $("#txtAge_invit").attr("disabled", "disabled");
             $("#txtCarte_Dentite_invit").attr("disabled", "disabled");
             $("#txtRemarks_invit").attr("disabled", "disabled");
-            Enter_Cust.focus();
-            Foucs();
         }
         $('#Men_popu').attr('style', 'display:block;');
         $('#Men_popu').attr('class', 'popu animated zoomIn');
@@ -202,8 +199,6 @@ var Attendance;
                 if (result.IsSuccess) {
                     $("#PopupDialog").modal("hide");
                     $('#Men_popu').attr('class', 'popu animated zoomOutUp');
-                    Enter_Cust.focus();
-                    Foucs();
                 }
             }
         });
@@ -228,40 +223,40 @@ var Attendance;
         setTimeout(function () {
             Display();
             setTime();
-        }, 70000);
+        }, 3000);
     }
     function Foucs() {
-        setTimeout(function () {
-            //$("input#id_pirce").is(":active")
-            if ($('#PopupDialog').attr('style') == 'display: block; padding-right: 17px;' || $('#PopupDialog').attr('style') == 'display: block;') {
-                setTimeout(function () {
-                    //Enter_Cust.focus();
-                    Foucs();
-                }, 10000);
-            }
-            else if ($("textarea#id_Dasc_Name").is(":active")) {
-                setTimeout(function () {
-                    Enter_Cust.focus();
-                    Foucs();
-                }, 10000);
-            }
-            else if ($("input#id_pirce").is(":active")) {
-                setTimeout(function () {
-                    Enter_Cust.focus();
-                    Foucs();
-                }, 10000);
-            }
-            else if ($("input#searchbutmemreport").is(":active")) {
-                setTimeout(function () {
-                    Enter_Cust.focus();
-                    Foucs();
-                }, 10000);
-            }
-            else {
-                Enter_Cust.focus();
-                Foucs();
-            }
-        }, 1000);
+        //setTimeout(function () {
+        //    //$("input#id_pirce").is(":active")
+        //    if ($('#PopupDialog').attr('style') == 'display: block; padding-right: 17px;' || $('#PopupDialog').attr('style') == 'display: block;') {
+        //        setTimeout(function () {
+        //            //Enter_Cust.focus();
+        //            Foucs();
+        //        }, 10000);
+        //    }
+        //    else if ($("textarea#id_Dasc_Name").is(":active")) {
+        //        setTimeout(function () {
+        //            Enter_Cust.focus();
+        //            Foucs();
+        //        }, 10000);
+        //    }
+        //    else if ($("input#id_pirce").is(":active")) {
+        //        setTimeout(function () {
+        //            Enter_Cust.focus();
+        //            Foucs();
+        //        }, 10000);
+        //    }
+        //    else if ($("input#searchbutmemreport").is(":active")) {
+        //        setTimeout(function () {
+        //            Enter_Cust.focus();
+        //            Foucs();
+        //        }, 10000);
+        //    }
+        //    else {
+        //        Enter_Cust.focus();
+        //        Foucs();
+        //    }
+        //}, 1000);
     }
     function _SearchBox_Focs() {
         //setTimeout(function () {

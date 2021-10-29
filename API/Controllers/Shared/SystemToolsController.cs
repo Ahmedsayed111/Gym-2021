@@ -30,6 +30,7 @@ using System.Drawing;
 using Inv.API.Models.CustomEntities;
 using Microsoft.VisualBasic;
 using QRCoder;
+using RS.API.Models;
 
 namespace Inv.API.Controllers
 {
@@ -1637,6 +1638,128 @@ namespace Inv.API.Controllers
             } while (1 == 1);
             return formattedDate;
         }
+
+
+        [HttpGet]
+        public string paths(string CustCode)
+        {
+            //added
+            // Read rs_control where comp_code = ?? and then read _stdPath from rs_control . imgpath  
+            //var Gcontrol = GetG_control(compcode);
+            string pathimg = "";
+            string _Path = System.Configuration.ConfigurationManager.AppSettings["ImageFolder_Path"] + CustCode + "/";
+            // System.Configuration.ConfigurationManager.AppSettings["ImageFolder_Path"] + Type + "/" + CustCode + "/";
+            //string fol = context.Server.MapPath(path)
+            if (Directory.Exists(_Path))
+            {
+                DirectoryInfo d = new DirectoryInfo(_Path);
+                FileInfo[] Files = d.GetFiles();
+                //if (Files.Count() <= 0)
+                //{
+                //    _Path = System.Web.Hosting.HostingEnvironment.MapPath("~/images/EmptyImages/");
+                //    d = new DirectoryInfo(_Path);
+                //    Files = d.GetFiles();
+                //}
+                List<string> str = new List<string>();
+                List<ImgPath> img = new List<ImgPath>();
+                if (Files.Count() > 0)
+                {
+                    char[] _ = { '_' };
+                    char[] _Jpg = { '.' };
+                    Dictionary<int, string> dic = new Dictionary<int, string>();
+
+                    //List<int> num = new List<int>();
+                    foreach (FileInfo file in Files)
+                    {
+                        using (MemoryStream m = new MemoryStream())
+                        {
+
+                            string pdf_file = "";
+                            if (file.Extension == ".pdf")
+                            {
+
+                                byte[] bytes = File.ReadAllBytes(file.FullName).ToArray();
+                                pdf_file = Convert.ToBase64String(bytes, 0, bytes.Length);
+                                img.Add(new ImgPath
+                                {
+                                    ID = 0,
+                                    Name = _Path + file.Name,
+                                    IncodeImg = "data:application/pdf;base64," + pdf_file
+                                });
+                            }
+                            else
+                            {
+
+
+                                Image image = Image.FromFile(_Path + file.Name);
+                                image.Save(m, image.RawFormat);
+                                image.Dispose();
+                                BinaryReader br = new BinaryReader(m);
+                                byte[] imageBytes = m.ToArray();
+                                // Convert byte[] to Base64 String
+                                string Base64string = Convert.ToBase64String(imageBytes, 0, imageBytes.Length);
+                                //return base64String;
+                                //str.Add("data:image/jpeg;base64," + Base64string + "data:image/jpeg;base64," + pdf_file);
+                                img.Add(new ImgPath
+                                {
+                                    ID = 0,
+                                    Name = _Path + file.Name,
+                                    IncodeImg = "data:image/jpeg;base64," + Base64string
+                                });
+                                m.Flush();
+                                m.Close();
+                                m.Dispose();
+                            }
+                        }
+                    }
+                }
+                pathimg = JsonConvert.SerializeObject(img, Newtonsoft.Json.Formatting.Indented, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Serialize });
+
+
+            }
+            else
+            {
+
+                _Path = System.Web.Hosting.HostingEnvironment.MapPath("~/img/EmptyImages/");
+                DirectoryInfo d = new DirectoryInfo(_Path);
+                FileInfo[] Files = d.GetFiles();
+                char[] _ = { '_' };
+                char[] _Jpg = { '.' };
+                Dictionary<int, string> dic = new Dictionary<int, string>();
+                List<string> str = new List<string>();
+                List<ImgPath> img = new List<ImgPath>();
+                //List<int> num = new List<int>();
+                foreach (FileInfo file in Files)
+                {
+                    using (MemoryStream m = new MemoryStream())
+                    {
+                        Image image = Image.FromFile(_Path + file.Name);
+                        image.Save(m, image.RawFormat);
+                        BinaryReader br = new BinaryReader(m);
+                        byte[] imageBytes = m.ToArray();
+                        // Convert byte[] to Base64 String
+                        string Base64string = Convert.ToBase64String(imageBytes, 0, imageBytes.Length);
+                        //return base64String;
+                        str.Add("data:image/jpeg;base64," + Base64string);
+                        img.Add(new ImgPath
+                        {
+                            ID = 0,
+                            Name = _Path + file.Name,
+                            IncodeImg = "data:image/jpeg;base64," + Base64string
+                        });
+                        m.Flush();
+                        m.Close();
+                        m.Dispose();
+                    }
+
+                }
+
+                pathimg = JsonConvert.SerializeObject(img, Newtonsoft.Json.Formatting.Indented, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Serialize });
+            }
+
+            return pathimg;
+        }
+
 
     }
 }

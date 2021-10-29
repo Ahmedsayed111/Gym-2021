@@ -531,7 +531,6 @@ var SlsTrSales;
             //this.setAttribute('style', 'zoom:' + zoom_select + ';background-color: #c80202db;');
             //this.setAttribute('class', 'Css_but chat-box-wrap shadow-reset  animated pulse');
             this.setAttribute('value', 'Finish');
-            //div.setAttribute('style', 'zoom:' + zoom_select + ';background-color: #ff000094;');
         }
         //this.focus();
     }

@@ -1,4 +1,4 @@
-var SystemTools = /** @class */ (function () {
+var SystemTools = (function () {
     function SystemTools() {
         this.orgCondition = "";
         this.SysSession = GetSystemSession();
@@ -71,7 +71,7 @@ var SystemTools = /** @class */ (function () {
         }
         var favs = SharedWork.UserFavorits.filter(function (f) { return f.MODULE_CODE == sessionStorage.getItem("MODU_CODE"); });
         var favImage = DocumentActions.GetElementById("favImage");
-        if (favs.length > 0) { // This page is in favorite list
+        if (favs.length > 0) {
             //sessionStorage.setItem("imgFavUrl", "../images/favourit.gif");
             //$("#imgFavUrl").val("../images/favourit.gif");
             favImage.src = "../images/favourit.gif";
@@ -462,7 +462,7 @@ var SystemTools = /** @class */ (function () {
     };
     return SystemTools;
 }());
-var SelectItem = /** @class */ (function () {
+var SelectItem = (function () {
     function SelectItem() {
         this.Value = null;
         this.Text = null;

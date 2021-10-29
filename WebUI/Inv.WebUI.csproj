@@ -154,10 +154,6 @@
     <Content Include="ClientApp\Home\Home.js" />
     <Content Include="ClientApp\Reports\Income_expenses.js" />
     <Content Include="ClientApp\Reports\Salesinventory.js" />
-    <Content Include="ClientApp\Sub\Presence.js" />
-    <Content Include="ClientApp\Sub\Purchases.js" />
-    <Content Include="ClientApp\Sub\Subscriptions.js" />
-    <Content Include="ClientApp\teamwork\TEAMWORK.js" />
     <Content Include="css\select2.min.css" />
     <Content Include="css\UnderConstruction\css\animate.css" />
     <Content Include="css\UnderConstruction\css\bootstrap.min.css" />
@@ -173,6 +169,11 @@
     <Content Include="css\UnderConstruction\js\my_js.js" />
     <Content Include="css\UnderConstruction\js\wow.min.js" />
     <Content Include="favicon.png" />
+    <Content Include="images\Background\amal.jpg" />
+    <Content Include="images\Background\amal1.jpg" />
+    <Content Include="images\Background\bk5.jpg" />
+    <Content Include="images\Background\bk_HopeLife.jpg" />
+    <Content Include="images\Background\bk_shrouq.jpg" />
     <Content Include="images\Background\bs1.jpg" />
     <Content Include="images\Background\businessman-3087395_1920.jpg" />
     <Content Include="images\Background\fr1.jpg" />
@@ -689,43 +690,7 @@
     <Content Include="fonts\IDAutomationSC39XS.ttf" />
     <Content Include="Content\DataTables\css\mixins.scss" />
     <Content Include="Content\DataTables\css\common.scss" />
-    <Content Include="Views\AdminSetting\AdminBarIndex.cshtml" />
-    <Content Include="Views\AdminSetting\AdminCompIndex.cshtml" />
-    <Content Include="Views\CollectionReports\ClientaccstatIndex.cshtml" />
-    <Content Include="Views\CollectionReports\CollectedaccstatIndex.cshtml" />
-    <Content Include="Views\CollectionReports\IncomeoperationsIndex.cshtml" />
-    <Content Include="Views\CollectionReports\InventorymoveIndex.cshtml" />
-    <Content Include="Views\CollectionReports\InventoryvalueIndex.cshtml" />
-    <Content Include="Views\CollectionReports\SupplieraccstatIndex.cshtml" />
-    <Content Include="Views\Generalsetting\Catch_ReceiptIndex.cshtml" />
-    <Content Include="Views\Generalsetting\CUSTOMERSIndex.cshtml" />
-    <Content Include="Views\Generalsetting\SupplierIndex.cshtml" />
-    <Content Include="Views\Generalsetting\USERSIndex.cshtml" />
-    <Content Include="Views\Home\Admin.cshtml" />
-    <Content Include="Views\Home\AdminHome.cshtml" />
-    <Content Include="Views\Home\HomeIndex.cshtml" />
-    <Content Include="Views\Login\HomePage.cshtml" />
     <Content Include="Views\Login\HomePage1.cshtml" />
-    <Content Include="Views\Login\LoginIndex.cshtml" />
-    <Content Include="Views\Purchases\PurchasesIndex.cshtml" />
-    <Content Include="Views\Report\Income_expenses.cshtml" />
-    <Content Include="Views\Report\Salesinventory.cshtml" />
-    <Content Include="Views\Sales\SlsTrReturnIndex.cshtml" />
-    <Content Include="Views\Sales\SlsTrSalesIndex.cshtml" />
-    <Content Include="Views\Sales\SlsTrSalesManagerIndex.cshtml" />
-    <Content Include="Views\Sale\SlsTrSalesManagerIndex.cshtml" />
-    <Content Include="Views\Shared\AdminLayout.cshtml" />
-    <Content Include="Views\Shared\Layout.cshtml" />
-    <Content Include="Views\Shared\LoginLayout.cshtml" />
-    <Content Include="Views\Shared\Popup.cshtml" />
-    <Content Include="Views\Shared\Popuppicture.cshtml" />
-    <Content Include="Views\Stock\CategoriesIndex.cshtml" />
-    <Content Include="Views\Stock\familly_Cat.cshtml" />
-    <Content Include="Views\Stock\ItemsIndex.cshtml" />
-    <Content Include="Views\Tools\USERS\USERSIndex.cshtml" />
-    <Content Include="Views\web.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Website\assets\css\style.css" />
     <Content Include="Website\assets\img\apple-touch-icon.png" />
     <Content Include="Website\assets\img\favicon.png" />
@@ -828,10 +793,7 @@
     </Content>
     <Content Include="ClientApp\Home\Attendance.js.map" />
     <Content Include="ClientApp\Home\Home.js.map" />
-    <Content Include="ClientApp\Sub\Presence.js.map" />
-    <Content Include="ClientApp\Sub\Purchases.js.map" />
-    <Content Include="ClientApp\Sub\Subscriptions.js.map" />
-    <Content Include="ClientApp\teamwork\TEAMWORK.js.map" />
+    <Content Include="ClientApp\Partial\UploadFile.ashx" />
     <None Include="POS2021DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>POS2021DataSet.Designer.cs</LastGenOutput>
@@ -1074,6 +1036,7 @@
     <Content Include="Scripts\jsgrid\jsgrid.min.css" />
     <Content Include="Scripts\jsgrid\jsgrid.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Views\Login\LoginIndex.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1191,6 +1154,14 @@
     <Content Include="Style_design\img\notification\Thumbs.db" />
     <Content Include="Style_design\img\profile\Thumbs.db" />
     <Content Include="Style_design\img\Thumbs.db" />
+    <Content Include="Views\Home\HomeIndex.cshtml" />
+    <Content Include="Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Shared\LoginLayout.cshtml" />
+    <Content Include="Views\Shared\Popup.cshtml" />
+    <Content Include="Views\Shared\Layout.cshtml" />
+    <Content Include="Views\Shared\Popuppicture.cshtml" />
     <Content Include="Style_design\css\fonts\adminpro-icon.ttf" />
     <Content Include="Style_design\css\fonts\adminpro-icon.woff" />
     <Content Include="Style_design\css\fonts\fontawesome-webfont.eot" />
@@ -1205,12 +1176,36 @@
     <Content Include="Style_design\css\fonts\summernote.eot" />
     <Content Include="Style_design\css\fonts\summernote.ttf" />
     <Content Include="Style_design\css\fonts\summernote.woff" />
-    <Content Include="Views\Generalsetting\TypesubscripIndex.cshtml" />
-    <Content Include="Views\Home\Help.cshtml" />
-    <Content Include="Views\Login\UnderConstruction_.cshtml" />
-    <Content Include="Views\Shared\_ErrorPage.cshtml" />
+    <Content Include="Views\CollectionReports\ClientaccstatIndex.cshtml" />
+    <Content Include="Views\CollectionReports\SupplieraccstatIndex.cshtml" />
+    <Content Include="Views\CollectionReports\InventorymoveIndex.cshtml" />
+    <Content Include="Views\CollectionReports\IncomeoperationsIndex.cshtml" />
+    <Content Include="Views\CollectionReports\InventoryvalueIndex.cshtml" />
+    <Content Include="Views\Login\HomePage.cshtml" />
+    <Content Include="Views\CollectionReports\CollectedaccstatIndex.cshtml" />
+    <Content Include="Views\Shared\AdminLayout.cshtml" />
+    <Content Include="Views\AdminSetting\AdminBarIndex.cshtml" />
+    <Content Include="Views\AdminSetting\AdminCompIndex.cshtml" />
+    <Content Include="Views\Home\Admin.cshtml" />
+    <Content Include="Views\Home\AdminHome.cshtml" />
+    <Content Include="Views\Tools\USERS\USERSIndex.cshtml" />
+    <Content Include="Views\Generalsetting\SupplierIndex.cshtml" />
+    <Content Include="Views\Generalsetting\USERSIndex.cshtml" />
+    <Content Include="Views\Purchases\PurchasesIndex.cshtml" />
+    <Content Include="Views\Report\Income_expenses.cshtml" />
+    <Content Include="Views\Report\Salesinventory.cshtml" />
+    <Content Include="Views\Sales\SlsTrReturnIndex.cshtml" />
+    <Content Include="Views\Sales\SlsTrSalesIndex.cshtml" />
+    <Content Include="Views\Sales\SlsTrSalesManagerIndex.cshtml" />
+    <Content Include="Views\Stock\CategoriesIndex.cshtml" />
+    <Content Include="Views\Stock\familly_Cat.cshtml" />
+    <Content Include="Views\Stock\ItemsIndex.cshtml" />
+    <Content Include="Views\Generalsetting\CUSTOMERSIndex.cshtml" />
+    <Content Include="Views\Generalsetting\Catch_ReceiptIndex.cshtml" />
+    <Content Include="Views\Sale\SlsTrSalesManagerIndex.cshtml" />
     <Content Include="Views\Sub\AttendanceIndex.cshtml" />
     <Content Include="Views\Sub\SubscriptionsIndex.cshtml" />
+    <Content Include="Views\Generalsetting\TypesubscripIndex.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1235,7 +1230,6 @@
     <TypeScriptCompile Include="ClientApp\Generalsetting\CUSTOMERS.ts" />
     <TypeScriptCompile Include="ClientApp\Generalsetting\Catch_Receipt.ts" />
     <TypeScriptCompile Include="ClientApp\Generalsetting\Supplier.ts" />
-    <TypeScriptCompile Include="ClientApp\Generalsetting\Typesubscrip.ts" />
     <TypeScriptCompile Include="ClientApp\Home\Attendance.ts" />
     <TypeScriptCompile Include="ClientApp\Pages\LoginAdmin.ts" />
     <TypeScriptCompile Include="ClientApp\Pages\LoginComponent.ts" />
@@ -1259,7 +1253,6 @@
     <TypeScriptCompile Include="ClientApp\Sub\Presence.ts" />
     <TypeScriptCompile Include="ClientApp\Sub\Subscriptions.ts" />
     <TypeScriptCompile Include="ClientApp\SystemTools.ts" />
-    <TypeScriptCompile Include="ClientApp\teamwork\TEAMWORK.ts" />
     <TypeScriptCompile Include="ClientApp\Tools\USERS\USERS.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
   </ItemGroup>
@@ -1313,7 +1306,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:65031/</IISUrl>
+          <IISUrl>http://localhost:55435/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

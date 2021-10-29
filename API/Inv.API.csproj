@@ -294,6 +294,7 @@
     <Compile Include="Models\CustomModel\SlsInvoiceMasterDetails.cs" />
     <Compile Include="Models\CustomModel\SlsMasterDetails.cs" />
     <Compile Include="Models\CustomModel\SubscriptionsMasterDetails.cs" />
+    <Compile Include="Models\ImgPath.cs" />
     <Compile Include="Models\ResponseResult.cs" />
     <Compile Include="Models\SessionRecord.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />

@@ -5861,7 +5861,7 @@ class GQ_GetUsers extends SecurityClass {
         super();
         this.USER_CODE = "";
         this.USER_PASSWORD = "";
-        this.USER_ACTIVE =false;
+        this.USER_ACTIVE = false;
         this.USER_NAME = "";
         this.CompCode = 0;
         this.REGION_CODE = "";
@@ -9779,7 +9779,7 @@ class I_Attendance_New extends SecurityClass {
         this.ready = false;
         this.Name_Customer = "";
         this.Num = 0;
-
+        this.Remarks = "";
 
     }
     public ID: number;
@@ -9792,6 +9792,7 @@ class I_Attendance_New extends SecurityClass {
     public ready: boolean;
     public Name_Customer: string;
     public Num: number;
+    public Remarks: string;
 }
 
 class IQ_Attend_Multi extends SecurityClass {
@@ -9808,6 +9809,7 @@ class IQ_Attend_Multi extends SecurityClass {
         this.Num_Day = 0;
         this.Name_Customer = "";
         this.USER_NAME = "";
+        this.Remarks = "";
     }
     public ID: number;
     public ID_Cust: number;
@@ -9820,6 +9822,7 @@ class IQ_Attend_Multi extends SecurityClass {
     public Num_Day: number;
     public Name_Customer: string;
     public USER_NAME: string;
+    public Remarks: string;
 }
 
 

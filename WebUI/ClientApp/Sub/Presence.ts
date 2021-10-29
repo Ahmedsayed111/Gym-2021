@@ -201,6 +201,7 @@ namespace Presence {
             { title: "وقت الحضور", name: "Time_in", type: "text", width: "20%" },
             { title: "وقت الانصراف", name: "Time_out", type: "text", width: "20%" },
             { title: "عدد ايام الحضور", name: "Num_Day_Attendance", type: "text", width: "20%" },
+            { title: "الملاحظات", name: "Remarks", type: "text", width: "20%" },     
         ];
 
     }

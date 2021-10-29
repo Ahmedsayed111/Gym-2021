@@ -174,7 +174,7 @@ namespace Inv.DAL.Domain
         public virtual DbSet<IQ_NoteSlsInvReturnList> IQ_NoteSlsInvReturnList { get; set; }
         public virtual DbSet<G_USERS> G_USERS { get; set; }
         public virtual DbSet<IQ_Attend_Multi> IQ_Attend_Multi { get; set; }
-    
+
         [DbFunction("InvEntities", "GFun_Companies")]
         public virtual IQueryable<GFun_Companies_Result> GFun_Companies(string userCode)
         {

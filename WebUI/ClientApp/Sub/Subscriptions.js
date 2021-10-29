@@ -1047,7 +1047,7 @@ var Subscriptions;
                 }
             }
         }
-        if (CanAdd) { //add
+        if (CanAdd) {
             Assign();
             Update();
             IsSuccess = false;
@@ -1123,7 +1123,6 @@ var Subscriptions;
             $("#Sales_Price" + i).removeAttr("disabled");
             $("#MinUnitPrice" + i).removeAttr("disabled");
             $("#txt_StatusFlag" + i).val("");
-            //$("#txtTotal" + i).removeAttr("disabled");
         }
     }
     function disabled_Grid_Controls() {
@@ -1142,7 +1141,6 @@ var Subscriptions;
             $("#Sales_Price" + i).attr("disabled", "disabled");
             $("#txtMinPrice" + i).attr("disabled", "disabled");
             $("#txt_StatusFlag" + i).val("");
-            //$("#txtScrapQty" + i).attr("disabled", "disabled");
         }
     }
     function ComputeTotals() {

@@ -35,8 +35,8 @@ namespace Attendance {
 
             setTime();
 
-            Enter_Cust.focus();
-            Foucs();
+            //Enter_Cust.focus();
+            //Foucs();
         }
 
     }
@@ -120,6 +120,7 @@ namespace Attendance {
             { title: "التاريخ", name: "Tr_Date", type: "text", width: "10%" },
             { title: "وقت الدخول", name: "Time_in", type: "text", width: "10%" },
             { title: "عدد ايام الحضور", name: "Num_Day_Attendance", type: "text", width: "11%" },
+            { title: "الملاحظات", name: "Remarks", type: "text", width: "11%" },   
             {
                 title: "الدعوه",
                 width: "5%",
@@ -184,8 +185,8 @@ namespace Attendance {
             $("#txtCarte_Dentite_invit").attr("disabled", "disabled");
             $("#txtRemarks_invit").attr("disabled", "disabled");
 
-            Enter_Cust.focus();
-            Foucs();
+            //Enter_Cust.focus();
+            //Foucs();
         }
 
 
@@ -218,11 +219,11 @@ namespace Attendance {
     }
 
     function view_invitation() {
-
+        
         let sys: SystemTools = new SystemTools();
         sys.FindKey(Modules.Subscriptions, "btnview_invitation", "ID_Cust = " + Number(ID_Cust_inv_view), () => {
             let ID_Supplier = SearchGrid.SearchDataGrid.SelectedKey;
-
+       
         });
 
     }
@@ -278,8 +279,8 @@ namespace Attendance {
                     $("#PopupDialog").modal("hide");
                     $('#Men_popu').attr('class', 'popu animated zoomOutUp');
 
-                    Enter_Cust.focus();
-                    Foucs();
+                    //Enter_Cust.focus();
+                    //Foucs();
                 }
             }
         });
@@ -320,68 +321,68 @@ namespace Attendance {
 
             Display();
             setTime();
-        }, 70000);
+        }, 3000);
 
 
 
     }
     function Foucs() {
 
-        setTimeout(function () {
+        //setTimeout(function () {
 
 
-            //$("input#id_pirce").is(":active")
+        //    //$("input#id_pirce").is(":active")
 
 
 
-            if ($('#PopupDialog').attr('style') == 'display: block; padding-right: 17px;' || $('#PopupDialog').attr('style') == 'display: block;') {
+        //    if ($('#PopupDialog').attr('style') == 'display: block; padding-right: 17px;' || $('#PopupDialog').attr('style') == 'display: block;') {
 
-                setTimeout(function () {
+        //        setTimeout(function () {
 
-                    //Enter_Cust.focus();
-                    Foucs();
+        //            //Enter_Cust.focus();
+        //            Foucs();
 
-                }, 10000);
+        //        }, 10000);
 
 
-            }
-            else if ($("textarea#id_Dasc_Name").is(":active")) {
+        //    }
+        //    else if ($("textarea#id_Dasc_Name").is(":active")) {
 
-                setTimeout(function () {
+        //        setTimeout(function () {
 
-                    Enter_Cust.focus();
-                    Foucs();
+        //            Enter_Cust.focus();
+        //            Foucs();
 
-                }, 10000);
+        //        }, 10000);
 
-            }
-            else if ($("input#id_pirce").is(":active")) {
+        //    }
+        //    else if ($("input#id_pirce").is(":active")) {
 
-                setTimeout(function () {
+        //        setTimeout(function () {
 
-                    Enter_Cust.focus();
-                    Foucs();
+        //            Enter_Cust.focus();
+        //            Foucs();
 
-                }, 10000);
+        //        }, 10000);
 
-            }
-            else if ($("input#searchbutmemreport").is(":active")) {
+        //    }
+        //    else if ($("input#searchbutmemreport").is(":active")) {
 
-                setTimeout(function () {
+        //        setTimeout(function () {
 
-                    Enter_Cust.focus();
-                    Foucs();
+        //            Enter_Cust.focus();
+        //            Foucs();
 
-                }, 10000);
+        //        }, 10000);
 
-            }
-            else {
+        //    }
+        //    else {
 
-                Enter_Cust.focus();
-                Foucs();
-            }
+        //        Enter_Cust.focus();
+        //        Foucs();
+        //    }
 
-        }, 1000);
+        //}, 1000);
 
 
     }

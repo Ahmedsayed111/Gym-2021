@@ -25,5 +25,6 @@ namespace Inv.DAL.Domain
         public Nullable<int> Num_Day { get; set; }
         public string Name_Customer { get; set; }
         public string USER_NAME { get; set; }
+        public string Remarks { get; set; }
     }
 }
