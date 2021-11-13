@@ -60,29 +60,7 @@ namespace BLL.Services.I_Attendancee
             unitOfWork.Save();
         }
 
-        public void UpdateList(List<IQ__Attendance> Lstservice)
-        {
-
-            var insertedRecord = Lstservice.Where(x => x.StatusFlag == 'i');
-            var updatedRecord = Lstservice.Where(x => x.StatusFlag == 'u');
-            var deletedRecord = Lstservice.Where(x => x.StatusFlag == 'd');
-
-            if (updatedRecord.Count() > 0)
-                unitOfWork.Repository<IQ__Attendance>().Update(updatedRecord);
-
-            if (insertedRecord.Count() > 0)
-                unitOfWork.Repository<IQ__Attendance>().Insert(insertedRecord);
-
-
-            if (deletedRecord.Count() > 0)
-            {
-                foreach (var entity in deletedRecord)
-                    unitOfWork.Repository<IQ__Attendance>().Delete(entity.ID);
-            }
-
-            unitOfWork.Save();
-
-        }
+        
         #endregion
     }
 }

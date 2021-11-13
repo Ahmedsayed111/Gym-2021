@@ -289,6 +289,14 @@ namespace USERS {
         txtUpdatedBy.value = Selecteditem.UpdatedBy;
         txtLastLogin.value = Selecteditem.LastLogin;
         txtFirstLogin.value = Selecteditem.FirstLogin;
+
+        $('#txtday_num').val(Selecteditem.day_num);
+        $('#txtDay_Off').val(Selecteditem.Day_Off);
+        $('#txthour_num').val(Selecteditem.hour_num);
+        $('#txtsalary').val(Selecteditem.salary);
+        $('#txtUSER_Attendance').val(Selecteditem.Num_Attendance);
+        $('#txtID_Code').val(Selecteditem.ID_Code);
+                 
     }
     function Display_RoleUsers() {
         var USER_CODE = txtUSER_CODE.value;
@@ -531,6 +539,7 @@ namespace USERS {
         CountGrid = Result_List.length;
     }
     function BindUserGrid() {
+
         Ajax.Callsync({
             type: "Get",
             url: sys.apiUrl("G_USERS", "GetUSER"),
@@ -812,7 +821,7 @@ namespace USERS {
     }
 
     function Update() {
-        Model = new G_USERS ;
+        Model = <G_USERS>Selecteditem;
         Assign();
 
         Assign_BRANCH();
@@ -832,13 +841,18 @@ namespace USERS {
             Master.G_USERS.UpdatedAt = DateTimeFormat(Date().toString());
             Master.G_USERS.UpdatedBy = SysSession.CurrentEnvironment.UserCode;
         }
-        Master.G_USERS.StoreID = null;
+
         Master.G_USERS.SalesManID = null;
         Master.G_USERS.CashBoxID = null;
         Master.G_USERS.USER_TYPE = drpuserType_2.value == "null" ? null : Number(drpuserType_2.value);
-
-
-
+        Master.G_USERS.day_num = Number($('#txtday_num').val());
+        Master.G_USERS.Day_Off = Number($('#txtDay_Off').val());
+        Master.G_USERS.hour_num = Number($('#txthour_num').val());
+        Master.G_USERS.salary = Number($('#txtsalary').val());
+        Master.G_USERS.Num_Attendance = Number($('#txtUSER_Attendance').val());
+        Master.G_USERS.ID_Code = Number($('#txtID_Code').val());
+        debugger
+        console.log(Master);
         Ajax.Callsync({
             type: "POST",
             url: sys.apiUrl("G_USERS", "Update"),

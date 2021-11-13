@@ -46,6 +46,11 @@ namespace Subscriptions {
     var Detailsfamilly_Cat: Array<familly_Cat> = new Array<familly_Cat>();
     var UploadImage: HTMLInputElement;
     var txtNumDays_freeze: HTMLInputElement;
+    var txtEnd_Date: HTMLInputElement;
+    var txtStart_Date: HTMLInputElement;
+
+    
+    
 
     //DropDownlist
 
@@ -165,6 +170,11 @@ namespace Subscriptions {
         //btnPrintTrEXEL = document.getElementById("btnPrintTrEXEL") as HTMLButtonElement;
         UploadImage = document.getElementById("Upload_Image") as HTMLInputElement;
         txtNumDays_freeze = document.getElementById("txtNumDays_freeze") as HTMLInputElement;
+        txtEnd_Date = document.getElementById("txtEnd_Date") as HTMLInputElement;
+        txtStart_Date = document.getElementById("txtStart_Date") as HTMLInputElement;         
+
+        
+        
         chkActive = document.getElementById("chkActive") as HTMLInputElement;
 
 
@@ -185,6 +195,10 @@ namespace Subscriptions {
         btnadd.onclick = btnAdd_onclick;
         btnAddDetails.onclick = AddNewRow;
         txtType_Sub.onchange = txtType_Sub_onchange;
+        txtEnd_Date.onchange = txtEnd_Date_onchange;
+        txtStart_Date.onchange = txtEnd_Date_onchange;
+
+        
         UploadImage.onchange = UploadImage_onchange;
         txtNumDays_freeze.onkeyup = txtNumDays_freeze_onchange;
         chkActive.onchange = chkActive_onchange;
@@ -1281,6 +1295,9 @@ namespace Subscriptions {
 
         $('#txtStart_Date').val(GetDate());
         $('#txtEnd_Date').val(GetDate());
+        $('#txtEnd_Date').removeAttr("disabled");
+        $('#txtStart_Date').removeAttr("disabled");
+
 
         $('#btnview_invitation').attr('disabled', 'disabled');
 
@@ -1340,8 +1357,12 @@ namespace Subscriptions {
         $('#txtUpdatedAt').attr('disabled', 'disabled');
 
 
-        $('#txtStart_Date').attr('disabled', 'disabled');
-        $('#txtEnd_Date').attr('disabled', 'disabled');
+        //$('#txtStart_Date').attr('disabled', 'disabled');
+        //$('#txtEnd_Date').attr('disabled', 'disabled');
+
+        $('#txtEnd_Date').removeAttr("disabled");
+        $('#txtStart_Date').removeAttr("disabled");
+
         $('#Num_Day').attr('disabled', 'disabled');
 
         $('#btnview_invitation').attr('disabled', 'disabled');
@@ -1582,6 +1603,15 @@ namespace Subscriptions {
             $('#Num_Day').val('0');
         }
 
+    }
+
+    function txtEnd_Date_onchange() {
+  
+        setTimeout(function () {
+            let Days = GetNumDay($('#txtStart_Date').val(), $('#txtEnd_Date').val());
+            $('#Num_Day').val(Days);
+        }, 600);
+       
     }
 
     function clear() {

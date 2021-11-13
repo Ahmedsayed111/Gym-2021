@@ -16,6 +16,6 @@ namespace BLL.Services.I_Attendancee
         IQ__Attendance Insert(IQ__Attendance entity);
         IQ__Attendance Update(IQ__Attendance entity);
         void Delete(int id);
-        void UpdateList(List<IQ__Attendance> Lstservice);
+        
     }
 }

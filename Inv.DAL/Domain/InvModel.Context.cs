@@ -87,7 +87,6 @@ namespace Inv.DAL.Domain
         public virtual DbSet<CUSTOMER> CUSTOMERs { get; set; }
         public virtual DbSet<Catch_Receipt> Catch_Receipt { get; set; }
         public virtual DbSet<IQ_Catch_Receipt> IQ_Catch_Receipt { get; set; }
-        public virtual DbSet<IQ__Attendance> IQ__Attendance { get; set; }
         public virtual DbSet<IQ_Custmer_Souscription> IQ_Custmer_Souscription { get; set; }
         public virtual DbSet<I_Customer_Gym> I_Customer_Gym { get; set; }
         public virtual DbSet<A_PERIOD> A_PERIOD { get; set; }
@@ -119,7 +118,6 @@ namespace Inv.DAL.Domain
         public virtual DbSet<G_ReportWebSetting> G_ReportWebSetting { get; set; }
         public virtual DbSet<G_VatNature> G_VatNature { get; set; }
         public virtual DbSet<HOLIDAY> HOLIDAYS { get; set; }
-        public virtual DbSet<I_Attendance> I_Attendance { get; set; }
         public virtual DbSet<I_Detais_Data_Custmor> I_Detais_Data_Custmor { get; set; }
         public virtual DbSet<I_Type_Souscription> I_Type_Souscription { get; set; }
         public virtual DbSet<invitation> invitations { get; set; }
@@ -173,8 +171,10 @@ namespace Inv.DAL.Domain
         public virtual DbSet<IQ_NoteSlsInvoiceList> IQ_NoteSlsInvoiceList { get; set; }
         public virtual DbSet<IQ_NoteSlsInvReturnList> IQ_NoteSlsInvReturnList { get; set; }
         public virtual DbSet<G_USERS> G_USERS { get; set; }
+        public virtual DbSet<I_Attendance> I_Attendance { get; set; }
+        public virtual DbSet<IQ__Attendance> IQ__Attendance { get; set; }
         public virtual DbSet<IQ_Attend_Multi> IQ_Attend_Multi { get; set; }
-
+    
         [DbFunction("InvEntities", "GFun_Companies")]
         public virtual IQueryable<GFun_Companies_Result> GFun_Companies(string userCode)
         {

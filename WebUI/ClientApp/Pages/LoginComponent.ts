@@ -147,7 +147,7 @@ var LoginComponent;
                         SystemEnv.UserType = result.USER_TYPE; 
                         SystemEnv.SalesManID = result.SalesManID; 
                         SystemEnv.CashBoxID = result.CashBoxID; 
-                        SystemEnv.StoreID = result.StoreID;  
+                  
                         document.cookie = "Inv1_systemProperties=" + JSON.stringify(SystemEnv).toString() + ";expires=Fri, 31 Dec 2030 23:59:59 GMT;path=/";
                         Ajax.Callsync({
                             type: "GET",

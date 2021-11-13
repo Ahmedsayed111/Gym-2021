@@ -51,10 +51,10 @@ function GetIndexByUseId(idValue, BaseTableName, idFieldName, Condition) {
         return result;
     }
     else {
-        var sys_1 = new SystemTools;
+        var sys = new SystemTools;
         var result_1 = "";
         Ajax.Callsync({
-            url: sys_1.apiUrl("SystemTools", "GetIndexByUseId"),
+            url: sys.apiUrl("SystemTools", "GetIndexByUseId"),
             data: { idValue: idValue.toString(), BaseTableName: BaseTableName, idFieldName: idFieldName, Condition: Condition },
             success: function (d) {
                 result_1 = d;
@@ -306,8 +306,8 @@ var Ajax = {
                 cache: false,
                 async: false
             }).responseJSON;
-            var result_3 = json.result;
-            return result_3;
+            var result = json.result;
+            return result;
         }
         catch (e) {
             $(".waitMe").removeAttr("style").fadeOut(200);

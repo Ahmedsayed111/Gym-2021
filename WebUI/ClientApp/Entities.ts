@@ -5766,8 +5766,29 @@ class G_RoleUsers extends SecurityClass {
 class G_USERS extends SecurityClass {
     constructor() {
         super();
-        this.LoginUrl = false;
+        this.USER_CODE = "";
+        this.ID_Code = 0;
+        this.USER_PASSWORD = "";
+        this.USER_ACTIVE = false;
+        this.USER_NAME = "";
+        this.CompCode = 0;
+        this.REGION_CODE = "";
+        this.GRP_CODE = 0;
+        this.USER_PASSWORD2 = "";
+        this.CHANGE_PASS_DATE = "";
+        this.City = "";
+        this.Address = "";
+        this.Tel = "";
+        this.Fax = "";
+        this.Mobile = "";
         this.Email = "";
+        this.DepartmentName = "";
+        this.JobTitle = "";
+        this.USER_TYPE = 0;
+        this.ManagedBy = "";
+        this.LoginUrl = false;
+        this.Tokenid = "";
+        this.LastLogin = "";
         this.FirstLogin = "";
         this.Remarks = "";
         this.CreatedAt = "";
@@ -5776,43 +5797,40 @@ class G_USERS extends SecurityClass {
         this.UpdatedBy = "";
         this.CashBoxID = 0;
         this.SalesManID = 0;
-        this.USER_CODE = "";
-        this.USER_PASSWORD = "";
-        this.USER_ACTIVE = false;
-        this.USER_NAME = "";
-        this.CompCode = 0;
-        this.REGION_CODE = "";
-        this.USER_PASSWORD2 = "";
-        this.CHANGE_PASS_DATE = "";
-        this.City = "";
-        this.Address = "";
-        this.Tel = "";
-        this.Fax = "";
-        this.Mobile = "";
-        this.DepartmentName = "";
-        this.JobTitle = "";
-        this.USER_TYPE = 0;
-        this.ManagedBy = "";
-        this.SYSTEM_CODE = "";
-        this.SUB_SYSTEM_CODE = "";
-        this.Tokenid = "";
-        this.LastLogin = "";
-        this.Flag_Mastr = "";
-        this.StoreID = 0;
-        this.USER_ACTIVE_Name = "";
-        this.GRP_CODE = 0;
         this.salary = 0;
         this.day_num = 0;
         this.hour_num = 0;
         this.Num_Attendance = 0;
-        this.ID_Code = 0;
         this.End_Data = "";
         this.Start_Data = "";
         this.Day_Off = 0;
+        this.Flag_Mastr = "";
+
 
     }
-    public LoginUrl: boolean;
+    public USER_CODE: string;
+    public ID_Code: number;
+    public USER_PASSWORD: string;
+    public USER_ACTIVE: boolean;
+    public USER_NAME: string;
+    public CompCode: number;
+    public REGION_CODE: string;
+    public GRP_CODE: number;
+    public USER_PASSWORD2: string;
+    public CHANGE_PASS_DATE: string;
+    public City: string;
+    public Address: string;
+    public Tel: string;
+    public Fax: string;
+    public Mobile: string;
     public Email: string;
+    public DepartmentName: string;
+    public JobTitle: string;
+    public USER_TYPE: number;
+    public ManagedBy: string;
+    public LoginUrl: boolean;
+    public Tokenid: string;
+    public LastLogin: string;
     public FirstLogin: string;
     public Remarks: string;
     public CreatedAt: string;
@@ -5821,45 +5839,23 @@ class G_USERS extends SecurityClass {
     public UpdatedBy: string;
     public CashBoxID: number;
     public SalesManID: number;
-    public USER_CODE: string;
-    public USER_PASSWORD: string;
-    public USER_ACTIVE: boolean;
-    public USER_NAME: string;
-    public CompCode: number;
-    public GRP_CODE: number;
-    public REGION_CODE: string;
-    public USER_PASSWORD2: string;
-    public CHANGE_PASS_DATE: string;
-    public City: string;
-    public Address: string;
-    public Tel: string;
-    public Fax: string;
-    public Mobile: string;
-    public DepartmentName: string;
-    public JobTitle: string;
-    public USER_TYPE: number;
-    public ManagedBy: string;
-    public SYSTEM_CODE: string;
-    public SUB_SYSTEM_CODE: string;
-    public LastLogin: string;
-    public Tokenid: string;
-    public Flag_Mastr: string;
-    public StoreID: number;
-    public USER_ACTIVE_Name: string;
-    public salary: number;
+    public salary: any;
     public day_num: number;
     public hour_num: number;
     public Num_Attendance: number;
-    public ID_Code: number;
     public End_Data: string;
     public Start_Data: string;
     public Day_Off: number;
+    public Flag_Mastr: string;
+
+
 }
 
 class GQ_GetUsers extends SecurityClass {
     constructor() {
         super();
         this.USER_CODE = "";
+        this.ID_Code = 0;
         this.USER_PASSWORD = "";
         this.USER_ACTIVE = false;
         this.USER_NAME = "";
@@ -5887,17 +5883,24 @@ class GQ_GetUsers extends SecurityClass {
         this.CreatedBy = "";
         this.UpdatedAt = "";
         this.UpdatedBy = "";
-        this.Type_DescA = "";
-        this.Type_DescE = "";
-        this.CodeType = "";
-        this.IsActiveDesc = "";
         this.CashBoxID = 0;
         this.SalesManID = 0;
-        this.StoreID = 0;
+        this.salary
+        this.day_num = 0;
+        this.hour_num = 0;
+        this.Num_Attendance = 0;
+        this.End_Data = "";
+        this.Start_Data = "";
+        this.Day_Off = 0;
+        this.ISActive = false;
+        this.Flag_Mastr = "";
+        this.IsActiveDesc = "";
+
 
     }
     public USER_CODE: string;
-    public USER_PASSWORD: string
+    public ID_Code: number;
+    public USER_PASSWORD: string;
     public USER_ACTIVE: boolean;
     public USER_NAME: string;
     public CompCode: number;
@@ -5924,13 +5927,18 @@ class GQ_GetUsers extends SecurityClass {
     public CreatedBy: string;
     public UpdatedAt: string;
     public UpdatedBy: string;
-    public Type_DescA: string;
-    public Type_DescE: string;
-    public IsActiveDesc: string;
-    public CodeType: string;
     public CashBoxID: number;
     public SalesManID: number;
-    public StoreID: number;
+    public salary: any;
+    public day_num: number;
+    public hour_num: number;
+    public Num_Attendance: number;
+    public End_Data: string;
+    public Start_Data: string;
+    public Day_Off: number;
+    public Flag_Mastr: string;
+    public ISActive: boolean;
+    public IsActiveDesc: string;
 }
 class GQ_GetUserRole extends SecurityClass {
     constructor() {

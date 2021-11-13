@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="61aabdb08bd949f3a1433823d07402fe" Name="Diagram1" ZoomLevel="37">
+      <Diagram DiagramId="61aabdb08bd949f3a1433823d07402fe" Name="Diagram1" ZoomLevel="94">
         <EntityTypeShape EntityType="POS2021Model.CATEGRES" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="POS2021Model.EMPLOYEE" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="POS2021Model.Enter_Money" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
@@ -65,7 +65,6 @@
         <EntityTypeShape EntityType="POS2021Model.CUSTOMER" Width="1.5" PointX="19.375" PointY="23.75" />
         <EntityTypeShape EntityType="POS2021Model.Catch_Receipt" Width="1.5" PointX="15.375" PointY="24.75" />
         <EntityTypeShape EntityType="POS2021Model.IQ_Catch_Receipt" Width="1.5" PointX="25.375" PointY="0.75" />
-        <EntityTypeShape EntityType="POS2021Model.IQ__Attendance" Width="1.5" PointX="25.375" PointY="7.75" />
         <EntityTypeShape EntityType="POS2021Model.IQ_Custmer_Souscription" Width="1.5" PointX="25.375" PointY="13.75" />
         <EntityTypeShape EntityType="POS2021Model.I_Customer_Gym" Width="1.5" PointX="25.375" PointY="20.75" />
         <EntityTypeShape EntityType="POS2021Model.A_PERIOD" Width="1.5" PointX="27.75" PointY="0.75" />
@@ -97,7 +96,6 @@
         <EntityTypeShape EntityType="POS2021Model.G_ReportWebSetting" Width="1.5" PointX="17.75" PointY="30.75" />
         <EntityTypeShape EntityType="POS2021Model.G_VatNature" Width="1.5" PointX="19.75" PointY="30.75" />
         <EntityTypeShape EntityType="POS2021Model.HOLIDAY" Width="1.5" PointX="31.75" PointY="0.75" />
-        <EntityTypeShape EntityType="POS2021Model.I_Attendance" Width="1.5" PointX="31.75" PointY="4.75" />
         <EntityTypeShape EntityType="POS2021Model.I_Detais_Data_Custmor" Width="1.5" PointX="31.75" PointY="8.75" />
         <EntityTypeShape EntityType="POS2021Model.I_Type_Souscription" Width="1.5" PointX="10.75" PointY="31.75" />
         <EntityTypeShape EntityType="POS2021Model.invitation" Width="1.5" PointX="31.75" PointY="12.75" />
@@ -151,7 +149,9 @@
         <EntityTypeShape EntityType="POS2021Model.IQ_NoteSlsInvoiceList" Width="1.5" PointX="38.75" PointY="32.75" />
         <EntityTypeShape EntityType="POS2021Model.IQ_NoteSlsInvReturnList" Width="1.5" PointX="19.75" PointY="39.75" />
         <EntityTypeShape EntityType="POS2021Model.G_USERS" Width="1.5" PointX="41.375" PointY="0.75" />
-        <EntityTypeShape EntityType="POS2021Model.IQ_Attend_Multi" Width="1.5" PointX="3.375" PointY="19.75" />
+        <EntityTypeShape EntityType="POS2021Model.I_Attendance" Width="1.5" PointX="3.375" PointY="19.75" />
+        <EntityTypeShape EntityType="POS2021Model.IQ__Attendance" Width="1.5" PointX="41.375" PointY="10.75" />
+        <EntityTypeShape EntityType="POS2021Model.IQ_Attend_Multi" Width="1.5" PointX="41.375" PointY="16.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

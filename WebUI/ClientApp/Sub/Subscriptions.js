@@ -37,6 +37,8 @@ var Subscriptions;
     var Detailsfamilly_Cat = new Array();
     var UploadImage;
     var txtNumDays_freeze;
+    var txtEnd_Date;
+    var txtStart_Date;
     //DropDownlist
     var ddlStateType;
     var ddlSouscription;
@@ -135,6 +137,8 @@ var Subscriptions;
         //btnPrintTrEXEL = document.getElementById("btnPrintTrEXEL") as HTMLButtonElement;
         UploadImage = document.getElementById("Upload_Image");
         txtNumDays_freeze = document.getElementById("txtNumDays_freeze");
+        txtEnd_Date = document.getElementById("txtEnd_Date");
+        txtStart_Date = document.getElementById("txtStart_Date");
         chkActive = document.getElementById("chkActive");
     }
     function IntializeEvents() {
@@ -152,6 +156,8 @@ var Subscriptions;
         btnadd.onclick = btnAdd_onclick;
         btnAddDetails.onclick = AddNewRow;
         txtType_Sub.onchange = txtType_Sub_onchange;
+        txtEnd_Date.onchange = txtEnd_Date_onchange;
+        txtStart_Date.onchange = txtEnd_Date_onchange;
         UploadImage.onchange = UploadImage_onchange;
         txtNumDays_freeze.onkeyup = txtNumDays_freeze_onchange;
         chkActive.onchange = chkActive_onchange;
@@ -879,6 +885,8 @@ var Subscriptions;
         }
         $('#txtStart_Date').val(GetDate());
         $('#txtEnd_Date').val(GetDate());
+        $('#txtEnd_Date').removeAttr("disabled");
+        $('#txtStart_Date').removeAttr("disabled");
         $('#btnview_invitation').attr('disabled', 'disabled');
     }
     function btnAdd_onclick() {
@@ -917,8 +925,10 @@ var Subscriptions;
         $('#txtCreatedAt').attr('disabled', 'disabled');
         $('#txtUpdatedBy').attr('disabled', 'disabled');
         $('#txtUpdatedAt').attr('disabled', 'disabled');
-        $('#txtStart_Date').attr('disabled', 'disabled');
-        $('#txtEnd_Date').attr('disabled', 'disabled');
+        //$('#txtStart_Date').attr('disabled', 'disabled');
+        //$('#txtEnd_Date').attr('disabled', 'disabled');
+        $('#txtEnd_Date').removeAttr("disabled");
+        $('#txtStart_Date').removeAttr("disabled");
         $('#Num_Day').attr('disabled', 'disabled');
         $('#btnview_invitation').attr('disabled', 'disabled');
         var code = '000000';
@@ -1092,6 +1102,12 @@ var Subscriptions;
             $('#txtEnd_Date').val(GetDate());
             $('#Num_Day').val('0');
         }
+    }
+    function txtEnd_Date_onchange() {
+        setTimeout(function () {
+            var Days = GetNumDay($('#txtStart_Date').val(), $('#txtEnd_Date').val());
+            $('#Num_Day').val(Days);
+        }, 600);
     }
     function clear() {
         $('#txtNumber').val('');

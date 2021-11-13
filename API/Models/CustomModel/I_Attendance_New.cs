@@ -20,6 +20,8 @@ namespace API.Models.CustomModel
         public Nullable<bool> ready { get; set; }
         public Nullable<int> Num_Day { get; set; }
         public string Name_Customer { get; set; }
+        public string Remarks { get; set; }
+
 
     }
 }

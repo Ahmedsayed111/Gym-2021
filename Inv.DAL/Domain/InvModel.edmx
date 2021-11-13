@@ -2396,6 +2396,7 @@ warning 6002: The table/view 'Gym2021.dbo.IQ_Attend_Multi' does not have a prima
           <Property Name="Num_Day" Type="int" />
           <Property Name="Name_Customer" Type="nvarchar" MaxLength="50" />
           <Property Name="USER_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="Remarks" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'Gym2021.dbo.IQ_Catch_Receipt' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -3943,11 +3944,6 @@ warning 6002: The table/view 'Gym2021.dbo.ReviewSalesMaster' does not have a pri
           <Parameter Name="End_Date" Type="datetime" Mode="In" />
           <Parameter Name="Num_DayS_out" Type="int" Mode="InOut" />
         </Function>
-        <Function Name="GetUser_Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
-          <Parameter Name="password" Type="nvarchar" Mode="In" />
-          <Parameter Name="Open_Login" Type="bit" Mode="In" />
-        </Function>
         <Function Name="GFun_Companies" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="userCode" Type="nvarchar" Mode="In" />
           <ReturnType>
@@ -5009,7 +5005,8 @@ warning 6002: The table/view 'Gym2021.dbo.ReviewSalesMaster' does not have a pri
     [IQ_Attend_Multi].[ready] AS [ready], 
     [IQ_Attend_Multi].[Num_Day] AS [Num_Day], 
     [IQ_Attend_Multi].[Name_Customer] AS [Name_Customer], 
-    [IQ_Attend_Multi].[USER_NAME] AS [USER_NAME]
+    [IQ_Attend_Multi].[USER_NAME] AS [USER_NAME], 
+    [IQ_Attend_Multi].[Remarks] AS [Remarks]
     FROM [dbo].[IQ_Attend_Multi] AS [IQ_Attend_Multi]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="IQ_Catch_Receipt" EntityType="Self.IQ_Catch_Receipt" store:Type="Views" store:Schema="dbo">
@@ -7363,7 +7360,6 @@ warning 6002: The table/view 'Gym2021.dbo.ReviewSalesMaster' does not have a pri
             <Parameter Name="FromDate" Mode="In" Type="DateTime" />
             <Parameter Name="ToDate" Mode="In" Type="DateTime" />
           </FunctionImport>
-          <EntitySet Name="IQ__Attendance" EntityType="POS2021Model.IQ__Attendance" />
           <EntitySet Name="IQ_Custmer_Souscription" EntityType="POS2021Model.IQ_Custmer_Souscription" />
           <EntitySet Name="I_Customer_Gym" EntityType="POS2021Model.I_Customer_Gym" />
           <EntitySet Name="A_PERIOD" EntityType="POS2021Model.A_PERIOD" />
@@ -7395,7 +7391,6 @@ warning 6002: The table/view 'Gym2021.dbo.ReviewSalesMaster' does not have a pri
           <EntitySet Name="G_ReportWebSetting" EntityType="POS2021Model.G_ReportWebSetting" />
           <EntitySet Name="G_VatNature" EntityType="POS2021Model.G_VatNature" />
           <EntitySet Name="HOLIDAYS" EntityType="POS2021Model.HOLIDAY" />
-          <EntitySet Name="I_Attendance" EntityType="POS2021Model.I_Attendance" />
           <EntitySet Name="I_Detais_Data_Custmor" EntityType="POS2021Model.I_Detais_Data_Custmor" />
           <EntitySet Name="I_Type_Souscription" EntityType="POS2021Model.I_Type_Souscription" />
           <EntitySet Name="invitations" EntityType="POS2021Model.invitation" />
@@ -7742,10 +7737,12 @@ warning 6002: The table/view 'Gym2021.dbo.ReviewSalesMaster' does not have a pri
             <Parameter Name="UserName" Mode="In" Type="String" />
           </FunctionImport>
           <EntitySet Name="G_USERS" EntityType="POS2021Model.G_USERS" />
-          <EntitySet Name="IQ_Attend_Multi" EntityType="POS2021Model.IQ_Attend_Multi" />
           <FunctionImport Name="End_Date_Souscription" ReturnType="Collection(String)">
-            <Parameter Name="ID_Souscription" Mode="In" Type="Int32" />
+          <Parameter Name="ID_Souscription" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="I_Attendance" EntityType="POS2021Model.I_Attendance" />
+          <EntitySet Name="IQ__Attendance" EntityType="POS2021Model.IQ__Attendance" />
+          <EntitySet Name="IQ_Attend_Multi" EntityType="POS2021Model.IQ_Attend_Multi" />
         </EntityContainer>
         <ComplexType Name="Get_Settings_Report_Result">
           <Property Type="Int32" Name="ID_Report" Nullable="false" />
@@ -7876,31 +7873,6 @@ warning 6002: The table/view 'Gym2021.dbo.ReviewSalesMaster' does not have a pri
           <Property Type="DateTime" Name="FromDate" Nullable="true" />
           <Property Type="DateTime" Name="ToDate" Nullable="true" />
         </ComplexType>
-        <EntityType Name="IQ__Attendance">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID_Souscription" Type="Int32" />
-          <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="ID_Cust" Type="Int32" />
-          <Property Name="ID_Code_USER" Type="Int32" />
-          <Property Name="Tr_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Time_in" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Time_out" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Num_Day_Attendance" Type="Int32" />
-          <Property Name="ready" Type="Boolean" />
-          <Property Name="Num_Day" Type="Int32" />
-          <Property Name="Name_Customer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Phone_Customer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Type_Customer" Type="Int32" />
-          <Property Name="Num_Attendance" Type="Int32" />
-          <Property Name="invitation" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="Price_After_Discount" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="price_Sub" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="Discount" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="Type_Sub" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="IQ_Custmer_Souscription">
           <Key>
             <PropertyRef Name="ID_Cust" />
@@ -8465,21 +8437,6 @@ warning 6002: The table/view 'Gym2021.dbo.ReviewSalesMaster' does not have a pri
           <Property Name="XINBIE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
           <Property Name="MINZU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="DeptID" Type="Int16" />
-        </EntityType>
-        <EntityType Name="I_Attendance">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ID_Cust" Type="Int32" />
-          <Property Name="ID_Code_USER" Type="Int32" />
-          <Property Name="Tr_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Time_in" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Time_out" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Num_Day_Attendance" Type="Int32" />
-          <Property Name="ready" Type="Boolean" />
-          <Property Name="Num_Day" Type="Int32" />
-          <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="I_Detais_Data_Custmor">
           <Key>
@@ -10454,6 +10411,46 @@ warning 6002: The table/view 'Gym2021.dbo.ReviewSalesMaster' does not have a pri
           <Property Name="Start_Data" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Day_Off" Type="Int32" />
         </EntityType>
+        <EntityType Name="I_Attendance">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Cust" Type="Int32" />
+          <Property Name="ID_Code_USER" Type="Int32" />
+          <Property Name="Tr_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Time_in" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Time_out" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Num_Day_Attendance" Type="Int32" />
+          <Property Name="ready" Type="Boolean" />
+          <Property Name="Num_Day" Type="Int32" />
+          <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="IQ__Attendance">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID_Souscription" Type="Int32" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID_Cust" Type="Int32" />
+          <Property Name="ID_Code_USER" Type="Int32" />
+          <Property Name="Tr_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Time_in" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Time_out" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Num_Day_Attendance" Type="Int32" />
+          <Property Name="ready" Type="Boolean" />
+          <Property Name="Num_Day" Type="Int32" />
+          <Property Name="Name_Customer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_Customer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type_Customer" Type="Int32" />
+          <Property Name="Num_Attendance" Type="Int32" />
+          <Property Name="invitation" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Price_After_Discount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="price_Sub" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Discount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Type_Sub" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="IQ_Attend_Multi">
           <Key>
             <PropertyRef Name="ID" />
@@ -10469,6 +10466,7 @@ warning 6002: The table/view 'Gym2021.dbo.ReviewSalesMaster' does not have a pri
           <Property Name="Num_Day" Type="Int32" />
           <Property Name="Name_Customer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="USER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -11829,32 +11827,6 @@ warning 6002: The table/view 'Gym2021.dbo.ReviewSalesMaster' does not have a pri
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <EntitySetMapping Name="IQ__Attendance">
-            <EntityTypeMapping TypeName="POS2021Model.IQ__Attendance">
-              <MappingFragment StoreEntitySet="IQ__Attendance">
-                <ScalarProperty Name="Type_Sub" ColumnName="Type_Sub" />
-                <ScalarProperty Name="Discount" ColumnName="Discount" />
-                <ScalarProperty Name="price_Sub" ColumnName="price_Sub" />
-                <ScalarProperty Name="Price_After_Discount" ColumnName="Price_After_Discount" />
-                <ScalarProperty Name="invitation" ColumnName="invitation" />
-                <ScalarProperty Name="Num_Attendance" ColumnName="Num_Attendance" />
-                <ScalarProperty Name="Type_Customer" ColumnName="Type_Customer" />
-                <ScalarProperty Name="Type" ColumnName="Type" />
-                <ScalarProperty Name="Phone_Customer" ColumnName="Phone_Customer" />
-                <ScalarProperty Name="Name_Customer" ColumnName="Name_Customer" />
-                <ScalarProperty Name="Num_Day" ColumnName="Num_Day" />
-                <ScalarProperty Name="ready" ColumnName="ready" />
-                <ScalarProperty Name="Num_Day_Attendance" ColumnName="Num_Day_Attendance" />
-                <ScalarProperty Name="Time_out" ColumnName="Time_out" />
-                <ScalarProperty Name="Time_in" ColumnName="Time_in" />
-                <ScalarProperty Name="Tr_Date" ColumnName="Tr_Date" />
-                <ScalarProperty Name="ID_Code_USER" ColumnName="ID_Code_USER" />
-                <ScalarProperty Name="ID_Cust" ColumnName="ID_Cust" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="ID_Souscription" ColumnName="ID_Souscription" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="IQ_Custmer_Souscription">
             <EntityTypeMapping TypeName="POS2021Model.IQ_Custmer_Souscription">
               <MappingFragment StoreEntitySet="IQ_Custmer_Souscription">
@@ -12422,22 +12394,6 @@ warning 6002: The table/view 'Gym2021.dbo.ReviewSalesMaster' does not have a pri
                 <ScalarProperty Name="HOLIDAYYEAR" ColumnName="HOLIDAYYEAR" />
                 <ScalarProperty Name="HOLIDAYNAME" ColumnName="HOLIDAYNAME" />
                 <ScalarProperty Name="HOLIDAYID" ColumnName="HOLIDAYID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="I_Attendance">
-            <EntityTypeMapping TypeName="POS2021Model.I_Attendance">
-              <MappingFragment StoreEntitySet="I_Attendance">
-                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
-                <ScalarProperty Name="Num_Day" ColumnName="Num_Day" />
-                <ScalarProperty Name="ready" ColumnName="ready" />
-                <ScalarProperty Name="Num_Day_Attendance" ColumnName="Num_Day_Attendance" />
-                <ScalarProperty Name="Time_out" ColumnName="Time_out" />
-                <ScalarProperty Name="Time_in" ColumnName="Time_in" />
-                <ScalarProperty Name="Tr_Date" ColumnName="Tr_Date" />
-                <ScalarProperty Name="ID_Code_USER" ColumnName="ID_Code_USER" />
-                <ScalarProperty Name="ID_Cust" ColumnName="ID_Cust" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -14543,9 +14499,53 @@ warning 6002: The table/view 'Gym2021.dbo.ReviewSalesMaster' does not have a pri
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="End_Date_Souscription" FunctionName="POS2021Model.Store.End_Date_Souscription" />
+          <EntitySetMapping Name="I_Attendance">
+            <EntityTypeMapping TypeName="POS2021Model.I_Attendance">
+              <MappingFragment StoreEntitySet="I_Attendance">
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Num_Day" ColumnName="Num_Day" />
+                <ScalarProperty Name="ready" ColumnName="ready" />
+                <ScalarProperty Name="Num_Day_Attendance" ColumnName="Num_Day_Attendance" />
+                <ScalarProperty Name="Time_out" ColumnName="Time_out" />
+                <ScalarProperty Name="Time_in" ColumnName="Time_in" />
+                <ScalarProperty Name="Tr_Date" ColumnName="Tr_Date" />
+                <ScalarProperty Name="ID_Code_USER" ColumnName="ID_Code_USER" />
+                <ScalarProperty Name="ID_Cust" ColumnName="ID_Cust" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IQ__Attendance">
+            <EntityTypeMapping TypeName="POS2021Model.IQ__Attendance">
+              <MappingFragment StoreEntitySet="IQ__Attendance">
+                <ScalarProperty Name="Type_Sub" ColumnName="Type_Sub" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="price_Sub" ColumnName="price_Sub" />
+                <ScalarProperty Name="Price_After_Discount" ColumnName="Price_After_Discount" />
+                <ScalarProperty Name="invitation" ColumnName="invitation" />
+                <ScalarProperty Name="Num_Attendance" ColumnName="Num_Attendance" />
+                <ScalarProperty Name="Type_Customer" ColumnName="Type_Customer" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Phone_Customer" ColumnName="Phone_Customer" />
+                <ScalarProperty Name="Name_Customer" ColumnName="Name_Customer" />
+                <ScalarProperty Name="Num_Day" ColumnName="Num_Day" />
+                <ScalarProperty Name="ready" ColumnName="ready" />
+                <ScalarProperty Name="Num_Day_Attendance" ColumnName="Num_Day_Attendance" />
+                <ScalarProperty Name="Time_out" ColumnName="Time_out" />
+                <ScalarProperty Name="Time_in" ColumnName="Time_in" />
+                <ScalarProperty Name="Tr_Date" ColumnName="Tr_Date" />
+                <ScalarProperty Name="ID_Code_USER" ColumnName="ID_Code_USER" />
+                <ScalarProperty Name="ID_Cust" ColumnName="ID_Cust" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_Souscription" ColumnName="ID_Souscription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="IQ_Attend_Multi">
             <EntityTypeMapping TypeName="POS2021Model.IQ_Attend_Multi">
               <MappingFragment StoreEntitySet="IQ_Attend_Multi">
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
                 <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
                 <ScalarProperty Name="Name_Customer" ColumnName="Name_Customer" />
                 <ScalarProperty Name="Num_Day" ColumnName="Num_Day" />
@@ -14560,7 +14560,6 @@ warning 6002: The table/view 'Gym2021.dbo.ReviewSalesMaster' does not have a pri
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="End_Date_Souscription" FunctionName="POS2021Model.Store.End_Date_Souscription" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

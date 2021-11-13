@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'F:\yabany\WORK\New folder\Gym_2021\Gym2021\Inv.DAL\Domain\InvModel.edmx'. 
+﻿// T4 code generation is enabled for model 'F:\Gym-2021\Inv.DAL\Domain\InvModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
